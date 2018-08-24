@@ -202,6 +202,7 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
 
 
 app.get('/agenda/obtener_eventos/', function(req, res) {
+    let usuarios = [];
 
     Usuario.find({ email: req.query.email })
         .populate('agenda')
@@ -218,6 +219,10 @@ app.get('/agenda/obtener_eventos/', function(req, res) {
                     message: 'Usuario no encontrado'
                 });
             }
+
+
+
+
             res.json({
                 ok: true,
                 usuario
