@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 
 
 //indice de rutas
-// app.use(require('./routes/index'));
+app.use(require('./routes/evento'));
 app.use(require('./routes/usuario'));
 // app.use(require('./server_entidades/server_entidades'));
 // app.use(require('./server_persona/server_persona'));

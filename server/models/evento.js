@@ -23,6 +23,17 @@ let eventoSchema = new Schema({
     },
     longitud: {
         type: String
+    },
+    id: {
+        type: Number
+    },
+    completo: {
+        type: Boolean,
+        default: false
+    },
+    cupo: {
+        type: Number,
+        default: 10000
     }
 });
 

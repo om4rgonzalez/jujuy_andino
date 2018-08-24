@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const Usuario = require('../models/usuario');
 const Evento = require('../models/evento');
+const axios = require('axios');
 
 
 
@@ -58,19 +59,30 @@ let nuevoEvento = async(evento) => {
     }
 };
 
+let verificarAsistencia = async(usuario, idEvento_, res) => {
+    let URL = process.env.URL_SERVICE + process.env.PORT + '/agenda/verficar_asistencia/';
+    let resp = await axios.post(URL, {
+        email: usuario,
+        idEvento: idEvento_
+    });
+
+    if (resp.ok)
+        return res.json({
+            ok: true
+        });
+    else
+        return res.status(401).json({
+            ok: false
+        });
+};
+
 
 app.post('/agenda/agregar_evento/', async function(req, res) {
     //datos que recibe:
     //===== === ======
     //
     //esNuevo
-    //localidad
-    //nombreEvento
-    //lugar
-    //fechaInicio
-    //fechaFin
-    //latitud
-    //longitud
+    //idEvento
     //idGoogle
     //email
     //nombre
@@ -78,6 +90,8 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
     // console.log(req.body.usuario);
 
     let idUsuario = '';
+    let yaRegistrado = false;
+    let idEvento = "";
     if (req.body.esNuevo) {
         //creo la cuenta del usuario
         let usuario = new Usuario({
@@ -103,52 +117,62 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
             });
         }
     }
-    // else {
-    //     //busco el usuario
-    //     let usuario = await buscarUsuario(req.body.usuario.email, res);
-    //     console.log('Usuario: ' + usuario);
-    //     if (usuario.ok) {
-    //         //agrego el evento a la agenda
-    //         idUsuario = usuario.message;
-    //     }
-    // }
-    //genero el registro con el evento
-    let evento = new Evento({
-        localidad: req.body.evento.localidad,
-        nombreEvento: req.body.evento.nombreEvento,
-        lugar: req.body.evento.lugar,
-        fechaInicio: req.body.evento.fechaInicio,
-        fechaFin: req.body.evento.fechaFin,
-        latitud: req.body.evento.latitud,
-        longitud: req.body.evento.longitud
-    })
-    try {
-        let respuestaNuevoEvento = await nuevoEvento(evento);
-        if (respuestaNuevoEvento.ok) {
-            //agrego el evento a la agenda
-            Usuario.findOneAndUpdate({ email: req.body.usuario.email }, { $push: { agenda: evento._id } },
-                function(err, success) {
-
-                    if (err) {
-                        return res.status(400).json({
-                            ok: false,
-                            message: 'No se pudo agregar el evento a la agenda'
-                        });
-                    }
-                    res.json({
-                        ok: true,
-                        message: 'El evento se agrego a la agenda'
-                    });
+    Usuario.find({ email: req.body.usuario.email })
+        .populate('agenda')
+        .exec((err, usuario) => {
+            if (err) {
+                return res.status(400).json({
+                    ok: false,
+                    err
                 });
-        }
+            }
 
-    } catch (e) {
-        return res.status(400).json({
-            ok: false,
-            message: 'No se pudo agregar el evento a la agenda. Error ' + e.message
+            for (var j in usuario) {
+                for (var i in usuario[j].agenda) {
+                    if (usuario[j].agenda[i].id == req.body.evento.id) {
+                        yaRegistrado = true;
+                        break;
+                    }
+                }
+            }
+            if (!yaRegistrado) {
+                Evento.find({ id: req.body.evento.id })
+                    .exec((err, eventoDB) => {
+                        if (err) {
+                            return res.status(400).json({
+                                ok: false,
+                                err
+                            });
+                        }
+
+
+                        idEvento = eventoDB[0]._id;
+
+
+                        // Aqui tengo que agregar el id a la agenda
+                        Usuario.findOneAndUpdate({ email: req.body.usuario.email }, { $push: { agenda: eventoDB[0]._id } },
+                            function(err, success) {
+
+                                if (err) {
+                                    return res.status(400).json({
+                                        ok: false,
+                                        message: 'No se pudo agregar el evento a la agenda'
+                                    });
+                                }
+                                res.json({
+                                    ok: true,
+                                    message: 'El evento se agrego a la agenda'
+                                });
+                            });
+                    });
+            } else {
+                return res.json({
+                    ok: false,
+                    message: 'Ya esta registrado al evento'
+                });
+            }
+
         });
-    }
-
 });
 
 
@@ -172,6 +196,36 @@ app.get('/agenda/obtener_eventos/', function(req, res) {
             res.json({
                 ok: true,
                 usuario
+            });
+        });
+});
+
+app.post('/agenda/verficar_asistencia/', function(req, res) {
+
+    Usuario.find({ email: req.body.email })
+        .populate('agenda')
+        .exec((err, usuario) => {
+            if (err) {
+                return res.status(400).json({
+                    ok: false,
+                    err
+                });
+            }
+
+            usuario = usuario.filter(function(usuario) {
+                return usuario.agenda.id != req.body.idEvento;
+            })
+
+
+            if (usuario.length != 0) {
+                return res.status(404).json({
+                    ok: false,
+                    message: 'Usuario ya registrado al evento'
+                });
+            }
+            res.json({
+                ok: true,
+                message: 'El usuario aun no se registro en el evento'
             });
         });
 });
