@@ -127,13 +127,15 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                     err
                 });
             }
-            if (usuario.length > 0)
+            if (usuario.length > 0) {
                 idUsuario = usuario[0]._id;
+            }
 
             for (var j in usuario) {
                 for (var i in usuario[j].agenda) {
                     if (usuario[j].agenda[i].id == req.body.evento.id) {
                         yaRegistrado = true;
+                        idEvento = usuario[j].agenda[i]._id;
                         break;
                     }
                 }
@@ -181,10 +183,18 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                             });
                     });
             } else {
-                return res.json({
-                    ok: false,
-                    message: 'Ya esta registrado al evento'
-                });
+                //busco el tikcet
+                Entrada.find({ usuario: idUsuario, evento: idEvento })
+                    .exec((err, entradaDB) => {
+
+                        return res.json({
+                            ok: false,
+                            message: 'Ya esta registrado al evento',
+                            codigo: entradaDB[0]._id
+                        });
+                    });
+
+
             }
 
         });
