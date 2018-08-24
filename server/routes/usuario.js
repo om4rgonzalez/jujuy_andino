@@ -3,6 +3,7 @@ const app = express();
 const Usuario = require('../models/usuario');
 const Evento = require('../models/evento');
 const axios = require('axios');
+const Entrada = require('../models/entrada');
 
 
 
@@ -126,6 +127,8 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                     err
                 });
             }
+            if (usuario.length > 0)
+                idUsuario = usuario[0]._id;
 
             for (var j in usuario) {
                 for (var i in usuario[j].agenda) {
@@ -146,7 +149,7 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                         }
 
 
-                        idEvento = eventoDB[0]._id;
+                        // idEvento = eventoDB[0]._id;
 
 
                         // Aqui tengo que agregar el id a la agenda
@@ -159,9 +162,21 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                         message: 'No se pudo agregar el evento a la agenda'
                                     });
                                 }
+
+                                // console.log('id usuario: ' + success);
+                                // console.log('id usuario guardado: ' + idUsuario);
+
+                                // genero el ticket de entrada
+                                let entrada = new Entrada({
+                                    usuario: idUsuario,
+                                    evento: eventoDB[0]._id
+                                });
+                                entrada.save();
+
                                 res.json({
                                     ok: true,
-                                    message: 'El evento se agrego a la agenda'
+                                    message: 'El evento se agrego a la agenda',
+                                    codigo: entrada._id
                                 });
                             });
                     });
