@@ -24,7 +24,11 @@ let usuarioSchema = new Schema({
     agenda: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Evento'
-    }]
+    }],
+    fechaAlta: {
+        type: Date,
+        default: Date.now
+    }
 });
 usuarioSchema.plugin(uniqueValidator);
 module.exports = mongoose.model('Usuario', usuarioSchema);
