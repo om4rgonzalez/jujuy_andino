@@ -5,135 +5,150 @@
                 "lugar": "Plaza Vilca",
                 "fechaInicio": "2018-11-03 02:00 PM",
                 "fechaFin": "2018-11-03 08:00 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 1
+                "latitud": -24.1842186,
+                "longitud": -65.3073631,
+                "id": 1,
+                "color": "#F99F38"
             },
             {
                 "evento": "Apertura Gala Sinfonica",
                 "lugar": "Teatro Mitre",
                 "fechaInicio": "2018-11-03 09:00 PM",
                 "fechaFin": "0",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 2
+                "latitud": -24.184189,
+                "longitud": -65.307126,
+                "id": 2,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
-                "lugar": "",
+                "lugar": "Lozano",
                 "fechaInicio": "2018-11-04 10:00 AM",
                 "fechaFin": "2018-11-04 11:30 AM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 3
+                "latitud": -24.06665,
+                "longitud": -65.41549,
+                "id": 3,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
-                "lugar": "",
+                "lugar": "Lozano",
                 "fechaInicio": "2018-11-05 10:00 AM",
                 "fechaFin": "2018-11-05 11:30 AM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 4
+                "latitud": -24.06665,
+                "longitud": -65.41549,
+                "id": 4,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Masterclass Escalandrum Tango y Ritmos Argentinos",
                 "lugar": "Teatro Mitre",
                 "fechaInicio": "2018-11-05 02:00 PM",
                 "fechaFin": "2018-11-05 04:00 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 5
+                "latitud": -24.184189,
+                "longitud": -65.307126,
+                "id": 5,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Horacio Lavandera",
                 "lugar": "Teatro Mitre",
                 "fechaInicio": "2018-11-05 09:00 PM",
                 "fechaFin": "",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 6
+                "latitud": -24.184189,
+                "longitud": -65.307126,
+                "id": 6,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
-                "lugar": "",
+                "lugar": "Lozano",
                 "fechaInicio": "2018-11-06 10:00 AM",
                 "fechaFin": "2018-11-06 11:30 AM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 7
+                "latitud": -24.06665,
+                "longitud": -65.41549,
+                "id": 7,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Masterclass Horacio Lavandera",
                 "lugar": "Teatro Mitre",
                 "fechaInicio": "2018-11-06 11:00 AM",
                 "fechaFin": "2018-11-06 01:00 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 8
+                "latitud": -24.184189,
+                "longitud": -65.307126,
+                "id": 8,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Blessing Chimanga and Dreams Band - Zimbawe Orquesta Sinfónica Liceo Bicentenario Oscar Castro Zuñiga - Chile ",
                 "lugar": "Lozano",
                 "fechaInicio": "2018-11-18 06:00 PM",
                 "fechaFin": "2018-11-06 07:30 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 9
+                "latitud": -24.06665,
+                "longitud": -65.41549,
+                "id": 9,
+                "color": "#70CDDD"
             },
             {
                 "evento": "SOJ Elena Roger",
                 "lugar": "Teatro Mitre",
                 "fechaInicio": "2018-11-06 09:00 PM",
                 "fechaFin": "",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 10
+                "latitud": -24.184189,
+                "longitud": -65.307126,
+                "id": 10,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
-                "lugar": "",
+                "lugar": "Lozano",
                 "fechaInicio": "2018-11-07 10:00 AM",
                 "fechaFin": "2018-11-07 11:30 AM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 11
+                "latitud": -24.06665,
+                "longitud": -65.41549,
+                "id": 11,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Ballet ISA",
                 "lugar": "Teatro Mitre",
                 "fechaInicio": "2018-11-07 09:00 PM",
                 "fechaFin": "0",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 12
+                "latitud": -24.184189,
+                "longitud": -65.307126,
+                "id": 12,
+                "color": "#EF4823"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
-                "lugar": "",
+                "lugar": "Lozano",
                 "fechaInicio": "2018-11-08 10:00 AM",
                 "fechaFin": "2018-11-08 11:30 AM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 13
+                "latitud": -24.06665,
+                "longitud": -65.41549,
+                "id": 13,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Masterclass Paquito D'Rivera",
                 "lugar": "Teatro Mitre",
                 "fechaInicio": "2018-11-08 04:00 PM",
                 "fechaFin": "2018-11-08 06:00 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 14
+                "latitud": -24.184189,
+                "longitud": -65.307126,
+                "id": 14,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
-                "lugar": "",
+                "lugar": "Lozano",
                 "fechaInicio": "2018-11-10 11:00 AM",
                 "fechaFin": "0",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 15
+                "latitud": -24.06665,
+                "longitud": -65.41549,
+                "id": 15,
+                "color": "#70CDDD"
             }
         ]
     },
@@ -144,94 +159,104 @@
                 "lugar": "Posta del Hornillo",
                 "fechaInicio": "2018-11-04 11:00 AM",
                 "fechaFin": "2018-11-04 01:00 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 16
+                "latitud": -23.65462,
+                "longitud": -65.4318,
+                "id": 16,
+                "color": "#F5C515"
             },
             {
                 "evento": "Desfile Moda Andina Contemporanea Sustentable",
                 "lugar": "Posta del Hornillo",
                 "fechaInicio": "2018-11-04 01:00 PM",
                 "fechaFin": "2018-11-04 02:30 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 17
+                "latitud": -23.65462,
+                "longitud": -65.4318,
+                "id": 17,
+                "color": "#F99F38"
             },
             {
                 "evento": "Feria Sustentable",
                 "lugar": "Maimará",
                 "fechaInicio": "2018-11-04 02:00 PM",
                 "fechaFin": "0",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 18
+                "latitud": -23.65462,
+                "longitud": -65.4318,
+                "id": 18,
+                "color": "#F99F38"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "Maimará",
                 "fechaInicio": "2018-11-04 03:00 PM",
                 "fechaFin": "2018-11-04 04:30 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 19
+                "latitud": -23.65462,
+                "longitud": -65.4318,
+                "id": 19,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Coro de Niños del Teatro Colon",
                 "lugar": "Iglesia - Nuestra Señora de la Calendaria",
                 "fechaInicio": "2018-11-04 06:00 PM",
                 "fechaFin": "2018-11-04 07:30 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 20
+                "latitud": -23.62445,
+                "longitud": -65.40904,
+                "id": 20,
+                "color": "#70CDDD"
             }
         ]
     },
     {
         "localidad": "Tumbaya",
         "eventos": [{
-                "evento": "Cine Movil",
+                "evento": "Alturas Movil",
                 "lugar": "Tumbaya",
                 "fechaInicio": "2018-11-05 02:00 PM",
                 "fechaFin": "0",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 21
+                "id": 21,
+                "color": "#155AA9"
             },
             {
                 "evento": "Feria Sustentable",
                 "lugar": "Tumbaya",
                 "fechaInicio": "2018-11-05 02:00 PM",
                 "fechaFin": "0",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 22
+                "latitud": -23.85752,
+                "longitud": -65.46786,
+                "id": 22,
+                "color": "#F99F38"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "Tumbaya",
                 "fechaInicio": "2018-11-05 02:00 PM",
                 "fechaFin": "0",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 23
+                "latitud": -23.85752,
+                "longitud": -65.46786,
+                "id": 23,
+                "color": "#70CDDD"
             },
             {
                 "evento": "ISA, Barroco",
                 "lugar": "Iglesia - Nuestra Señora de los Dolores",
                 "fechaInicio": "2018-11-05 05:00 PM",
                 "fechaFin": "2018-11-05 06:00 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 24
+                "latitud": -23.85752,
+                "longitud": -65.46786,
+                "id": 24,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Sinfonica de Peru",
                 "lugar": "Iglesia - Nuestra Señora de los Dolores",
                 "fechaInicio": "2018-11-05 06:00 PM",
                 "fechaFin": "2018-11-05 07:30 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 25
+                "latitud": -23.85752,
+                "longitud": -65.46786,
+                "id": 25,
+                "color": "#70CDDD"
             }
         ]
     },
@@ -242,18 +267,20 @@
                 "lugar": "Serranias del Hornocal",
                 "fechaInicio": "2018-11-06 12:00 PM",
                 "fechaFin": "2018-11-06 02:00 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 26
+                "latitud": -23.19734,
+                "longitud": -65.19338,
+                "id": 26,
+                "color": "#70CDDD"
             },
             {
-                "evento": "Cine Movil",
+                "evento": "Alturas Movil",
                 "lugar": "Humahuaca",
                 "fechaInicio": "2018-11-06 02:00 PM",
                 "fechaFin": "0",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 27
+                "id": 27,
+                "color": "#155AA9"
             },
             {
                 "evento": "Feria Sustentable",
@@ -262,7 +289,8 @@
                 "fechaFin": "0",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 28
+                "id": 28,
+                "color": "#F99F38"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
@@ -271,16 +299,18 @@
                 "fechaFin": "2018-11-06 04:30 PM",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 29
+                "id": 29,
+                "color": "#70CDDD"
             },
             {
                 "evento": "ISA, Barroco",
                 "lugar": "Iglesia Catedra - Nuestra Señora de la Candelaria",
                 "fechaInicio": "2018-11-06 05:00 PM",
                 "fechaFin": "2018-11-06 06:30 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 30
+                "latitud": -23.20399,
+                "longitud": -65.34894,
+                "id": 30,
+                "color": "#70CDDD"
             }
         ]
     },
@@ -293,7 +323,8 @@
                 "fechaFin": "2018-11-07 04:00 PM",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 31
+                "id": 31,
+                "color": "#F99F38"
             },
             {
                 "evento": "Feria Sustentable",
@@ -302,7 +333,8 @@
                 "fechaFin": "2018-11-07 04:30 PM",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 32
+                "id": 32,
+                "color": "#F99F38"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
@@ -311,16 +343,18 @@
                 "fechaFin": "2018-11-07 04:30 PM",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 33
+                "id": 33,
+                "color": "#70CDDD"
             },
             {
                 "evento": "JAZZ Paquito D´Rivera / Escalandrum / Jujeña Jazz Band / Elena Roger",
                 "lugar": "Volcan",
                 "fechaInicio": "2018-11-07 05:00 PM",
                 "fechaFin": "2018-11-07 07:00 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 34
+                "latitud": -23.92586,
+                "longitud": -65.46989,
+                "id": 34,
+                "color": "#70CDDD"
             }
         ]
     },
@@ -333,7 +367,8 @@
                 "fechaFin": "0",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 35
+                "id": 35,
+                "color": "#F99F38"
             },
             {
                 "evento": "Santaoalla",
@@ -342,7 +377,8 @@
                 "fechaFin": "2018-11-08 02:00 PM",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 36
+                "id": 36,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Feria Sustentable",
@@ -351,7 +387,8 @@
                 "fechaFin": "2018-11-08 08:00 PM",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 37
+                "id": 37,
+                "color": "#F99F38"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
@@ -360,25 +397,28 @@
                 "fechaFin": "2018-11-08 04:30 PM",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 38
+                "id": 38,
+                "color": "#70CDDD"
             },
             {
-                "evento": "Cine Movil",
+                "evento": "Alturas Movil",
                 "lugar": "Tilcara",
                 "fechaInicio": "2018-11-08 04:00 PM",
                 "fechaFin": "0",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 39
+                "id": 39,
+                "color": "#155AA9"
             },
             {
                 "evento": "Ballet ISA - Teatro Colon",
                 "lugar": "Tilcara - Iglesia Nuestra Señora del Rosario",
                 "fechaInicio": "2018-11-08 06:00 PM",
                 "fechaFin": "0",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 40
+                "latitud": -23.5771,
+                "longitud": -65.39192,
+                "id": 40,
+                "color": "#EF4823"
             }
         ]
     },
@@ -391,7 +431,8 @@
                 "fechaFin": "2018-11-09 11:30 AM",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 41
+                "id": 41,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Feria Sustentable",
@@ -400,16 +441,18 @@
                 "fechaFin": "2018-11-09 11:30 AM",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 42
+                "id": 42,
+                "color": "#F99F38"
             },
             {
                 "evento": "Concierto de Campanas",
                 "lugar": "Purmamarca - Iglesia Santa Rosa de Lima",
                 "fechaInicio": "2018-11-09 02:00 PM",
                 "fechaFin": "0",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 43
+                "latitud": -23.74711,
+                "longitud": -65.4993,
+                "id": 43,
+                "color": "#70CDDD"
             },
             {
                 "evento": "Feria Sustentable",
@@ -418,7 +461,8 @@
                 "fechaFin": "2018-11-10 08:00 PM",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 44
+                "id": 44,
+                "color": "#F99F38"
             }
         ]
     },
@@ -431,26 +475,30 @@
                 "fechaFin": "2018-11-09 08:00 PM",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 45
+                "id": 45,
+                "color": "#F99F38"
             },
             {
-                "evento": "Cine Movil",
+                "evento": "Alturas Movil",
                 "lugar": "Uquia",
                 "fechaInicio": "2018-11-09 04:00 PM",
                 "fechaFin": "0",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 46
+                "id": 46,
+                "color": "#155AA9"
             },
             {
                 "evento": "Dolores Costoyas",
                 "lugar": "Uquia",
                 "fechaInicio": "2018-11-09 06:00 PM",
                 "fechaFin": "0",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 47
+                "latitud": -23.30325,
+                "longitud": -65.3562,
+                "id": 47,
+                "color": "#70CDDD"
             }
         ]
     }
+
 ]

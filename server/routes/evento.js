@@ -9,16 +9,18 @@ app.post('/conf/calendario_init/', function(req, res) {
         for (var i in Calendario) {
             for (var j in Calendario[i].eventos) {
                 let evento = new Evento({
-                    localidad: Calendario[i].eventos[j].localidad,
+                    localidad: Calendario[i].localidad,
                     nombreEvento: Calendario[i].eventos[j].evento,
                     lugar: Calendario[i].eventos[j].lugar,
                     fechaInicio: Calendario[i].eventos[j].fechaInicio,
                     fechaFin: Calendario[i].eventos[j].fechaFin,
                     latitud: Calendario[i].eventos[j].latitud,
                     longitud: Calendario[i].eventos[j].longitud,
-                    id: Calendario[i].eventos[j].id
+                    id: Calendario[i].eventos[j].id,
+                    color: Calendario[i].eventos[j].color
                 });
                 evento.save();
+                console.log('Evento agregado al calendario');
             }
         }
         res.json({

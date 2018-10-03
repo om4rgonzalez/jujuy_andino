@@ -1,0 +1,109 @@
+[{
+        "Orden": 1,
+        "Nombre": "CASONA DE ALEJO",
+        "Direccion": "ALVEAR 1341",
+        "Telefono": 154750742
+    },
+    {
+        "Orden": 2,
+        "Nombre": "NEGUS",
+        "Direccion": "SARMIENTO 210",
+        "Telefono": 4244519
+    },
+    {
+        "Orden": 3,
+        "Nombre": "VIRACOCHA",
+        "Direccion": "INDEPENDENCIA 994",
+        "Telefono": 4233554
+    },
+    {
+        "Orden": 4,
+        "Nombre": "GUAJIRA",
+        "Direccion": "RAMIREZ DE VELZCO 576",
+        "Telefono": 155849732
+    },
+    {
+        "Orden": 5,
+        "Nombre": "GUANTANAMERA",
+        "Direccion": "ILLIA ESQ LAS DELICIAS",
+        "Telefono": 4262908
+    },
+    {
+        "Orden": 6,
+        "Nombre": "JOAQUINA (LA ESPAÑOLA)",
+        "Direccion": "BELGRANO 1102",
+        "Telefono": 155711365
+    },
+    {
+        "Orden": 7,
+        "Nombre": "CALAS (HOWARD)",
+        "Direccion": "GUEMES 864",
+        "Telefono": 4249800
+    },
+    {
+        "Orden": 8,
+        "Nombre": "TUMASI",
+        "Direccion": "PATRICIAS ARGENTINAS 385",
+        "Telefono": 155882040
+    },
+    {
+        "Orden": 9,
+        "Nombre": "CHUNG KING",
+        "Direccion": "ALVEAR 627",
+        "Telefono": 4222982
+    },
+    {
+        "Orden": 10,
+        "Nombre": "CHEF ( ex krisis)",
+        "Direccion": "BALCARCE 272",
+        "Telefono": 4231126
+    },
+    {
+        "Orden": 11,
+        "Nombre": "YUNGO",
+        "Direccion": "BELGRANO 575",
+        "Telefono": 4227335
+    },
+    {
+        "Orden": 12,
+        "Nombre": "PISA RESTO",
+        "Direccion": "SALTA 911",
+        "Telefono": 4242196
+    },
+    {
+        "Orden": 13,
+        "Nombre": "LOS PUESTOS",
+        "Direccion": "SENADOR PEREZ 222",
+        "Telefono": 4243427
+    },
+    {
+        "Orden": 14,
+        "Nombre": "BONAFIDE",
+        "Direccion": "BELGRANO 991",
+        "Telefono": 4232802
+    },
+    {
+        "Orden": 15,
+        "Nombre": "BONAFIDE",
+        "Direccion": "CARRILLO ESQ DAVILA",
+        "Telefono": 4222890
+    },
+    {
+        "Orden": 16,
+        "Nombre": "MISTURA",
+        "Direccion": "SENADOR PEREZ 228",
+        "Telefono": 4234532
+    },
+    {
+        "Orden": 17,
+        "Nombre": "MACEDONIO",
+        "Direccion": "LAMADRID 525",
+        "Telefono": 4241606
+    },
+    {
+        "Orden": 18,
+        "Nombre": "EL MOJON",
+        "Direccion": "SAN MARTIN 858",
+        "Telefono": 4235761
+    }
+]

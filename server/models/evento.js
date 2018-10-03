@@ -34,6 +34,9 @@ let eventoSchema = new Schema({
     cupo: {
         type: Number,
         default: 10000
+    },
+    color: {
+        type: String
     }
 });
 
