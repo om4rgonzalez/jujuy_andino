@@ -9,11 +9,11 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev;'
 
 //base de datos
 let urlDB;
-//if (process.env.NODE_ENV === 'dev') {
-//    urlDB = 'mongodb://localhost:27017/db_sur_creditos';
-//} else {
-urlDB = 'mongodb://sa:Bintech123@ds229552.mlab.com:29552/jujuy_andino'
-    //}
+if (process.env.NODE_ENV == 'prod') {
+    urlDB = 'mongodb://localhost:27017/jujuy_andino';
+} else {
+    urlDB = 'mongodb://sa:Bintech123@ds229552.mlab.com:29552/jujuy_andino'
+}
 
 
 process.env.URLDB = urlDB;
