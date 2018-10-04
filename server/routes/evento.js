@@ -5,6 +5,7 @@ const Calendario = require('../src/calendario.json')
 
 
 app.post('/conf/calendario_init/', function(req, res) {
+    console.log('Procesando la solicitud: Cargar base de eventos');
     try {
         for (var i in Calendario) {
             for (var j in Calendario[i].eventos) {
