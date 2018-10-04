@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-
+console.log('Llega la peticion');
 //indice de rutas
 app.use(require('./routes/evento'));
 app.use(require('./routes/usuario'));
