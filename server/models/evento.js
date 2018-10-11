@@ -37,6 +37,10 @@ let eventoSchema = new Schema({
     },
     color: {
         type: String
+    },
+    urlCompraTicket: {
+        type: String,
+        default: '-'
     }
 });
 

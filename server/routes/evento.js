@@ -22,6 +22,9 @@ app.post('/conf/calendario_init/', function(req, res) {
     try {
         for (var i in Calendario) {
             for (var j in Calendario[i].eventos) {
+                if (Calendario[i].eventos[j].cupo == 0)
+                    Calendario[i].eventos[j].cupo = 1000000;
+
                 let evento = new Evento({
                     localidad: Calendario[i].localidad,
                     nombreEvento: Calendario[i].eventos[j].evento,
@@ -31,10 +34,14 @@ app.post('/conf/calendario_init/', function(req, res) {
                     latitud: Calendario[i].eventos[j].latitud,
                     longitud: Calendario[i].eventos[j].longitud,
                     id: Calendario[i].eventos[j].id,
-                    color: Calendario[i].eventos[j].color
+                    color: Calendario[i].eventos[j].color,
+                    cupo: Calendario[i].eventos[j].cupo,
+                    urlCompraTicket: Calendario[i].eventos[j].urlCompraTicket
                 });
+
+
                 evento.save();
-                console.log('Evento agregado al calendario');
+                // console.log('Evento agregado al calendario');
             }
         }
         res.json({

@@ -6,6 +6,36 @@ const axios = require('axios');
 const Entrada = require('../models/entrada');
 
 
+//valores que devuelve:
+//0: ok
+//1: no existe el evento
+//2: 
+let verificar_cupo = async(idEvento) => {
+    Evento.find()
+        .where({ id: idEvento })
+        .exec((err, even) => {
+            if (err) {
+                console.log("No existe el evento " + idEvento);
+                return {
+                    ok: 1
+                };
+            }
+
+            if (even.length == 0) {
+                console.log("No existe el evento " + idEvento);
+                return {
+                    ok: 1
+                };
+            }
+
+            return {
+                ok: 0
+            };
+
+        });
+};
+
+
 
 let buscarUsuario = async(email_, res) => {
 
@@ -90,6 +120,8 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
     //clave
     // console.log(req.body.usuario);
 
+    //primero verifico si hay cupo
+
     let idUsuario = '';
     let yaRegistrado = false;
     let idEvento = "";
@@ -142,6 +174,7 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
             }
             if (!yaRegistrado) {
                 Evento.find({ id: req.body.evento.id })
+                    // .where({ completo: false })
                     .exec((err, eventoDB) => {
                         if (err) {
                             return res.status(400).json({
@@ -150,37 +183,66 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                             });
                         }
 
+                        if (eventoDB.length <= 0) {
+                            return res.json({
+                                ok: false,
+                                message: 'No existe un evento con el id enviado'
+                            });
+                        }
 
-                        // idEvento = eventoDB[0]._id;
+                        if (eventoDB[0].cupo > 0) {
+                            let c = eventoDB[0].cupo - 1;
+                            let completo_ = false;
+                            if (c <= 0) {
+                                completo_ = true;
+                            }
 
+                            Evento.findOneAndUpdate({ _id: eventoDB[0]._id }, {
+                                $set: { cupo: c, completo: completo_ }
+                            });
+                            // Aqui tengo que agregar el id a la agenda
+                            Usuario.findOneAndUpdate({ email: req.body.usuario.email }, { $push: { agenda: eventoDB[0]._id } },
+                                function(err, success) {
 
-                        // Aqui tengo que agregar el id a la agenda
-                        Usuario.findOneAndUpdate({ email: req.body.usuario.email }, { $push: { agenda: eventoDB[0]._id } },
-                            function(err, success) {
+                                    if (err) {
+                                        return res.status(400).json({
+                                            ok: false,
+                                            message: 'No se pudo agregar el evento a la agenda'
+                                        });
+                                    }
 
-                                if (err) {
-                                    return res.status(400).json({
-                                        ok: false,
-                                        message: 'No se pudo agregar el evento a la agenda'
+                                    // console.log('id usuario: ' + success);
+                                    // console.log('id usuario guardado: ' + idUsuario);
+
+                                    // genero el ticket de entrada
+                                    let entrada = new Entrada({
+                                        usuario: idUsuario,
+                                        evento: eventoDB[0]._id
                                     });
-                                }
+                                    entrada.save();
 
-                                // console.log('id usuario: ' + success);
-                                // console.log('id usuario guardado: ' + idUsuario);
-
-                                // genero el ticket de entrada
-                                let entrada = new Entrada({
-                                    usuario: idUsuario,
-                                    evento: eventoDB[0]._id
+                                    res.json({
+                                        ok: true,
+                                        message: 'El evento se agrego a la agenda',
+                                        codigo: entrada._id
+                                    });
                                 });
-                                entrada.save();
-
-                                res.json({
-                                    ok: true,
-                                    message: 'El evento se agrego a la agenda',
+                        } else {
+                            //el evento esta completo, queda ver si es que tiene la opcion de comprar la entrada
+                            if (eventoDB[0].urlCompraTicket == '-') { //no se puede comprar ticket
+                                return res.json({
+                                    ok: false,
+                                    message: 'No quedan entradas gratuitas para este evento.',
                                     codigo: entrada._id
                                 });
-                            });
+                            } else { //se puede comprar ticket
+                                return res.json({
+                                    ok: false,
+                                    message: 'No quedan entradas gratuitas para este evento. Puedes comprar accediendo a este link ' + eventoDB[0].urlCompraTicket,
+                                    codigo: entrada._id
+                                });
+                            }
+                        }
                     });
             } else {
                 //busco el tikcet
@@ -193,10 +255,7 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                             codigo: entradaDB[0]._id
                         });
                     });
-
-
             }
-
         });
 });
 

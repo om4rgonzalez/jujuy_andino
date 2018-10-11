@@ -33,5 +33,5 @@ app.listen(process.env.PORT, () => {
     console.log('Ambiente: ' + process.env.NODE_ENV);
     console.log('URL del servicio: ' + process.env.URL_SERVICE);
     console.log('Puerto escuchando: ' + process.env.PORT);
-    console.log('URL base de datos: ' + process.env.urlDB);
+    console.log('URL base de datos: ' + process.env.URLDB);
 });
