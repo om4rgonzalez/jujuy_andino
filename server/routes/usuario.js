@@ -125,6 +125,7 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
     let idUsuario = '';
     let yaRegistrado = false;
     let idEvento = "";
+    console.log('Valor de la variable -esNuevo-: ' + req.body.esNuevo);
     if (req.body.esNuevo) {
         //creo la cuenta del usuario
         let usuario = new Usuario({
