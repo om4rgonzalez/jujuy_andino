@@ -179,19 +179,21 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                         if (err) {
                             return res.status(400).json({
                                 ok: false,
-                                err
+                                err,
+                                codigo: -1
                             });
                         }
 
                         if (eventoDB.length <= 0) {
                             return res.json({
                                 ok: false,
-                                message: 'No existe un evento con el id enviado'
+                                message: 'No existe un evento con el id enviado',
+                                codigo: -1
                             });
                         }
 
                         if (eventoDB[0].cupo > 0) {
-                            let c = eventoDB[0].cupo - 1;
+                            let c = (eventoDB[0].cupo - 1);
                             let completo_ = false;
                             if (c <= 0) {
                                 completo_ = true;
@@ -199,6 +201,17 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
 
                             Evento.findOneAndUpdate({ _id: eventoDB[0]._id }, {
                                 $set: { cupo: c, completo: completo_ }
+                            }, function(err1, success_) {
+                                if (err1) {
+                                    console.log('La actualizacion del evento produjo un error: ' + err1.message);
+                                    return res.json({
+                                        ok: false,
+                                        message: 'La actualizacion del evento produjo un error: ' + err1.message,
+                                        codigo: -1
+                                    })
+                                }
+
+                                console.log('Se actualizo el cupo, ahora vale: ' + c);
                             });
                             // Aqui tengo que agregar el id a la agenda
                             Usuario.findOneAndUpdate({ email: req.body.usuario.email }, { $push: { agenda: eventoDB[0]._id } },
@@ -207,7 +220,8 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                     if (err) {
                                         return res.status(400).json({
                                             ok: false,
-                                            message: 'No se pudo agregar el evento a la agenda'
+                                            message: 'No se pudo agregar el evento a la agenda',
+                                            codigo: -1
                                         });
                                     }
 
