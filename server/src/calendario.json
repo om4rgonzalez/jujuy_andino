@@ -13,6 +13,18 @@
                 "urlCompraTicket": "-"
             },
             {
+                "evento": "Inauguracion Muestra Retrospectiva de 'MiCHI' Aparicio",
+                "lugar": "Culturarte, General San Martín, esquina, Sarmiento",
+                "fechaInicio": "2018-11-03 06:00 PM",
+                "fechaFin": "2018-11-29 08:00 PM",
+                "latitud": -24.1842186,
+                "longitud": -65.3073631,
+                "id": 75,
+                "color": "#F99F38",
+                "cupo": 1,
+                "urlCompraTicket": "-"
+            },
+            {
                 "evento": "Apertura Gala Sinfonica",
                 "lugar": "Teatro Mitre, Alvear 1009",
                 "fechaInicio": "2018-11-03 09:00 PM",
@@ -22,6 +34,42 @@
                 "id": 2,
                 "color": "#70CDDD",
                 "cupo": 0,
+                "urlCompraTicket": "-"
+            },
+            {
+                "evento": "Muestra Fotografica 'Quebrada Oculta' de Luis Calizaya",
+                "lugar": "Centro Cultural C.A.J.A, Alvear 534",
+                "fechaInicio": "2018-11-03 08:30 AM",
+                "fechaFin": "2018-11-30 08:30 PM",
+                "latitud": -24.1842186,
+                "longitud": -65.3073631,
+                "id": 78,
+                "color": "#FFFFF",
+                "cupo": 1,
+                "urlCompraTicket": "-"
+            },
+            {
+                "evento": "Muestra Fotografica 'Casabindo' de Cesar Ruiz",
+                "lugar": "Centro Cultural Macedonio, Lamadrid esquina Guemes",
+                "fechaInicio": "2018-11-03 08:30 AM",
+                "fechaFin": "2018-11-30 08:30 PM",
+                "latitud": 0,
+                "longitud": 0,
+                "id": 79,
+                "color": "#FFFFF",
+                "cupo": 1,
+                "urlCompraTicket": "-"
+            },
+            {
+                "evento": "Muestra Fotografica 'Identidad' de Nicolas Guerrero",
+                "lugar": "Teatro Mitre, Sala Medardo Pantoja, Alvear 1009",
+                "fechaInicio": "2018-11-03 08:30 AM",
+                "fechaFin": "2018-11-30 08:30 PM",
+                "latitud": 0,
+                "longitud": 0,
+                "id": 80,
+                "color": "#FFFFF",
+                "cupo": 1,
                 "urlCompraTicket": "-"
             },
             {
@@ -49,8 +97,20 @@
                 "urlCompraTicket": "-"
             },
             {
+                "evento": "Ll Literatura Como Patrimonio Sustentable. Alejandro Carrizo",
+                "lugar": "Teatro Mitre, Sala Galan, Alvear 1009",
+                "fechaInicio": "2018-11-03 08:30 AM",
+                "fechaFin": "2018-11-30 08:30 PM",
+                "latitud": 0,
+                "longitud": 0,
+                "id": 81,
+                "color": "#FFFFF",
+                "cupo": 1,
+                "urlCompraTicket": "-"
+            },
+            {
                 "evento": "Taller de Instrumentos Reciclados",
-                "lugar": "Lozano",
+                "lugar": "San Salvador de Jujuy",
                 "fechaInicio": "2018-11-04 10:00 AM",
                 "fechaFin": "2018-11-04 11:45 AM",
                 "latitud": -24.06665,
@@ -61,7 +121,7 @@
                 "urlCompraTicket": "-"
             },
             {
-                "evento": "Concierto: Soochow University Brass Quintet, China - Orquesta H2O Sonidos De La Tierra, Paraguay",
+                "evento": "Concierto: Orquesta H2O Sonidos De La Tierra, Paraguay",
                 "lugar": "Teatro Mitre, Alvear 1009",
                 "fechaInicio": "2018-11-04 09:00 PM",
                 "fechaFin": "0",
@@ -69,6 +129,18 @@
                 "longitud": -65.307126,
                 "id": 6,
                 "color": "#70CDDD",
+                "cupo": 0,
+                "urlCompraTicket": "-"
+            },
+            {
+                "evento": "Cine De Las Alturas - 'Taller de Musicalización'",
+                "lugar": "Sala Galan - Teatro Mitre, Alvear 1009",
+                "fechaInicio": "2018-11-05 03:00 PM",
+                "fechaFin": "2018-11-05 07:00 PM",
+                "latitud": 0,
+                "longitud": 0,
+                "id": 90,
+                "color": "#155AA9",
                 "cupo": 0,
                 "urlCompraTicket": "-"
             },
@@ -97,18 +169,6 @@
                 "urlCompraTicket": "-"
             },
             {
-                "evento": "Masterclass a cargo del grupo: Escalandrum",
-                "lugar": "Teatro Mitre",
-                "fechaInicio": "2018-11-05 02:00 PM",
-                "fechaFin": "2018-11-05 04:00 PM",
-                "latitud": -24.184189,
-                "longitud": -65.307126,
-                "id": 9,
-                "color": "#70CDDD",
-                "cupo": 0,
-                "urlCompraTicket": "-"
-            },
-            {
                 "evento": "Concierto Horacio Lavandera",
                 "lugar": "Teatro Mitre, Alvear 1009",
                 "fechaInicio": "2018-11-05 09:00 PM",
@@ -117,6 +177,18 @@
                 "longitud": -65.307126,
                 "id": 10,
                 "color": "#70CDDD",
+                "cupo": 0,
+                "urlCompraTicket": "-"
+            },
+            {
+                "evento": "Cine De Las Alturas - 'Taller de Musicalización'",
+                "lugar": "Sala Galan - Teatro Mitre, Alvear 1009",
+                "fechaInicio": "2018-11-05 09:00 AM",
+                "fechaFin": "2018-11-05 05:00 PM",
+                "latitud": 0,
+                "longitud": 0,
+                "id": 91,
+                "color": "#155AA9",
                 "cupo": 0,
                 "urlCompraTicket": "-"
             },
@@ -133,20 +205,8 @@
                 "urlCompraTicket": "-"
             },
             {
-                "evento": "Masterclass a cargo de: Horacio Lavandera",
-                "lugar": "Teatro Mitre",
-                "fechaInicio": "2018-11-06 11:00 AM",
-                "fechaFin": "2018-11-06 01:00 PM",
-                "latitud": -24.184189,
-                "longitud": -65.307126,
-                "id": 12,
-                "color": "#70CDDD",
-                "cupo": 0,
-                "urlCompraTicket": "-"
-            },
-            {
                 "evento": "Blessing Chimanga and Dreams Band, Zimbabwe - Orquesta Sinfónica Liceo Bicentenario Oscar Castro Zuñiga, Chile ",
-                "lugar": "Posta de Lozano",
+                "lugar": "Anfiteatro Niña Yolanda, Posta de Lozano",
                 "fechaInicio": "2018-11-06 06:00 PM",
                 "fechaFin": "2018-11-06 07:30 PM",
                 "latitud": -24.06665,
@@ -184,7 +244,7 @@
                 "evento": "Charla - Herramientas Digitales Para Emprendedores Sustentables",
                 "lugar": "Sala Raúl Galán. Altos del Teatro Mitre. Alvear 1009",
                 "fechaInicio": "2018-11-06 10:00 AM",
-                "fechaFin": "2018-11-06 12:00 AM",
+                "fechaFin": "2018-11-06 12:00 PM",
                 "latitud": 0,
                 "longitud": 0,
                 "id": 16,
@@ -249,7 +309,7 @@
                 "longitud": 0,
                 "id": 21,
                 "color": "#FFFFFF",
-                "cupo": 0,
+                "cupo": 50,
                 "urlCompraTicket": "-"
             },
             {
@@ -261,7 +321,7 @@
                 "longitud": 0,
                 "id": 22,
                 "color": "#FFFFFF",
-                "cupo": 0,
+                "cupo": 50,
                 "urlCompraTicket": "-"
             },
             {
@@ -273,7 +333,7 @@
                 "longitud": 0,
                 "id": 23,
                 "color": "#FFFFFF",
-                "cupo": 0,
+                "cupo": 50,
                 "urlCompraTicket": "-"
             },
             {
@@ -297,7 +357,7 @@
                 "longitud": 0,
                 "id": 25,
                 "color": "#FFFFFF",
-                "cupo": 0,
+                "cupo": 50,
                 "urlCompraTicket": "-"
             },
             {
@@ -309,7 +369,7 @@
                 "longitud": 0,
                 "id": 26,
                 "color": "#FFFFFF",
-                "cupo": 0,
+                "cupo": 50,
                 "urlCompraTicket": "-"
             },
             {
@@ -321,7 +381,7 @@
                 "longitud": 0,
                 "id": 27,
                 "color": "#FFFFFF",
-                "cupo": 0,
+                "cupo": 50,
                 "urlCompraTicket": "-"
             },
             {
@@ -339,8 +399,8 @@
             {
                 "evento": "Herramientas Digitales Para Emprendedores Sustentables",
                 "lugar": "Sala Raúl Galán. Altos del Teatro Mitre. Alvear 1009",
-                "fechaInicio": "2018-11-06 10:00 AM",
-                "fechaFin": "2018-11-06 12:00 PM",
+                "fechaInicio": "2018-11-07 10:00 AM",
+                "fechaFin": "2018-11-07 12:00 PM",
                 "latitud": 0,
                 "longitud": 0,
                 "id": 29,
@@ -409,18 +469,6 @@
                 "urlCompraTicket": "-"
             },
             {
-                "evento": "Conferencia y Presentación del Libro de Carlos Núñez 'La hermandad de los celtas'",
-                "lugar": "Teatro Mitre",
-                "fechaInicio": "2018-11-09 11:00 AM",
-                "fechaFin": "0",
-                "latitud": -24.184189,
-                "longitud": -65.307126,
-                "id": 35,
-                "color": "#70CDDD",
-                "cupo": 0,
-                "urlCompraTicket": "-"
-            },
-            {
                 "evento": "Encuentro De Ciencias, Taller de Carton 3D y Mapping Andino",
                 "lugar": "Ciudad Cultural. Zorrilla de San Martin esq. Curupaiti .Alto Padilla",
                 "fechaInicio": "2018-11-08 02:00 PM",
@@ -454,6 +502,18 @@
                 "id": 38,
                 "color": "#FFFFFF",
                 "cupo": 20,
+                "urlCompraTicket": "-"
+            },
+            {
+                "evento": "Conferencia y Presentación del Libro de Carlos Núñez 'La hermandad de los celtas'",
+                "lugar": "Teatro Mitre",
+                "fechaInicio": "2018-11-09 11:00 AM",
+                "fechaFin": "0",
+                "latitud": -24.184189,
+                "longitud": -65.307126,
+                "id": 35,
+                "color": "#70CDDD",
+                "cupo": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -499,8 +559,8 @@
             {
                 "evento": "Desfile Moda Etnico Contemporáneo",
                 "lugar": "Posta de Hornillos",
-                "fechaInicio": "2018-11-04 11:00 AM",
-                "fechaFin": "2018-11-04 01:00 PM",
+                "fechaInicio": "2018-11-04 01:00 AM",
+                "fechaFin": "2018-11-04 02:30 PM",
                 "latitud": -23.65462,
                 "longitud": -65.4318,
                 "id": 42,
@@ -766,22 +826,10 @@
                 "urlCompraTicket": "-"
             },
             {
-                "evento": "Maraton de Barriletes",
-                "lugar": "Huacalera",
-                "fechaInicio": "2018-11-08 01:30 PM",
-                "fechaFin": "2018-11-08 03:30 PM",
-                "latitud": 0,
-                "longitud": 0,
-                "id": 63,
-                "color": "#F99F38",
-                "cupo": 0,
-                "urlCompraTicket": "-"
-            },
-            {
                 "evento": "Concierto de Gustavo Santaoalla y Su Banda",
                 "lugar": "Huacalera",
-                "fechaInicio": "2018-11-08 04:00 PM",
-                "fechaFin": "2018-11-08 06:00 PM",
+                "fechaInicio": "2018-11-08 06:00 AM",
+                "fechaFin": "0",
                 "latitud": 0,
                 "longitud": 0,
                 "id": 64,
@@ -842,13 +890,13 @@
                 "urlCompraTicket": "-"
             },
             {
-                "evento": "Jujuy Feria Sustentable",
+                "evento": "Feria Sustentable",
                 "lugar": "Plaza 9 de Julio",
                 "fechaInicio": "2018-11-10 02:00 PM",
                 "fechaFin": "2018-11-10 07:00 PM",
                 "latitud": 0,
                 "longitud": 0,
-                "id": 69,
+                "id": 77,
                 "color": "#F99F38",
                 "cupo": 0,
                 "urlCompraTicket": "-"
