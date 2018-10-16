@@ -71,6 +71,7 @@ let nuevoUsuario = async(usuario) => {
             ok: true
         };
     } catch (e) {
+        console.log('Fallo el registro del usuario: ' + e.message);
         return {
             ok: false
         };
@@ -84,6 +85,7 @@ let nuevoEvento = async(evento) => {
             ok: true
         };
     } catch (e) {
+
         return {
             ok: false
         };
@@ -144,11 +146,13 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
             let respuestaNuevoUsuario = await nuevoUsuario(usuario);
             if (respuestaNuevoUsuario.ok) {
                 idUsuario = usuario._id;
-            } else
-                return res.status(400).json({
-                    ok: false,
-                    message: 'No se pudo dar de alta el usuario. Error '
-                });
+            }
+            // else
+
+            //     return res.status(400).json({
+            //         ok: false,
+            //         message: 'No se pudo dar de alta el usuario. Error '
+            //     });
 
         } catch (e) {
             return res.status(400).json({
