@@ -155,10 +155,11 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
             //     });
 
         } catch (e) {
-            return res.status(400).json({
-                ok: false,
-                message: 'No se pudo dar de alta el usuario. Error ' + e.message
-            });
+            console.log('No se pudo dar de alta el usuario. Error ' + e.message);
+            // return res.status(400).json({
+            //     ok: false,
+            //     message: 'No se pudo dar de alta el usuario. Error ' + e.message
+            // });
         }
     }
     Usuario.find({ email: req.body.usuario.email })
@@ -258,13 +259,13 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                 return res.json({
                                     ok: false,
                                     message: 'No quedan entradas gratuitas para este evento.',
-                                    codigo: entrada._id
+                                    codigo: -1
                                 });
                             } else { //se puede comprar ticket
                                 return res.json({
                                     ok: false,
                                     message: 'No quedan entradas gratuitas para este evento. Puedes comprar accediendo a este link ' + eventoDB[0].urlCompraTicket,
-                                    codigo: entrada._id
+                                    codigo: -1
                                 });
                             }
                         }
