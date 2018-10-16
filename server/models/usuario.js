@@ -16,6 +16,25 @@ let usuarioSchema = new Schema({
         type: String,
         default: '-'
     },
+    pais: {
+        type: String
+    },
+    provincia: {
+        type: String
+    },
+    fechaNacimiento: {
+        type: Date
+    },
+    tipoDocumento: {
+        type: String,
+        default: 'DNI'
+    },
+    documentoIdentidad: {
+        type: String
+    },
+    hotel: {
+        type: String
+    },
     clave: {
         type: String,
         default: '-'

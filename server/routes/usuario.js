@@ -131,8 +131,14 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
         let usuario = new Usuario({
             idGoogle: req.body.usuario.idGoogle,
             email: req.body.usuario.email,
+            pais: req.body.usuario.pais,
+            provincia: req.body.usuario.provincia,
+            tipoDocumento: req.body.usuario.tipoDocumento,
+            documentoIdentidad: req.body.usuario.documentoIdentidad,
+            fechaNacimiento: req.body.usuario.fechaNacimiento,
             nombre: req.body.usuario.nombre,
-            clave: req.body.usuario.clave
+            clave: req.body.usuario.clave,
+            hotel: req.body.usuario.hotel
         });
         try {
             let respuestaNuevoUsuario = await nuevoUsuario(usuario);
