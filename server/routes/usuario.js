@@ -348,6 +348,30 @@ app.post('/agenda/verficar_asistencia/', function(req, res) {
         });
 });
 
+app.post('/agenda/confirmar_asistencia/', function(req, res) {
+
+
+    Entrada.findOneAndUpdate({ _id: req.body.idEntrada }, { $set: { entradaConfirmada: true } },
+        function(err, success) {
+
+            if (err) {
+                return res.status(400).json({
+                    ok: false,
+                    message: 'No se pudo confirmar la entrada. Error: ' + err.message
+                });
+            }
+
+
+
+            res.json({
+                ok: true,
+                message: 'La entrada fue confirmada'
+            });
+        });
+
+
+});
+
 
 
 module.exports = app;

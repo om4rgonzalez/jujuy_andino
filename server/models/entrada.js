@@ -10,6 +10,10 @@ let entradaSchema = new Schema({
     evento: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Evento'
+    },
+    entradaConfirmada: {
+        type: Boolean,
+        default: false
     }
 });
 
