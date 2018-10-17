@@ -127,7 +127,7 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
     let idUsuario = '';
     let yaRegistrado = false;
     let idEvento = "";
-    console.log('Valor de la variable -esNuevo-: ' + req.body.esNuevo);
+    // console.log('Valor de la variable -esNuevo-: ' + req.body.esNuevo);
     if (req.body.esNuevo) {
         //creo la cuenta del usuario
         let usuario = new Usuario({
@@ -295,13 +295,15 @@ app.get('/agenda/obtener_eventos/', function(req, res) {
             if (err) {
                 return res.status(400).json({
                     ok: false,
-                    err
+                    message: 'La busqueda de usuario devolvio un error: ' + err.message,
+                    usuario
                 });
             }
             if (usuario.length == 0) {
                 return res.status(404).json({
                     ok: false,
-                    message: 'Usuario no encontrado'
+                    message: 'Usuario no encontrado',
+                    usuario
                 });
             }
 
@@ -310,6 +312,7 @@ app.get('/agenda/obtener_eventos/', function(req, res) {
 
             res.json({
                 ok: true,
+                message: 'Usuario encontrado',
                 usuario
             });
         });
