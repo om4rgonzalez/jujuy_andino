@@ -392,6 +392,11 @@ app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
             });
     } else {
         console.log('No se pudo buscar la entrada');
+        res.json({
+            ok: true,
+            message: 'No hay datos para esa entrada',
+            entradas: null
+        });
     }
 });
 
