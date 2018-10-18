@@ -400,56 +400,58 @@ app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
     }
 });
 
-app.post('/agenda/verficar_asistencia/', function(req, res) {
+// app.post('/agenda/verficar_asistencia/', function(req, res) {
 
-    Usuario.find({ email: req.body.email })
-        .populate('agenda')
-        .exec((err, usuario) => {
-            if (err) {
-                return res.status(400).json({
-                    ok: false,
-                    err
-                });
-            }
+//     Usuario.find({ email: req.body.email })
+//         .populate('agenda')
+//         .exec((err, usuario) => {
+//             if (err) {
+//                 return res.status(400).json({
+//                     ok: false,
+//                     err
+//                 });
+//             }
 
-            usuario = usuario.filter(function(usuario) {
-                return usuario.agenda.id != req.body.idEvento;
-            })
+//             usuario = usuario.filter(function(usuario) {
+//                 return usuario.agenda.id != req.body.idEvento;
+//             })
 
 
-            if (usuario.length != 0) {
-                return res.status(404).json({
-                    ok: false,
-                    message: 'Usuario ya registrado al evento'
-                });
-            }
-            res.json({
-                ok: true,
-                message: 'El usuario aun no se registro en el evento'
-            });
-        });
-});
+//             if (usuario.length != 0) {
+//                 return res.status(404).json({
+//                     ok: false,
+//                     message: 'Usuario ya registrado al evento'
+//                 });
+//             }
+//             res.json({
+//                 ok: true,
+//                 message: 'El usuario aun no se registro en el evento'
+//             });
+//         });
+// });
 
 app.post('/agenda/confirmar_asistencia/', function(req, res) {
 
+    for (var i in req.body.entradas) {
+        Entrada.findOneAndUpdate({ _id: req.body.entradas[i]._id }, { $set: { entradaConfirmada: true } },
+            function(err, success) {
 
-    Entrada.findOneAndUpdate({ _id: req.body.idEntrada }, { $set: { entradaConfirmada: true } },
-        function(err, success) {
+                if (err) {
+                    return res.status(400).json({
+                        ok: false,
+                        message: 'No se pudo confirmar la entrada. Error: ' + err.message
+                    });
+                }
 
-            if (err) {
-                return res.status(400).json({
-                    ok: false,
-                    message: 'No se pudo confirmar la entrada. Error: ' + err.message
+
+
+                res.json({
+                    ok: true,
+                    message: 'La entrada fue confirmada'
                 });
-            }
-
-
-
-            res.json({
-                ok: true,
-                message: 'La entrada fue confirmada'
             });
-        });
+    }
+
 
 
 });
