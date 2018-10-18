@@ -78,6 +78,15 @@ let nuevoUsuario = async(usuario) => {
     }
 };
 
+function buscarEntrada_(idEntrada) {
+    console.log('Id de entrada =', idEntrada);
+    return new Promise(function() {
+
+    });
+}
+
+
+
 let nuevoEvento = async(evento) => {
     try {
         evento.save();
@@ -109,6 +118,32 @@ let verificarAsistencia = async(usuario, idEvento_, res) => {
         });
 };
 
+
+app.post('/agenda/buscar_entrada/', async function(req, res) {
+    Entrada.find({ _id: req.body.idEntrada })
+        // .populate('Usuario')
+        .populate('evento')
+        .exec((err, entrada) => {
+            if (err) {
+                return res.json({
+                    ok: false
+                });
+            }
+
+            if (entrada.length == 0) {
+                return res.json({
+                    ok: false
+                });
+            }
+
+            // console.log('encontro una entrada: ');
+            // console.log(entrada[0]);
+            return res.json({
+                ok: true,
+                entrada: entrada[0]
+            });
+        });
+})
 
 app.post('/agenda/agregar_evento/', async function(req, res) {
     //datos que recibe:
@@ -316,6 +351,48 @@ app.get('/agenda/obtener_eventos/', function(req, res) {
                 usuario
             });
         });
+});
+
+app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
+    let usuarios = [];
+    let URL = process.env.URL_SERVICE + process.env.PORT + '/agenda/buscar_entrada/';
+    let entrada = await axios.post(URL, {
+        idEntrada: req.query.idEntrada
+    });
+
+    // console.log('El objeto que devuelve la funcion es: ');
+    // console.log(entrada);
+    if (entrada.data.ok) {
+        Entrada.find()
+            .populate('usuario', 'nombre email tipoDocumento documentoIdentidad pais provincia')
+            .populate('evento')
+            .where({ usuario: entrada.data.entrada.usuario })
+            .exec((err, entradas) => {
+                if (err) {
+                    return res.json({
+                        ok: false,
+                        message: 'La busqueda produjo un error: ' + err.message,
+                        entradas: null
+                    });
+                }
+                if (entradas.length == 0) {
+                    return res.json({
+                        ok: false,
+                        message: 'El usuario no tiene entradas',
+                        entradas: null
+                    });
+                }
+
+                res.json({
+                    ok: true,
+                    message: 'El usuario tiene entradas pendientes',
+                    entradas: entradas
+                });
+
+            });
+    } else {
+        console.log('No se pudo buscar la entrada');
+    }
 });
 
 app.post('/agenda/verficar_asistencia/', function(req, res) {
