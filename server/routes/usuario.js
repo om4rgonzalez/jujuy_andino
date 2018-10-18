@@ -324,31 +324,43 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
 app.get('/agenda/obtener_eventos/', function(req, res) {
     let usuarios = [];
 
-    Usuario.find({ email: req.query.email })
-        .populate('agenda')
-        .exec((err, usuario) => {
+    Entrada.find()
+        .populate('evento')
+        .populate('usuario', 'nombre email tipoDocumento documentoIdentidad pais provincia')
+        // .where({ 'usuario.email': req.query.email })
+        .exec((err, entradas) => {
             if (err) {
                 return res.status(400).json({
                     ok: false,
                     message: 'La busqueda de usuario devolvio un error: ' + err.message,
-                    usuario
+                    entradas
                 });
             }
-            if (usuario.length == 0) {
+            if (entradas.length == 0) {
                 return res.status(404).json({
                     ok: false,
                     message: 'Usuario no encontrado',
-                    usuario
+                    entradas
                 });
             }
 
+            entradas = entradas.filter(function(entradas) {
+                return entradas.usuario.email == req.query.email;
+            })
 
 
+            if (entradas.length == 0) {
+                return res.status(404).json({
+                    ok: false,
+                    message: 'El usuario no tiene entradas en su agenda',
+                    entradas
+                });
+            }
 
             res.json({
                 ok: true,
                 message: 'Usuario encontrado',
-                usuario
+                entradas
             });
         });
 });
