@@ -17,7 +17,7 @@ console.log('Llega la peticion');
 //indice de rutas
 app.use(require('./routes/evento'));
 app.use(require('./routes/usuario'));
-// app.use(require('./server_entidades/server_entidades'));
+app.use(require('./routes/horarioBus'));
 // app.use(require('./server_persona/server_persona'));
 // app.use(require('./server_usuario/server_usuario'));
 // app.use(require('./server_contacto/server_contacto'));

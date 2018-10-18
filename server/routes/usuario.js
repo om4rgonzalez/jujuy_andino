@@ -463,9 +463,6 @@ app.post('/agenda/confirmar_asistencia/', function(req, res) {
                 });
             });
     }
-
-
-
 });
 
 
