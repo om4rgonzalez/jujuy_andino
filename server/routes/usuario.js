@@ -378,7 +378,7 @@ app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
         Entrada.find()
             .populate('usuario', 'nombre email tipoDocumento documentoIdentidad pais provincia')
             .populate('evento')
-            .where({ usuario: entrada.data.entrada.usuario })
+            .where({ usuario: entrada.data.entrada.usuario, entradaConfirmada: false })
             .exec((err, entradas) => {
                 if (err) {
                     return res.json({
@@ -444,25 +444,33 @@ app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
 
 app.post('/agenda/confirmar_asistencia/', function(req, res) {
 
+    let exito = true;
+    let mensajeError = '';
+
     for (var i in req.body.entradas) {
         Entrada.findOneAndUpdate({ _id: req.body.entradas[i]._id }, { $set: { entradaConfirmada: true } },
             function(err, success) {
 
                 if (err) {
-                    return res.status(400).json({
-                        ok: false,
-                        message: 'No se pudo confirmar la entrada. Error: ' + err.message
-                    });
+                    exito = false;
+                    mensajeError = 'No se pudo confirmar la entrada. Error: ' + err.message;
+                    // return res.status(400).json({
+                    //     ok: false,
+                    //     message: 'No se pudo confirmar la entrada. Error: ' + err.message
+                    // });
                 }
-
-
-
-                res.json({
-                    ok: true,
-                    message: 'La entrada fue confirmada'
-                });
             });
     }
+    if (exito)
+        res.json({
+            ok: true,
+            message: 'La entrada fue confirmada'
+        });
+    else
+        return res.json({
+            ok: false,
+            message: mensajeError
+        });
 });
 
 
