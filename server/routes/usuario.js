@@ -299,7 +299,7 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                             } else { //se puede comprar ticket
                                 return res.json({
                                     ok: false,
-                                    message: 'No quedan entradas gratuitas para este evento. Puedes comprar accediendo a este link ' + eventoDB[0].urlCompraTicket,
+                                    message: 'No quedan entradas gratuitas para este evento.',
                                     codigo: -1
                                 });
                             }
