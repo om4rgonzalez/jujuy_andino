@@ -22,7 +22,7 @@
                 "id": 75,
                 "color": "#F99F38",
                 "cupo": 1,
-                "urlCompraTicket": "-"
+                "urlCompraTicket": "https://portal.autoentrada.com/apertura-gala-sinfonica-festival-jujuy-corazon-andino.html"
             },
             {
                 "evento": "Apertura Gala Sinfonica",
@@ -33,7 +33,7 @@
                 "longitud": -65.307126,
                 "id": 2,
                 "color": "#70CDDD",
-                "cupo": 0,
+                "cupo": 400,
                 "urlCompraTicket": "-"
             }, {
                 "evento": "Muestra Fotografica 'Quebrada Oculta' de Luis Calizaya",
@@ -120,13 +120,13 @@
                 "urlCompraTicket": "-"
             },
             {
-                "evento": "Concierto: Orquesta H2O Sonidos De La Tierra, Paraguay",
+                "evento": "Concierto de Gala - Orquesta de cuerdas del Instituto GPA",
                 "lugar": "Teatro Mitre, Alvear 1009",
                 "fechaInicio": "2018-11-04 09:00 PM",
                 "fechaFin": "0",
                 "latitud": -24.184189,
                 "longitud": -65.307126,
-                "id": 6,
+                "id": 82,
                 "color": "#70CDDD",
                 "cupo": 0,
                 "urlCompraTicket": "-"
@@ -176,8 +176,8 @@
                 "longitud": -65.307126,
                 "id": 10,
                 "color": "#70CDDD",
-                "cupo": 0,
-                "urlCompraTicket": "-"
+                "cupo": 500,
+                "urlCompraTicket": "https://portal.autoentrada.com/horacio-lavandera-festival-jujuy-corazon-andino.html"
             },
             {
                 "evento": "Cine De Las Alturas - 'Taller de Musicalización'",
@@ -212,7 +212,7 @@
                 "longitud": -65.41549,
                 "id": 13,
                 "color": "#70CDDD",
-                "cupo": 0,
+                "cupo": 2000,
                 "urlCompraTicket": "-"
             },
             {
@@ -236,8 +236,8 @@
                 "longitud": -65.307126,
                 "id": 15,
                 "color": "#70CDDD",
-                "cupo": 0,
-                "urlCompraTicket": "-"
+                "cupo": 500,
+                "urlCompraTicket": "https://portal.autoentrada.com/elena-roger-sinfonico-festival-jujuy-corazon-andino.html"
             },
             {
                 "evento": "Charla - Herramientas Digitales Para Emprendedores Sustentables",
@@ -296,7 +296,7 @@
                 "longitud": -65.307126,
                 "id": 20,
                 "color": "#EF4823",
-                "cupo": 0,
+                "cupo": 800,
                 "urlCompraTicket": "-"
             },
             {
@@ -552,8 +552,8 @@
                 "longitud": -65.4318,
                 "id": 41,
                 "color": "#F5C515",
-                "cupo": 0,
-                "urlCompraTicket": "-"
+                "cupo": 300,
+                "urlCompraTicket": "https://portal.autoentrada.com/feria-gastronomica-festival-jujuy-corazon-andino.html"
             },
             {
                 "evento": "Desfile Moda Etnico Contemporáneo",
@@ -592,7 +592,7 @@
                 "urlCompraTicket": "-"
             },
             {
-                "evento": "Concierto de Coro de Niños del Teatro Colo",
+                "evento": "Concierto de Coro de Niños del Teatro Colon",
                 "lugar": "Iglesia - Nuestra Señora de la Calendaria",
                 "fechaInicio": "2018-11-04 06:00 PM",
                 "fechaFin": "2018-11-04 07:30 PM",
@@ -600,7 +600,7 @@
                 "longitud": -65.40904,
                 "id": 45,
                 "color": "#70CDDD",
-                "cupo": 0,
+                "cupo": 100,
                 "urlCompraTicket": "-"
             }
         ]
@@ -652,8 +652,8 @@
                 "longitud": -65.46786,
                 "id": 49,
                 "color": "#70CDDD",
-                "cupo": 0,
-                "urlCompraTicket": "-"
+                "cupo": 300,
+                "urlCompraTicket": "https://portal.autoentrada.com/julie-freundt-festival-jujuy-corazon-andino.html"
             },
             {
                 "evento": "Concierto del Ensamble Barroco Del Teatro Colón (ISA)",
@@ -664,7 +664,7 @@
                 "longitud": -65.46786,
                 "id": 50,
                 "color": "#70CDDD",
-                "cupo": 0,
+                "cupo": 100,
                 "urlCompraTicket": "-"
             }
 
@@ -681,7 +681,7 @@
                 "longitud": -65.19338,
                 "id": 51,
                 "color": "#70CDDD",
-                "cupo": 0,
+                "cupo": 150,
                 "urlCompraTicket": "-"
             },
             {
@@ -729,7 +729,7 @@
                 "longitud": -65.34894,
                 "id": 55,
                 "color": "#70CDDD",
-                "cupo": 0,
+                "cupo": 100,
                 "urlCompraTicket": "-"
             }
         ]
@@ -781,8 +781,8 @@
                 "longitud": -65.46989,
                 "id": 59,
                 "color": "#70CDDD",
-                "cupo": 0,
-                "urlCompraTicket": "-"
+                "cupo": 1000,
+                "urlCompraTicket": "https://portal.autoentrada.com/paquito-d-rivera-festival-jujuy-corazon-andino.html"
             }
         ]
     },
@@ -825,16 +825,16 @@
                 "urlCompraTicket": "-"
             },
             {
-                "evento": "Concierto de Gustavo Santaoalla y Su Banda",
+                "evento": "EL DESPERTAR - Concierto de Gustavo Santaoalla y Su Banda",
                 "lugar": "Huacalera",
-                "fechaInicio": "2018-11-08 06:00 AM",
+                "fechaInicio": "2018-11-08 04:00 PM",
                 "fechaFin": "0",
                 "latitud": -23.438735,
                 "longitud": -65.350692,
                 "id": 64,
                 "color": "#70CDDD",
-                "cupo": 0,
-                "urlCompraTicket": "-"
+                "cupo": 1500,
+                "urlCompraTicket": "https://portal.autoentrada.com/el-despertar-gustavo-santaolalla-festival-jujuy-corazon-andino.html"
             },
             {
                 "evento": "Concierto del Ensamble Barroco Del Teatro Colón (ISA)",
@@ -845,7 +845,7 @@
                 "longitud": -65.39192,
                 "id": 65,
                 "color": "#EF4823",
-                "cupo": 0,
+                "cupo": 100,
                 "urlCompraTicket": "-"
             }
         ]
@@ -877,10 +877,22 @@
                 "urlCompraTicket": "-"
             },
             {
-                "evento": "Concierto de Campanas",
+                "evento": "Concierto: Orquesta H2O Sonidos De La Tierra, Paraguay",
                 "lugar": "Purmamarca - Iglesia Santa Rosa de Lima",
                 "fechaInicio": "2018-11-09 03:00 PM",
-                "fechaFin": "2018-11-09 05:00 PM",
+                "fechaFin": "0",
+                "latitud": -23.74711,
+                "longitud": -65.4993,
+                "id": 6,
+                "color": "#70CDDD",
+                "cupo": 0,
+                "urlCompraTicket": "-"
+            },
+            {
+                "evento": "Concierto de Campanas",
+                "lugar": "Purmamarca - Iglesia Santa Rosa de Lima",
+                "fechaInicio": "2018-11-09 12:30 PM",
+                "fechaFin": "2018-11-09 03:00 PM",
                 "latitud": -23.74711,
                 "longitud": -65.4993,
                 "id": 68,
@@ -909,8 +921,8 @@
                 "longitud": -65.504345,
                 "id": 70,
                 "color": "#F99F38",
-                "cupo": 0,
-                "urlCompraTicket": "-"
+                "cupo": 4000,
+                "urlCompraTicket": "https://portal.autoentrada.com/espectaculo-clausura-festival-jujuy-corazon-andino.html"
             }
         ]
     },
@@ -961,7 +973,7 @@
                 "longitud": -65.3562,
                 "id": 74,
                 "color": "#70CDDD",
-                "cupo": 0,
+                "cupo": 70,
                 "urlCompraTicket": "-"
             }
         ]
