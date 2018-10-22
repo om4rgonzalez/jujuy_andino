@@ -162,9 +162,24 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
     let idUsuario = '';
     let yaRegistrado = false;
     let idEvento = "";
+    let esLocal = true;
+    let tieneHotel = true;
     // console.log('Valor de la variable -esNuevo-: ' + req.body.esNuevo);
     if (req.body.esNuevo) {
         //creo la cuenta del usuario
+        if (req.body.usuario.provincia) {
+            if (req.body.usuario.provincia.toUpperCase() == 'JUJUY')
+                esLocal = true;
+            else {
+                esLocal = false;
+                if (req.body.usuario.hotel) {
+                    tieneHotel = true;
+                } else
+                    tieneHotel = false;
+            }
+
+        }
+
         let usuario = new Usuario({
             idGoogle: req.body.usuario.idGoogle,
             email: req.body.usuario.email,
@@ -210,6 +225,16 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                 idUsuario = usuario[0]._id;
             }
 
+            if (usuario[0].provincia.toUpperCase() == 'JUJUY')
+                esLocal = true;
+            else
+                esLocal = false;
+
+            if (usuario[0].hotel != '-')
+                tieneHotel = true;
+            else
+                tieneHotel = false;
+
             for (var j in usuario) {
                 for (var i in usuario[j].agenda) {
                     if (usuario[j].agenda[i].id == req.body.evento.id) {
@@ -238,65 +263,145 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                 codigo: -1
                             });
                         }
-
-                        if (eventoDB[0].cupo > 0) {
-                            let c = (eventoDB[0].cupo - 1);
-                            let completo_ = false;
-                            if (c <= 0) {
-                                completo_ = true;
-                            }
-
-                            Evento.findOneAndUpdate({ _id: eventoDB[0]._id }, {
-                                $set: { cupo: c, completo: completo_ }
-                            }, function(err1, success_) {
-                                if (err1) {
-                                    console.log('La actualizacion del evento produjo un error: ' + err1.message);
-                                    return res.json({
-                                        ok: false,
-                                        message: 'La actualizacion del evento produjo un error: ' + err1.message,
-                                        codigo: -1
-                                    })
+                        if (esLocal) {
+                            if (eventoDB[0].cupo > 0) {
+                                let c = (eventoDB[0].cupo - 1);
+                                let completo_ = false;
+                                if (c <= 0) {
+                                    completo_ = true;
                                 }
 
-                                console.log('Se actualizo el cupo, ahora vale: ' + c);
-                            });
-                            // Aqui tengo que agregar el id a la agenda
-                            Usuario.findOneAndUpdate({ email: req.body.usuario.email }, { $push: { agenda: eventoDB[0]._id } },
-                                function(err, success) {
 
-                                    if (err) {
-                                        return res.status(400).json({
+                                Evento.findOneAndUpdate({ _id: eventoDB[0]._id }, {
+                                    $set: { cupo: c, completo: completo_ }
+                                }, function(err1, success_) {
+                                    if (err1) {
+                                        console.log('La actualizacion del evento produjo un error: ' + err1.message);
+                                        return res.json({
                                             ok: false,
-                                            message: 'No se pudo agregar el evento a la agenda',
+                                            message: 'La actualizacion del evento produjo un error: ' + err1.message,
+                                            codigo: -1
+                                        })
+                                    }
+
+                                    console.log('Se actualizo el cupo, ahora vale: ' + c);
+                                });
+                                // Aqui tengo que agregar el id a la agenda
+                                Usuario.findOneAndUpdate({ email: req.body.usuario.email }, { $push: { agenda: eventoDB[0]._id } },
+                                    function(err, success) {
+
+                                        if (err) {
+                                            return res.status(400).json({
+                                                ok: false,
+                                                message: 'No se pudo agregar el evento a la agenda',
+                                                codigo: -1
+                                            });
+                                        }
+
+                                        // console.log('id usuario: ' + success);
+                                        // console.log('id usuario guardado: ' + idUsuario);
+
+                                        // genero el ticket de entrada
+                                        let entrada = new Entrada({
+                                            usuario: idUsuario,
+                                            evento: eventoDB[0]._id
+                                        });
+                                        entrada.save();
+
+                                        res.json({
+                                            ok: true,
+                                            message: 'El evento se agrego a la agenda',
+                                            codigo: entrada._id
+                                        });
+                                    });
+                            } else {
+                                //el evento esta completo, queda ver si es que tiene la opcion de comprar la entrada
+                                if (eventoDB[0].urlCompraTicket == '-') { //no se puede comprar ticket
+                                    return res.json({
+                                        ok: false,
+                                        message: 'No quedan entradas gratuitas para este evento.',
+                                        codigo: -1
+                                    });
+                                } else { //se puede comprar ticket
+                                    return res.json({
+                                        ok: false,
+                                        message: 'No quedan entradas gratuitas para este evento.',
+                                        codigo: -1
+                                    });
+                                }
+                            }
+
+                        } else {
+                            if (tieneHotel) {
+                                //aqui debe tener en cuenta el cupo externo
+                                if (eventoDB[0].cupoExterno > 0) {
+                                    let c = (eventoDB[0].cupoExterno - 1);
+                                    let completo_ = false;
+                                    if (c <= 0) {
+                                        completo_ = true;
+                                    }
+
+
+                                    Evento.findOneAndUpdate({ _id: eventoDB[0]._id }, {
+                                        $set: { cupoExterno: c, completo: completo_ }
+                                    }, function(err1, success_) {
+                                        if (err1) {
+                                            console.log('La actualizacion del evento produjo un error: ' + err1.message);
+                                            return res.json({
+                                                ok: false,
+                                                message: 'La actualizacion del evento produjo un error: ' + err1.message,
+                                                codigo: -1
+                                            })
+                                        }
+
+                                        console.log('Se actualizo el cupo, ahora vale: ' + c);
+                                    });
+                                    // Aqui tengo que agregar el id a la agenda
+                                    Usuario.findOneAndUpdate({ email: req.body.usuario.email }, { $push: { agenda: eventoDB[0]._id } },
+                                        function(err, success) {
+
+                                            if (err) {
+                                                return res.status(400).json({
+                                                    ok: false,
+                                                    message: 'No se pudo agregar el evento a la agenda',
+                                                    codigo: -1
+                                                });
+                                            }
+
+                                            // console.log('id usuario: ' + success);
+                                            // console.log('id usuario guardado: ' + idUsuario);
+
+                                            // genero el ticket de entrada
+                                            let entrada = new Entrada({
+                                                usuario: idUsuario,
+                                                evento: eventoDB[0]._id
+                                            });
+                                            entrada.save();
+
+                                            res.json({
+                                                ok: true,
+                                                message: 'El evento se agrego a la agenda',
+                                                codigo: entrada._id
+                                            });
+                                        });
+                                } else {
+                                    //el evento esta completo, queda ver si es que tiene la opcion de comprar la entrada
+                                    if (eventoDB[0].urlCompraTicket == '-') { //no se puede comprar ticket
+                                        return res.json({
+                                            ok: false,
+                                            message: 'No quedan entradas gratuitas para este evento.',
+                                            codigo: -1
+                                        });
+                                    } else { //se puede comprar ticket
+                                        return res.json({
+                                            ok: false,
+                                            message: 'No quedan entradas gratuitas para este evento.',
                                             codigo: -1
                                         });
                                     }
-
-                                    // console.log('id usuario: ' + success);
-                                    // console.log('id usuario guardado: ' + idUsuario);
-
-                                    // genero el ticket de entrada
-                                    let entrada = new Entrada({
-                                        usuario: idUsuario,
-                                        evento: eventoDB[0]._id
-                                    });
-                                    entrada.save();
-
-                                    res.json({
-                                        ok: true,
-                                        message: 'El evento se agrego a la agenda',
-                                        codigo: entrada._id
-                                    });
-                                });
-                        } else {
-                            //el evento esta completo, queda ver si es que tiene la opcion de comprar la entrada
-                            if (eventoDB[0].urlCompraTicket == '-') { //no se puede comprar ticket
-                                return res.json({
-                                    ok: false,
-                                    message: 'No quedan entradas gratuitas para este evento.',
-                                    codigo: -1
-                                });
-                            } else { //se puede comprar ticket
+                                }
+                            } else {
+                                //no tiene hotel, no puede reservar entrada
                                 return res.json({
                                     ok: false,
                                     message: 'No quedan entradas gratuitas para este evento.',
@@ -304,6 +409,7 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                 });
                             }
                         }
+
                     });
             } else {
                 //busco el tikcet

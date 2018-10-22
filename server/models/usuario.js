@@ -20,7 +20,8 @@ let usuarioSchema = new Schema({
         type: String
     },
     provincia: {
-        type: String
+        type: String,
+        default: '-'
     },
     fechaNacimiento: {
         type: Date
