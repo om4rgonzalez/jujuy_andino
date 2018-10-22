@@ -78,6 +78,8 @@ let nuevoUsuario = async(usuario) => {
     }
 };
 
+
+
 function buscarEntrada_(idEntrada) {
     console.log('Id de entrada =', idEntrada);
     return new Promise(function() {
@@ -117,6 +119,35 @@ let verificarAsistencia = async(usuario, idEvento_, res) => {
             ok: false
         });
 };
+
+app.post('/usuario/nuevo/', async function(req, res) {
+    try {
+        let usuario = new Usuario({
+            _id: req.body._id,
+            idGoogle: req.body.idGoogle,
+            email: req.body.email,
+            pais: req.body.pais,
+            provincia: req.body.provincia,
+            tipoDocumento: req.body.tipoDocumento,
+            documentoIdentidad: req.body.documentoIdentidad,
+            fechaNacimiento: req.body.fechaNacimiento,
+            nombre: req.body.nombre,
+            clave: req.body.clave,
+            hotel: req.body.hotel
+        });
+
+
+        usuario.save();
+        res.json({
+            ok: true
+        });
+    } catch (e) {
+        console.log('Fallo el registro del usuario: ' + e.message);
+        res.json({
+            ok: false
+        });
+    }
+});
 
 
 app.post('/agenda/buscar_entrada/', async function(req, res) {
@@ -169,6 +200,7 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
         //creo la cuenta del usuario
         console.log('Pais: ' + req.body.usuario.pais);
         console.log('Provincia: ' + req.body.usuario.provincia);
+
         if (req.body.usuario.provincia) {
             if (req.body.usuario.provincia.toUpperCase() == 'JUJUY')
                 esLocal = true;
@@ -181,30 +213,44 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
             }
 
         }
+        let URL = process.env.URL_SERVICE + process.env.PORT + '/usuario/nuevo/';
 
-        let usuario = new Usuario({
-            idGoogle: req.body.usuario.idGoogle,
-            email: req.body.usuario.email,
-            pais: req.body.usuario.pais,
-            provincia: req.body.usuario.provincia,
-            tipoDocumento: req.body.usuario.tipoDocumento,
-            documentoIdentidad: req.body.usuario.documentoIdentidad,
-            fechaNacimiento: req.body.usuario.fechaNacimiento,
-            nombre: req.body.usuario.nombre,
-            clave: req.body.usuario.clave,
-            hotel: req.body.usuario.hotel
-        });
+        // let usuario = new Usuario({
+        //     idGoogle: req.body.usuario.idGoogle,
+        //     email: req.body.usuario.email,
+        //     pais: req.body.usuario.pais,
+        //     provincia: req.body.usuario.provincia,
+        //     tipoDocumento: req.body.usuario.tipoDocumento,
+        //     documentoIdentidad: req.body.usuario.documentoIdentidad,
+        //     fechaNacimiento: req.body.usuario.fechaNacimiento,
+        //     nombre: req.body.usuario.nombre,
+        //     clave: req.body.usuario.clave,
+        //     hotel: req.body.usuario.hotel
+        // });
         try {
-            let respuestaNuevoUsuario = await nuevoUsuario(usuario);
-            if (respuestaNuevoUsuario.ok) {
+            // let respuestaNuevoUsuario = await nuevoUsuario(usuario);
+            let usuario = new Usuario();
+            let resp = await axios.post(URL, {
+                _id: usuario._id,
+                idGoogle: req.body.usuario.idGoogle,
+                email: req.body.usuario.email,
+                pais: req.body.usuario.pais,
+                provincia: req.body.usuario.provincia,
+                tipoDocumento: req.body.usuario.tipoDocumento,
+                documentoIdentidad: req.body.usuario.documentoIdentidad,
+                fechaNacimiento: req.body.usuario.fechaNacimiento,
+                nombre: req.body.usuario.nombre,
+                clave: req.body.usuario.clave,
+                hotel: req.body.usuario.hotel
+            });
+            if (resp.data.ok) {
                 idUsuario = usuario._id;
-            }
-            // else
-
-            //     return res.status(400).json({
-            //         ok: false,
-            //         message: 'No se pudo dar de alta el usuario. Error '
-            //     });
+                // console.log('Ya se dio de alta el usuario');
+            } else
+                return res.status(400).json({
+                    ok: false,
+                    message: 'No se pudo dar de alta el usuario. Error '
+                });
 
         } catch (e) {
             console.log('No se pudo dar de alta el usuario. Error ' + e.message);
@@ -214,6 +260,8 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
             // });
         }
     }
+    // console.log('Se esta por buscar el usuario');
+    // console.log('email a buscar: ' + req.body.usuario.email);
     Usuario.find({ email: req.body.usuario.email })
         .populate('agenda')
         .exec((err, usuario) => {
@@ -223,9 +271,15 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                     err
                 });
             }
+
             if (usuario.length > 0) {
                 idUsuario = usuario[0]._id;
-            }
+            } else
+                return res.json({
+                    ok: false,
+                    message: 'No hay usuarios con ese correo'
+                });
+            console.log(usuario[0]);
 
             if (usuario[0].provincia.toUpperCase() == 'JUJUY')
                 esLocal = true;

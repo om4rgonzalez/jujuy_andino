@@ -9,8 +9,7 @@ let usuarioSchema = new Schema({
         default: '0'
     },
     email: {
-        type: String,
-        unique: true
+        type: String
     },
     nombre: {
         type: String,
