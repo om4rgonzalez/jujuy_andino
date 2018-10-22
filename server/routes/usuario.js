@@ -167,6 +167,8 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
     // console.log('Valor de la variable -esNuevo-: ' + req.body.esNuevo);
     if (req.body.esNuevo) {
         //creo la cuenta del usuario
+        console.log('Pais: ' + req.body.usuario.pais);
+        console.log('Provincia: ' + req.body.usuario.provincia);
         if (req.body.usuario.provincia) {
             if (req.body.usuario.provincia.toUpperCase() == 'JUJUY')
                 esLocal = true;
