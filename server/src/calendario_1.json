@@ -3,7 +3,6 @@
         "eventos": [{
                 "evento": "Feria Sustentable",
                 "lugar": "Plaza Vilca",
-                "descripcion": "",
                 "fechaInicio": "2018-11-03 02:00 PM",
                 "fechaFin": "2018-11-03 08:00 PM",
                 "latitud": -24.1842186,
@@ -11,13 +10,11 @@
                 "id": 1,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Inauguracion Muestra Retrospectiva de 'MiCHI' Aparicio",
                 "lugar": "Culturarte, General San Martín, esquina, Sarmiento",
-                "descripcion": "",
                 "fechaInicio": "2018-11-03 06:00 PM",
                 "fechaFin": "2018-11-29 08:00 PM",
                 "latitud": -24.1842186,
@@ -25,26 +22,22 @@
                 "id": 75,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
-                "urlCompraTicket": "-"
+                "urlCompraTicket": "https://portal.autoentrada.com/apertura-gala-sinfonica-festival-jujuy-corazon-andino.html"
             },
             {
                 "evento": "Apertura Gala Sinfonica",
                 "lugar": "Teatro Mitre",
-                "descripcion": "",
                 "fechaInicio": "2018-11-03 09:00 PM",
                 "fechaFin": "0",
                 "latitud": -24.184189,
                 "longitud": -65.307126,
                 "id": 2,
                 "color": "#70CDDD",
-                "cupo": 200,
-                "cupoExterno": 200,
-                "urlCompraTicket": "https://portal.autoentrada.com/apertura-gala-sinfonica-festival-jujuy-corazon-andino.html"
+                "cupo": 400,
+                "urlCompraTicket": "-"
             }, {
                 "evento": "Muestra Fotografica 'Quebrada Oculta' de Luis Calizaya",
                 "lugar": "Centro Cultural C.A.J.A, Alvear 534",
-                "descripcion": "",
                 "fechaInicio": "2018-11-03 08:30 AM",
                 "fechaFin": "2018-11-30 08:30 PM",
                 "latitud": -24.1842186,
@@ -52,13 +45,11 @@
                 "id": 78,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Muestra Fotografica 'Casabindo' de Cesar Ruiz",
                 "lugar": "Centro Cultural Macedonio, Lamadrid esquina Guemes",
-                "descripcion": "",
                 "fechaInicio": "2018-11-03 08:30 AM",
                 "fechaFin": "2018-11-30 08:30 PM",
                 "latitud": -24.182976,
@@ -66,27 +57,23 @@
                 "id": 79,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Muestra Fotografica 'Identidad' de Nicolas Guerrero",
                 "lugar": "Teatro Mitre, Sala Medardo Pantoja, Alvear 1009",
-                "descripcion": "",
                 "fechaInicio": "2018-11-03 08:30 AM",
                 "fechaFin": "2018-11-30 08:30 PM",
                 "latitud": -24.184189,
                 "longitud": -65.307126,
                 "id": 80,
                 "color": "#155AA9",
-                "cupo": 0,
-                "cupoExterno": 0,
+                "cupo": 1,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Encuentro De Ciencias, Deshidratador Solar - Para niños y jóvenes de 9 a 18 años",
                 "lugar": "Ciudad Cultural. Zorrilla de San Martin esq. Curupaiti .Alto Padilla",
-                "descripcion": "",
                 "fechaInicio": "2018-11-03 02:00 PM",
                 "fechaFin": "2018-11-03 04:00 PM",
                 "latitud": -24.183233,
@@ -94,13 +81,11 @@
                 "id": 3,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Encuentro De Ciencias, Deshidratador Solar - para jóvenes de 14 a 18 años",
                 "lugar": "Ciudad Cultural. Zorrilla de San Martin esq. Curupaiti .Alto Padilla",
-                "descripcion": "",
                 "fechaInicio": "2018-11-03 04:00 PM",
                 "fechaFin": "2018-11-03 06:00 PM",
                 "latitud": -24.183233,
@@ -108,27 +93,23 @@
                 "id": 4,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
-                "evento": "La Literatura Como Patrimonio Sustentable. Alejandro Carrizo",
+                "evento": "Ll Literatura Como Patrimonio Sustentable. Alejandro Carrizo",
                 "lugar": "Teatro Mitre, Sala Galan, Alvear 1009",
-                "descripcion": "",
                 "fechaInicio": "2018-11-03 08:30 AM",
                 "fechaFin": "2018-11-30 08:30 PM",
                 "latitud": -24.184189,
                 "longitud": -65.307126,
                 "id": 81,
                 "color": "#EF4823",
-                "cupo": 0,
-                "cupoExterno": 0,
+                "cupo": 1,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "Lozano",
-                "descripcion": "",
                 "fechaInicio": "2018-11-04 10:00 AM",
                 "fechaFin": "2018-11-04 11:45 AM",
                 "latitud": -24.06665,
@@ -136,13 +117,11 @@
                 "id": 5,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Concierto de Gala - Orquesta de cuerdas del Instituto GPA",
                 "lugar": "Teatro Mitre, Alvear 1009",
-                "descripcion": "",
                 "fechaInicio": "2018-11-04 09:00 PM",
                 "fechaFin": "0",
                 "latitud": -24.184189,
@@ -150,13 +129,11 @@
                 "id": 82,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Cine De Las Alturas - 'Taller de Musicalización'",
                 "lugar": "Sala Galan - Teatro Mitre, Alvear 1009",
-                "descripcion": "",
                 "fechaInicio": "2018-11-05 03:00 PM",
                 "fechaFin": "2018-11-05 07:00 PM",
                 "latitud": -24.184189,
@@ -164,27 +141,23 @@
                 "id": 90,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Circuitos Turisticos - Arte Colonial en la Ciudad.",
                 "lugar": "Atrio Basílica Catedral. Sarmiento y Belgrano",
-                "descripcion": "",
                 "fechaInicio": "2018-11-05 09:00 AM",
                 "fechaFin": "2018-11-05 11:00 AM",
                 "latitud": -24.185493,
                 "longitud": -65.300380,
                 "id": 7,
                 "color": "#155AA9",
-                "cupo": 10,
-                "cupoExterno": 10,
+                "cupo": 20,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "San Salvador de Jujuy",
-                "descripcion": "",
                 "fechaInicio": "2018-11-05 10:00 AM",
                 "fechaFin": "2018-11-05 11:45 AM",
                 "latitud": -24.06665,
@@ -192,27 +165,23 @@
                 "id": 8,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Concierto Horacio Lavandera",
                 "lugar": "Teatro Mitre",
-                "descripcion": "",
                 "fechaInicio": "2018-11-05 09:00 PM",
                 "fechaFin": "",
                 "latitud": -24.184189,
                 "longitud": -65.307126,
                 "id": 10,
                 "color": "#70CDDD",
-                "cupo": 250,
-                "cupoExterno": 250,
+                "cupo": 500,
                 "urlCompraTicket": "https://portal.autoentrada.com/horacio-lavandera-festival-jujuy-corazon-andino.html"
             },
             {
                 "evento": "Cine De Las Alturas - 'Taller de Musicalización'",
                 "lugar": "Sala Galan - Teatro Mitre, Alvear 1009",
-                "descripcion": "",
                 "fechaInicio": "2018-11-05 09:00 AM",
                 "fechaFin": "2018-11-05 05:00 PM",
                 "latitud": -24.184189,
@@ -220,13 +189,11 @@
                 "id": 91,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "San Salvador de Jujuy",
-                "descripcion": "",
                 "fechaInicio": "2018-11-06 10:00 AM",
                 "fechaFin": "2018-11-06 11:45 AM",
                 "latitud": -24.06665,
@@ -234,69 +201,59 @@
                 "id": 11,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Blessing Chimanga and Dreams Band, Zimbabwe - Orquesta Sinfónica Liceo Bicentenario Oscar Castro Zuñiga, Chile ",
                 "lugar": "Lozano",
-                "descripcion": "",
                 "fechaInicio": "2018-11-06 06:00 PM",
                 "fechaFin": "2018-11-06 07:30 PM",
                 "latitud": -24.06665,
                 "longitud": -65.41549,
                 "id": 13,
                 "color": "#70CDDD",
-                "cupo": 1000,
-                "cupoExterno": 1000,
+                "cupo": 2000,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Circuitos Turisticos - Casa ECO ANDINA.",
                 "lugar": "Centro Cedeira. Fundacion ECOANDINA - Acceso a Barrio San Martin pon Puente General Belgrano",
-                "descripcion": "",
                 "fechaInicio": "2018-11-06 03:00 PM",
                 "fechaFin": "2018-11-06 06:00 PM",
                 "latitud": -24.177032,
                 "longitud": -65.319470,
                 "id": 14,
                 "color": "#F99F38",
-                "cupo": 5,
-                "cupoExterno": 5,
+                "cupo": 10,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Concierto De Elena Roger y Sistema De Orquestas Juveniles e Infantiles De Jujuy",
                 "lugar": "Teatro Mitre",
-                "descripcion": "",
                 "fechaInicio": "2018-11-06 09:00 PM",
                 "fechaFin": "",
                 "latitud": -24.184189,
                 "longitud": -65.307126,
                 "id": 15,
                 "color": "#70CDDD",
-                "cupo": 250,
-                "cupoExterno": 250,
+                "cupo": 500,
                 "urlCompraTicket": "https://portal.autoentrada.com/elena-roger-sinfonico-festival-jujuy-corazon-andino.html"
             },
             {
                 "evento": "Charla - Herramientas Digitales Para Emprendedores Sustentables",
                 "lugar": "Sala Raúl Galán. Altos del Teatro Mitre. Alvear 1009",
-                "descripcion": "",
                 "fechaInicio": "2018-11-06 10:00 AM",
                 "fechaFin": "2018-11-06 12:00 AM",
                 "latitud": -24.184189,
                 "longitud": -65.307126,
                 "id": 16,
                 "color": "#155AA9",
-                "cupo": 100,
-                "cupoExterno": 100,
+                "cupo": 200,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Encuentro De Ciencias, Taller de Carton 3D y Mapping Andino",
                 "lugar": "Ciudad Cultural. Zorrilla de San Martin esq. Curupaiti .Alto Padilla",
-                "descripcion": "",
                 "fechaInicio": "2018-11-06 02:00 PM",
                 "fechaFin": "2018-11-06 04:00 PM",
                 "latitud": -24.183233,
@@ -304,27 +261,23 @@
                 "id": 17,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Circuitos Turisticos - Arte Colonial en la Ciudad.",
                 "lugar": "Atrio Basílica Catedral. Sarmiento y Belgrano",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 09:00 AM",
                 "fechaFin": "2018-11-07 11:00 AM",
                 "latitud": -24.185493,
                 "longitud": -65.300380,
                 "id": 18,
                 "color": "#155AA9",
-                "cupo": 10,
-                "cupoExterno": 10,
+                "cupo": 20,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "San Salvador de Jujuy",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 10:00 AM",
                 "fechaFin": "2018-11-07 11:45 AM",
                 "latitud": -24.06665,
@@ -332,27 +285,23 @@
                 "id": 19,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Concierto Coral y Danza, Coro de Niños y Ballet del Teatro Colón",
                 "lugar": "Teatro Mitre",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 09:00 PM",
                 "fechaFin": "0",
                 "latitud": -24.184189,
                 "longitud": -65.307126,
                 "id": 20,
                 "color": "#EF4823",
-                "cupo": 400,
-                "cupoExterno": 400,
+                "cupo": 800,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Jornada de Arquitectura Sustentable - Generacion Distribuida, Empresa Flex",
                 "lugar": "Colegio de Arquitectos - Av. Dr Arturo Ilia 865- Los Perales",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 09:30 AM",
                 "fechaFin": "2018-11-07 10:00 AM",
                 "latitud": -24.166727,
@@ -360,13 +309,11 @@
                 "id": 21,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Jornada de Arquitectura Sustentable - Muestra De Prototipos De Artefactos Solares",
                 "lugar": "Colegio de Arquitectos - Av. Dr Arturo Ilia 865- Los Perales",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 10:10 AM",
                 "fechaFin": "2018-11-07 10:30 AM",
                 "latitud": -24.166727,
@@ -374,13 +321,11 @@
                 "id": 22,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Jornada de Arquitectura Sustentable - Sistema De Calentamiento De Aguaisuma Solar",
                 "lugar": "Colegio de Arquitectos - Av. Dr Arturo Ilia 865- Los Perales",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 10:30 AM",
                 "fechaFin": "0",
                 "latitud": -24.166727,
@@ -388,13 +333,11 @@
                 "id": 23,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Jornada de Arquitectura Sustentable - Jardines Verticales, Ing. Agronoma Judith Fridman",
                 "lugar": "Colegio de Arquitectos - Av. Dr Arturo Ilia 865- Los Perales",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 11:30 AM",
                 "fechaFin": "0",
                 "latitud": -24.166727,
@@ -402,13 +345,11 @@
                 "id": 24,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Jornada de Arquitectura Sustentable - Termotanques Solares. Jujuy Solar",
                 "lugar": "Colegio de Arquitectos - Av. Dr Arturo Ilia 865- Los Perales",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 03:30 PM",
                 "fechaFin": "0",
                 "latitud": -24.166727,
@@ -416,13 +357,11 @@
                 "id": 25,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Jornada de Arquitectura Sustentable - Muestra de Prototipos de Artefactos Solares",
                 "lugar": "Colegio de Arquitectos - Av. Dr Arturo Ilia 865- Los Perales",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 03:40 PM",
                 "fechaFin": "0",
                 "latitud": -24.166727,
@@ -430,13 +369,11 @@
                 "id": 26,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Jornada de Arquitectura Sustentable - El Adobe y Sistemas Sismicos. Arq. Jorge Tomasi",
                 "lugar": "Colegio de Arquitectos - Av. Dr Arturo Ilia 865- Los Perales",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 04:00 PM",
                 "fechaFin": "0",
                 "latitud": -24.166727,
@@ -444,41 +381,35 @@
                 "id": 27,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Biotico Taller - Jesica Pullo",
                 "lugar": "Sala Raúl Galán. Altos del Teatro Mitre. Alvear 1009",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 11:00 AM",
                 "fechaFin": "2018-11-07 01:00 PM",
                 "latitud": -24.184189,
                 "longitud": -65.307126,
                 "id": 28,
                 "color": "#F99F38",
-                "cupo": 10,
-                "cupoExterno": 10,
+                "cupo": 20,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Herramientas Digitales Para Emprendedores Sustentables",
                 "lugar": "Sala Raúl Galán. Altos del Teatro Mitre. Alvear 1009",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 10:00 AM",
                 "fechaFin": "2018-11-07 12:00 PM",
                 "latitud": -24.184189,
                 "longitud": -65.307126,
                 "id": 29,
                 "color": "#155AA9",
-                "cupo": 100,
-                "cupoExterno": 100,
+                "cupo": 200,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Encuentro De Ciencias, Taller de Carton 3D y Mapping Andino",
                 "lugar": "Ciudad Cultural. Zorrilla de San Martin esq. Curupaiti .Alto Padilla",
-                "descripcion": "",
                 "fechaInicio": "2018-11-07 02:00 PM",
                 "fechaFin": "2018-11-07 04:00 PM",
                 "latitud": -24.184189,
@@ -486,13 +417,11 @@
                 "id": 30,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "San Salvador de Jujuy",
-                "descripcion": "",
                 "fechaInicio": "2018-11-08 10:00 AM",
                 "fechaFin": "2018-11-08 11:45 AM",
                 "latitud": -24.06665,
@@ -500,13 +429,11 @@
                 "id": 31,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Masterclass Paquito D'Rivera",
                 "lugar": "Teatro Mitre",
-                "descripcion": "",
                 "fechaInicio": "2018-11-08 11:00 AM",
                 "fechaFin": "2018-11-08 01:00 PM",
                 "latitud": -24.184189,
@@ -514,27 +441,23 @@
                 "id": 32,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Circuitos Turisticos - Casa ECO ANDINA.",
                 "lugar": "Centro Cedeira. Fundacion ECOANDINA - Acceso a Barrio San Martin pon Puente General Belgrano",
-                "descripcion": "",
                 "fechaInicio": "2018-11-08 03:00 PM",
                 "fechaFin": "2018-11-08 06:00 PM",
                 "latitud": -24.177032,
                 "longitud": -65.319470,
                 "id": 33,
                 "color": "#F99F38",
-                "cupo": 5,
-                "cupoExterno": 5,
+                "cupo": 10,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Inauguración de: “EL ABRAZO”, escultura de Alejandro Marmo",
                 "lugar": "Ciudad Cultural",
-                "descripcion": "",
                 "fechaInicio": "2018-11-08 07:00 PM",
                 "fechaFin": "0",
                 "latitud": -24.184189,
@@ -542,13 +465,11 @@
                 "id": 34,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Encuentro De Ciencias, Taller de Carton 3D y Mapping Andino",
                 "lugar": "Ciudad Cultural. Zorrilla de San Martin esq. Curupaiti .Alto Padilla",
-                "descripcion": "",
                 "fechaInicio": "2018-11-08 02:00 PM",
                 "fechaFin": "2018-11-08 04:00 PM",
                 "latitud": -24.184189,
@@ -556,13 +477,11 @@
                 "id": 36,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Proyección del Film “LANDFILL HARMONIC” – Estados Unidos / Paraguay 2015",
                 "lugar": "Parque Lineal Xibi Xibi  Anfiteatro. Hipólito Irigoyen 1502",
-                "descripcion": "",
                 "fechaInicio": "2018-11-08 07:00 PM",
                 "fechaFin": "0",
                 "latitud": -24.190050,
@@ -570,27 +489,23 @@
                 "id": 37,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Circuitos Turisticos - Arte Colonial en la Ciudad.",
                 "lugar": "Atrio Basílica Catedral. Sarmiento y Belgrano",
-                "descripcion": "",
                 "fechaInicio": "2018-11-09 09:00 AM",
                 "fechaFin": "2018-11-09 11:00 AM",
                 "latitud": -24.185493,
                 "longitud": -65.300380,
                 "id": 38,
                 "color": "#155AA9",
-                "cupo": 10,
-                "cupoExterno": 10,
+                "cupo": 20,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Conferencia y Presentación del Libro de Carlos Núñez 'La hermandad de los celtas'",
                 "lugar": "Teatro Mitre",
-                "descripcion": "",
                 "fechaInicio": "2018-11-09 11:00 AM",
                 "fechaFin": "0",
                 "latitud": -24.184189,
@@ -598,13 +513,11 @@
                 "id": 35,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Encuentro De Ciencias, Taller de Carton 3D y Mapping Andino",
                 "lugar": "Ciudad Cultural. Zorrilla de San Martin esq. Curupaiti .Alto Padilla",
-                "descripcion": "",
                 "fechaInicio": "2018-11-09 02:00 PM",
                 "fechaFin": "2018-11-09 04:00 PM",
                 "latitud": -24.184189,
@@ -612,13 +525,11 @@
                 "id": 39,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Concierto Popular de Instrumentos Reciclados",
                 "lugar": "Plaza Belgrano",
-                "descripcion": "",
                 "fechaInicio": "2018-11-10 11:00 AM",
                 "fechaFin": "2018-11-10 01:00 PM",
                 "latitud": -24.06665,
@@ -626,7 +537,6 @@
                 "id": 40,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             }
         ]
@@ -636,21 +546,18 @@
         "eventos": [{
                 "evento": "Feria Gastronomica “Arte Gastronómico Jujuy Corazón Andino”",
                 "lugar": "Posta del Hornillo",
-                "descripcion": "",
                 "fechaInicio": "2018-11-04 11:00 AM",
                 "fechaFin": "2018-11-04 01:00 PM",
                 "latitud": -23.65462,
                 "longitud": -65.4318,
                 "id": 41,
                 "color": "#F5C515",
-                "cupo": 150,
-                "cupoExterno": 150,
+                "cupo": 300,
                 "urlCompraTicket": "https://portal.autoentrada.com/feria-gastronomica-festival-jujuy-corazon-andino.html"
             },
             {
                 "evento": "Desfile Moda Etnico Contemporáneo",
                 "lugar": "Posta del Hornillo",
-                "descripcion": "",
                 "fechaInicio": "2018-11-04 01:00 PM",
                 "fechaFin": "2018-11-04 02:30 PM",
                 "latitud": -23.65462,
@@ -658,13 +565,11 @@
                 "id": 42,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Feria Sustentable",
                 "lugar": "Plaza Maimará (Martín Rodríguez esquina San Martín)",
-                "descripcion": "",
                 "fechaInicio": "2018-11-04 02:00 PM",
                 "fechaFin": "0",
                 "latitud": -23.65462,
@@ -672,13 +577,11 @@
                 "id": 43,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "Plaza Maimará",
-                "descripcion": "",
                 "fechaInicio": "2018-11-04 03:00 PM",
                 "fechaFin": "2018-11-04 04:30 PM",
                 "latitud": -23.65462,
@@ -686,21 +589,18 @@
                 "id": 44,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Concierto de Coro de Niños del Teatro Colon",
                 "lugar": "Iglesia - Nuestra Señora de la Calendaria",
-                "descripcion": "",
                 "fechaInicio": "2018-11-04 06:00 PM",
                 "fechaFin": "2018-11-04 07:30 PM",
                 "latitud": -23.62445,
                 "longitud": -65.40904,
                 "id": 45,
                 "color": "#70CDDD",
-                "cupo": 50,
-                "cupoExterno": 50,
+                "cupo": 100,
                 "urlCompraTicket": "-"
             }
         ]
@@ -710,7 +610,6 @@
         "eventos": [{
                 "evento": "Cine Itinerante 'Altura Móvil'",
                 "lugar": "Plaza Tumbaya - (Álvarez Prado esquina Salta)",
-                "descripcion": "",
                 "fechaInicio": "2018-11-05 02:00 PM",
                 "fechaFin": "0",
                 "latitud": -23.85752,
@@ -718,13 +617,11 @@
                 "id": 46,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
                 "evento": "Feria Sustentable",
                 "lugar": "Plaza Tumbaya - (Álvarez Prado esquina Salta)",
-                "descripcion": "",
                 "fechaInicio": "2018-11-05 02:00 PM",
                 "fechaFin": "2018-11-05 04:00 PM",
                 "latitud": -23.85752,
@@ -732,7 +629,6 @@
                 "id": 47,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -745,7 +641,6 @@
                 "id": 48,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -757,8 +652,7 @@
                 "longitud": -65.46786,
                 "id": 49,
                 "color": "#70CDDD",
-                "cupo": 150,
-                "cupoExterno": 150,
+                "cupo": 300,
                 "urlCompraTicket": "https://portal.autoentrada.com/julie-freundt-festival-jujuy-corazon-andino.html"
             },
             {
@@ -770,8 +664,7 @@
                 "longitud": -65.46786,
                 "id": 50,
                 "color": "#70CDDD",
-                "cupo": 50,
-                "cupoExterno": 50,
+                "cupo": 100,
                 "urlCompraTicket": "-"
             }
 
@@ -788,8 +681,7 @@
                 "longitud": -65.19338,
                 "id": 51,
                 "color": "#70CDDD",
-                "cupo": 75,
-                "cupoExterno": 75,
+                "cupo": 150,
                 "urlCompraTicket": "-"
             },
             {
@@ -802,7 +694,6 @@
                 "id": 52,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -815,7 +706,6 @@
                 "id": 53,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -828,7 +718,6 @@
                 "id": 54,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -840,8 +729,7 @@
                 "longitud": -65.34894,
                 "id": 55,
                 "color": "#70CDDD",
-                "cupo": 50,
-                "cupoExterno": 50,
+                "cupo": 100,
                 "urlCompraTicket": "-"
             }
         ]
@@ -858,7 +746,6 @@
                 "id": 56,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -871,7 +758,6 @@
                 "id": 57,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -884,7 +770,6 @@
                 "id": 58,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -896,8 +781,7 @@
                 "longitud": -65.46989,
                 "id": 59,
                 "color": "#70CDDD",
-                "cupo": 500,
-                "cupoExterno": 500,
+                "cupo": 1000,
                 "urlCompraTicket": "https://portal.autoentrada.com/paquito-d-rivera-festival-jujuy-corazon-andino.html"
             }
         ]
@@ -914,7 +798,6 @@
                 "id": 60,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -927,7 +810,6 @@
                 "id": 61,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -940,7 +822,6 @@
                 "id": 62,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -952,8 +833,7 @@
                 "longitud": -65.350692,
                 "id": 64,
                 "color": "#70CDDD",
-                "cupo": 750,
-                "cupoExterno": 750,
+                "cupo": 1500,
                 "urlCompraTicket": "https://portal.autoentrada.com/el-despertar-gustavo-santaolalla-festival-jujuy-corazon-andino.html"
             },
             {
@@ -965,8 +845,7 @@
                 "longitud": -65.39192,
                 "id": 65,
                 "color": "#EF4823",
-                "cupo": 50,
-                "cupoExterno": 50,
+                "cupo": 100,
                 "urlCompraTicket": "-"
             }
         ]
@@ -983,7 +862,6 @@
                 "id": 66,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -996,7 +874,6 @@
                 "id": 67,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -1009,7 +886,6 @@
                 "id": 6,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -1022,7 +898,6 @@
                 "id": 68,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -1035,7 +910,6 @@
                 "id": 69,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -1047,8 +921,7 @@
                 "longitud": -65.504345,
                 "id": 70,
                 "color": "#F99F38",
-                "cupo": 2000,
-                "cupoExterno": 2000,
+                "cupo": 4000,
                 "urlCompraTicket": "https://portal.autoentrada.com/espectaculo-clausura-festival-jujuy-corazon-andino.html"
             }
         ]
@@ -1065,7 +938,6 @@
                 "id": 71,
                 "color": "#F99F38",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -1078,7 +950,6 @@
                 "id": 72,
                 "color": "#70CDDD",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -1091,7 +962,6 @@
                 "id": 73,
                 "color": "#155AA9",
                 "cupo": 0,
-                "cupoExterno": 0,
                 "urlCompraTicket": "-"
             },
             {
@@ -1103,8 +973,7 @@
                 "longitud": -65.3562,
                 "id": 74,
                 "color": "#70CDDD",
-                "cupo": 35,
-                "cupoExterno": 35,
+                "cupo": 70,
                 "urlCompraTicket": "-"
             }
         ]

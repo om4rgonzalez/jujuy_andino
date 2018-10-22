@@ -25,6 +25,9 @@ app.post('/conf/calendario_init/', function(req, res) {
                 if (Calendario[i].eventos[j].cupo == 0)
                     Calendario[i].eventos[j].cupo = 1000000;
 
+                if (Calendario[i].eventos[j].cupoExterno == 0)
+                    Calendario[i].eventos[j].cupoExterno = 1000000;
+
                 let evento = new Evento({
                     localidad: Calendario[i].localidad,
                     nombreEvento: Calendario[i].eventos[j].evento,
@@ -36,7 +39,9 @@ app.post('/conf/calendario_init/', function(req, res) {
                     id: Calendario[i].eventos[j].id,
                     color: Calendario[i].eventos[j].color,
                     cupo: Calendario[i].eventos[j].cupo,
-                    urlCompraTicket: Calendario[i].eventos[j].urlCompraTicket
+                    urlCompraTicket: Calendario[i].eventos[j].urlCompraTicket,
+                    descripcion: Calendario[i].eventos[j].descripcion,
+                    cupoExterno: Calendario[i].eventos[j].cupoExterno
                 });
 
 

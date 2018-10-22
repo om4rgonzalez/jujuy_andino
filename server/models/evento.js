@@ -12,6 +12,9 @@ let eventoSchema = new Schema({
     lugar: {
         type: String
     },
+    descripcion: {
+        type: String
+    },
     fechaInicio: {
         type: Date
     },
@@ -33,7 +36,11 @@ let eventoSchema = new Schema({
     },
     cupo: {
         type: Number,
-        default: 10000
+        default: 1000000
+    },
+    cupoExterno: {
+        type: Number,
+        default: 1000000
     },
     color: {
         type: String
