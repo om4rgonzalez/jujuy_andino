@@ -279,7 +279,7 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                     ok: false,
                     message: 'No hay usuarios con ese correo'
                 });
-            console.log(usuario[0]);
+            // console.log(usuario[0]);
 
             if (usuario[0].provincia.toUpperCase() == 'JUJUY')
                 esLocal = true;
