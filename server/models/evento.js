@@ -16,10 +16,10 @@ let eventoSchema = new Schema({
         type: String
     },
     fechaInicio: {
-        type: Date
+        type: String
     },
     fechaFin: {
-        type: Date
+        type: String
     },
     latitud: {
         type: String

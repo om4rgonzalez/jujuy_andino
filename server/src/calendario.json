@@ -3,7 +3,7 @@
         "eventos": [{
                 "evento": "Feria Sustentable",
                 "lugar": "Plaza Vilca",
-                "descripcion": "",
+                "descripcion": "Exposición itinerante de productos diseñados con conciencia sustentable y materiales renovables. Apoya la Fundación Ecoandina con la apertura de la casa EcoSolar para el público del festival y la provisión de cocinas solares.",
                 "fechaInicio": "2018-11-03 02:00 PM",
                 "fechaFin": "2018-11-03 08:00 PM",
                 "latitud": -24.1842186,
@@ -44,7 +44,7 @@
             }, {
                 "evento": "Muestra Fotografica 'Quebrada Oculta' de Luis Calizaya",
                 "lugar": "Centro Cultural C.A.J.A, Alvear 534",
-                "descripcion": "",
+                "descripcion": "“Quebrada Oculta”, una muestra fotográfica de paisajes nocturnos de la Quebrada de Humahuaca , paisajes nocturnos que son ecosistemas que albergan una serie de especies que son poco conocidas para las poblaciones actuales. Se mostrarán especies,  animales y vegetales con una explicación científica y popular interactiva que  contribuirá al conocimiento, revalorización y conservación, no sólo de las especies, sino también del conocimiento popular autóctono. Se podrán apreciar 48 que pasan desapercibidas pero  habitan en la quebrada de Humahuaca.",
                 "fechaInicio": "2018-11-03 08:30 AM",
                 "fechaFin": "2018-11-30 08:30 PM",
                 "latitud": -24.1842186,
@@ -86,7 +86,7 @@
             {
                 "evento": "Encuentro De Ciencias, Deshidratador Solar - Para niños y jóvenes de 9 a 18 años",
                 "lugar": "Ciudad Cultural. Zorrilla de San Martin esq. Curupaiti .Alto Padilla",
-                "descripcion": "",
+                "descripcion": "En este taller te enseñaremos cómo hacer tu propio deshidratador de alimentos solar a partir de materiales reciclados, que podrían considerarse basura y comprender las ventajas de este tipo de conservación de alimentos; eliminamos la humedad y así evitamos que las bacterias acaben con las frutas y verduras.. Los deshidratadores solares son una opción adecuada para utilizar en emprendimientos caseros o rurales de pequeña escala.",
                 "fechaInicio": "2018-11-03 02:00 PM",
                 "fechaFin": "2018-11-03 04:00 PM",
                 "latitud": -24.183233,
@@ -128,7 +128,7 @@
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "Lozano",
-                "descripcion": "",
+                "descripcion": "El taller de lutheria fue creado con el objetivo de generar una conciencia sustentable y educar a través del reciclaje, a través de los conceptos básicos de construcción de instrumentos sinfónicos de cuerda y de vientos. Está dedicado a todas las edades, generando también un encuentro entre miembros de una familia. Para este festival se han diseñado instrumentos especiales: la “Violata” y el “Sorborgano”. Estos instrumentos están compuestos por las mismas partes que un violín y una flauta, pero su particularidad reside en que están conformados con materiales reciclables. Las latas de gaseosa y las botellas de plástico serán una parte fundamental en la fabricación de los mismos. Guiados por especialistas, cada uno de los participantes recibirá un kit de materiales y las indicaciones que sean necesarias para fabricar su propio instrumento que se llevarán luego como obsequio. Durante el taller aprenderán a tocar los instrumentos en grupo y podrán participar el Sábado 10 al mediodía en la Plaza MItre formando parte de en una gran orquesta de instrumentos reciclados.",
                 "fechaInicio": "2018-11-04 10:00 AM",
                 "fechaFin": "2018-11-04 11:45 AM",
                 "latitud": -24.06665,
@@ -170,7 +170,7 @@
             {
                 "evento": "Circuitos Turisticos - Arte Colonial en la Ciudad.",
                 "lugar": "Atrio Basílica Catedral. Sarmiento y Belgrano",
-                "descripcion": "",
+                "descripcion": "Recorrido por el centro histórico y cultural de la ciudad. Fundación Recrear. Recorrido pedestre. Es uno de los centros pictóricos más importantes de la provincia de Jujuy. Hace algunos años, la fundación comenzó su trabajo, apuntando principalmente a investigar, difundir y revalorizar el patrimonio de la pintura colonial de Jujuy. Inaugurado en el año 2000, el museo consta de 3 salas de exposición y un taller, en donde trabajan estudiantes de entre 14 y 25 años. De las obras que integran el museo, las más conocidas son las pinturas de los Arcángeles Arcabuceros (representación ángeles con arcabuz y vestidos a la manera española de la época colonial.",
                 "fechaInicio": "2018-11-05 09:00 AM",
                 "fechaFin": "2018-11-05 11:00 AM",
                 "latitud": -24.185493,
@@ -184,7 +184,7 @@
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "San Salvador de Jujuy",
-                "descripcion": "",
+                "descripcion": "El taller de lutheria fue creado con el objetivo de generar una conciencia sustentable y educar a través del reciclaje, a través de los conceptos básicos de construcción de instrumentos sinfónicos de cuerda y de vientos. Está dedicado a todas las edades, generando también un encuentro entre miembros de una familia. Para este festival se han diseñado instrumentos especiales: la “Violata” y el “Sorborgano”. Estos instrumentos están compuestos por las mismas partes que un violín y una flauta, pero su particularidad reside en que están conformados con materiales reciclables. Las latas de gaseosa y las botellas de plástico serán una parte fundamental en la fabricación de los mismos. Guiados por especialistas, cada uno de los participantes recibirá un kit de materiales y las indicaciones que sean necesarias para fabricar su propio instrumento que se llevarán luego como obsequio. Durante el taller aprenderán a tocar los instrumentos en grupo y podrán participar el Sábado 10 al mediodía en la Plaza MItre formando parte de en una gran orquesta de instrumentos reciclados.",
                 "fechaInicio": "2018-11-05 10:00 AM",
                 "fechaFin": "2018-11-05 11:45 AM",
                 "latitud": -24.06665,
@@ -226,7 +226,7 @@
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "San Salvador de Jujuy",
-                "descripcion": "",
+                "descripcion": "El taller de lutheria fue creado con el objetivo de generar una conciencia sustentable y educar a través del reciclaje, a través de los conceptos básicos de construcción de instrumentos sinfónicos de cuerda y de vientos. Está dedicado a todas las edades, generando también un encuentro entre miembros de una familia. Para este festival se han diseñado instrumentos especiales: la “Violata” y el “Sorborgano”. Estos instrumentos están compuestos por las mismas partes que un violín y una flauta, pero su particularidad reside en que están conformados con materiales reciclables. Las latas de gaseosa y las botellas de plástico serán una parte fundamental en la fabricación de los mismos. Guiados por especialistas, cada uno de los participantes recibirá un kit de materiales y las indicaciones que sean necesarias para fabricar su propio instrumento que se llevarán luego como obsequio. Durante el taller aprenderán a tocar los instrumentos en grupo y podrán participar el Sábado 10 al mediodía en la Plaza MItre formando parte de en una gran orquesta de instrumentos reciclados.",
                 "fechaInicio": "2018-11-06 10:00 AM",
                 "fechaFin": "2018-11-06 11:45 AM",
                 "latitud": -24.06665,
@@ -254,7 +254,7 @@
             {
                 "evento": "Circuitos Turisticos - Casa ECO ANDINA.",
                 "lugar": "Centro Cedeira. Fundacion ECOANDINA - Acceso a Barrio San Martin pon Puente General Belgrano",
-                "descripcion": "",
+                "descripcion": "La Casa Eco Andina  permite visualizar la minimización de los impactos ambientales producidos al vivir: cómo aprovechar la naturaleza para generar la mayor cantidad de energía sin dañarla y lograr, al mismo tiempo, una buena calidad de vida. En la visita guiada podrá ver en funcionamiento calefacción solar , calefón solar , hornos y cocinas solares en cada ambiente , construida con materiales ecológicos.",
                 "fechaInicio": "2018-11-06 03:00 PM",
                 "fechaFin": "2018-11-06 06:00 PM",
                 "latitud": -24.177032,
@@ -296,7 +296,7 @@
             {
                 "evento": "Encuentro De Ciencias, Taller de Carton 3D y Mapping Andino",
                 "lugar": "Ciudad Cultural. Zorrilla de San Martin esq. Curupaiti .Alto Padilla",
-                "descripcion": "",
+                "descripcion": "TALLER DE CARTON 3 D. Taller”Cartón 3D” reutilización de los cartones armando esculturas de arte y diseño con técnicas de corte usando el programa Slicer, es la herramienta que necesita para convertir un modelo 3D en instrucciones de impresión para impresoras 3d. Corta el modelo en secciones horizontales (capas). MAPPING ANDINO. Taller “ART-LAC” Dibujo libre de arte muralista, utilizando una pintura que se extrae de una proteína de la leche (caseína) coloreada con pigmentos naturales de especies autóctonas de Jujuy. Utilizando la técnica de Milo Lockett. Para niños de 6 a 8 años",
                 "fechaInicio": "2018-11-06 02:00 PM",
                 "fechaFin": "2018-11-06 04:00 PM",
                 "latitud": -24.183233,
@@ -310,7 +310,7 @@
             {
                 "evento": "Circuitos Turisticos - Arte Colonial en la Ciudad.",
                 "lugar": "Atrio Basílica Catedral. Sarmiento y Belgrano",
-                "descripcion": "",
+                "descripcion": "Recorrido por el centro histórico y cultural de la ciudad. Fundación Recrear. Recorrido pedestre. Es uno de los centros pictóricos más importantes de la provincia de Jujuy. Hace algunos años, la fundación comenzó su trabajo, apuntando principalmente a investigar, difundir y revalorizar el patrimonio de la pintura colonial de Jujuy. Inaugurado en el año 2000, el museo consta de 3 salas de exposición y un taller, en donde trabajan estudiantes de entre 14 y 25 años. De las obras que integran el museo, las más conocidas son las pinturas de los Arcángeles Arcabuceros (representación ángeles con arcabuz y vestidos a la manera española de la época colonial",
                 "fechaInicio": "2018-11-07 09:00 AM",
                 "fechaFin": "2018-11-07 11:00 AM",
                 "latitud": -24.185493,
@@ -324,7 +324,7 @@
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "San Salvador de Jujuy",
-                "descripcion": "",
+                "descripcion": "El taller de lutheria fue creado con el objetivo de generar una conciencia sustentable y educar a través del reciclaje, a través de los conceptos básicos de construcción de instrumentos sinfónicos de cuerda y de vientos. Está dedicado a todas las edades, generando también un encuentro entre miembros de una familia. Para este festival se han diseñado instrumentos especiales: la “Violata” y el “Sorborgano”. Estos instrumentos están compuestos por las mismas partes que un violín y una flauta, pero su particularidad reside en que están conformados con materiales reciclables. Las latas de gaseosa y las botellas de plástico serán una parte fundamental en la fabricación de los mismos. Guiados por especialistas, cada uno de los participantes recibirá un kit de materiales y las indicaciones que sean necesarias para fabricar su propio instrumento que se llevarán luego como obsequio. Durante el taller aprenderán a tocar los instrumentos en grupo y podrán participar el Sábado 10 al mediodía en la Plaza MItre formando parte de en una gran orquesta de instrumentos reciclados.",
                 "fechaInicio": "2018-11-07 10:00 AM",
                 "fechaFin": "2018-11-07 11:45 AM",
                 "latitud": -24.06665,
@@ -394,7 +394,7 @@
             {
                 "evento": "Jornada de Arquitectura Sustentable - Jardines Verticales, Ing. Agronoma Judith Fridman",
                 "lugar": "Colegio de Arquitectos - Av. Dr Arturo Ilia 865- Los Perales",
-                "descripcion": "",
+                "descripcion": "Que es un jardín. El jardín como complemento arquitectónico. Tendencias ecológicas. Beneficios de los jardines verticales. Mantenimiento. Tipos de sistemas de jardines verticales. Ventajas y desventajas de los diferentes sistemas. Plantas adecuadas para jardines verticales. Dificultades de un jardín vertical",
                 "fechaInicio": "2018-11-07 11:30 AM",
                 "fechaFin": "0",
                 "latitud": -24.166727,
@@ -450,7 +450,7 @@
             {
                 "evento": "Biotico Taller - Jesica Pullo",
                 "lugar": "Sala Raúl Galán. Altos del Teatro Mitre. Alvear 1009",
-                "descripcion": "",
+                "descripcion": "Dictado por Jessica Pullo. El descarte como motor de obra artística y diseño. Charla -  Taller destinado a Fundaciones y Asociaciones de recicladores y público en general",
                 "fechaInicio": "2018-11-07 11:00 AM",
                 "fechaFin": "2018-11-07 01:00 PM",
                 "latitud": -24.184189,
@@ -464,7 +464,7 @@
             {
                 "evento": "Herramientas Digitales Para Emprendedores Sustentables",
                 "lugar": "Sala Raúl Galán. Altos del Teatro Mitre. Alvear 1009",
-                "descripcion": "",
+                "descripcion": "Herramientas digitales en la nube para potenciar tu emprendimiento sustentable. Destinado a Emprendedores sustentables que quieran aprovechar la tecnología, internet, web, nube para comercializar sus productos y potenciar sus emprendimientos.",
                 "fechaInicio": "2018-11-07 10:00 AM",
                 "fechaFin": "2018-11-07 12:00 PM",
                 "latitud": -24.184189,
@@ -492,7 +492,7 @@
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "San Salvador de Jujuy",
-                "descripcion": "",
+                "descripcion": "El taller de lutheria fue creado con el objetivo de generar una conciencia sustentable y educar a través del reciclaje, a través de los conceptos básicos de construcción de instrumentos sinfónicos de cuerda y de vientos. Está dedicado a todas las edades, generando también un encuentro entre miembros de una familia. Para este festival se han diseñado instrumentos especiales: la “Violata” y el “Sorborgano”. Estos instrumentos están compuestos por las mismas partes que un violín y una flauta, pero su particularidad reside en que están conformados con materiales reciclables. Las latas de gaseosa y las botellas de plástico serán una parte fundamental en la fabricación de los mismos. Guiados por especialistas, cada uno de los participantes recibirá un kit de materiales y las indicaciones que sean necesarias para fabricar su propio instrumento que se llevarán luego como obsequio. Durante el taller aprenderán a tocar los instrumentos en grupo y podrán participar el Sábado 10 al mediodía en la Plaza MItre formando parte de en una gran orquesta de instrumentos reciclados.",
                 "fechaInicio": "2018-11-08 10:00 AM",
                 "fechaFin": "2018-11-08 11:45 AM",
                 "latitud": -24.06665,
@@ -534,7 +534,7 @@
             {
                 "evento": "Inauguración de: “EL ABRAZO”, escultura de Alejandro Marmo",
                 "lugar": "Ciudad Cultural",
-                "descripcion": "",
+                "descripcion": "Así como en Roma, en Tokio y en la Plaza de los dos Congresos en Buenos Aires, Jujuy recibe este Abrazo al “Corazón Andino”, iluminado por primera vez con energía solar y donado por Fundecua, en el marco de un convenio de colaboración con el Centro Cultural “Arte en las Fábricas”, del escultor Alejandro Marmo. Acto inaugural por la presentación de la escultura “El Abrazo”, abrazo que representa lo simple como eje de unión entre los pueblos y la hermandad de diversas culturas. En dicha inauguración actuarán y deleitarán con un baile de tango, la pareja de bailarines Paula Robles y Luis Solanas",
                 "fechaInicio": "2018-11-08 07:00 PM",
                 "fechaFin": "0",
                 "latitud": -24.184189,
@@ -562,7 +562,7 @@
             {
                 "evento": "Proyección del Film “LANDFILL HARMONIC” – Estados Unidos / Paraguay 2015",
                 "lugar": "Parque Lineal Xibi Xibi  Anfiteatro. Hipólito Irigoyen 1502",
-                "descripcion": "",
+                "descripcion": "SINOPSIS: Una historia de vida, de esperanza, de inspiración. Una propuesta tan compleja como armónica, quizás tanto como el compás de la orquesta. “Landfill harmonic” cuenta la historia de una orquesta musical de jóvenes músicos en situación de vulnerabilidad de Paraguay que tocan a partir de instrumentos creados con residuos. Una iniciativa de reciclaje y música pasó a ser un ejemplo de transformación para el mundo entero; un mensaje de optimismo para cambiar la realidad.",
                 "fechaInicio": "2018-11-08 07:00 PM",
                 "fechaFin": "0",
                 "latitud": -24.190050,
@@ -590,7 +590,7 @@
             {
                 "evento": "Conferencia y Presentación del Libro de Carlos Núñez 'La hermandad de los celtas'",
                 "lugar": "Teatro Mitre",
-                "descripcion": "",
+                "descripcion": "Últimas investigaciones y vivencias sobre los celtas y su música por uno de sus protagonistas. El libro analiza la música celta desde múltiples perspectivas: histórica, musicológica, cultural, etc., y aborda aspectos muy diversos: su relación con otras músicas y estilos, sus formas, los instrumentos característicos de su interpretación, su ámbito territorial de expansión e influencia, etc..",
                 "fechaInicio": "2018-11-09 11:00 AM",
                 "fechaFin": "0",
                 "latitud": -24.184189,
@@ -650,7 +650,7 @@
             {
                 "evento": "Desfile Moda Etnico Contemporáneo",
                 "lugar": "Posta del Hornillo",
-                "descripcion": "",
+                "descripcion": "Moda sostenible, moda ética,  filosofía del diseño con sustentabilidad y responsabilidad social. Son productos elaborados considerando el impacto ambiental y social, con el uso de técnicas ancestrales en la utilización de materiales ambientalmente amigables y métodos socialmente responsables para la producción. Prendas con valor agregado, identidad y Cultura. Las prendas y accesorios son realizados totalmente a mano  a partir de la técnicas artesanal de telar en fibra pura de llama. alpaca., oveja  y  bordados. Chales , ponchos ,joyas realizadas en alpaca, plata, piedras semipreciosas, maderas nativas, asta y hueso, fibras naturales como lana de oveja , fibra de chaguar que son moldeados pulidos y ensamblados  artesanalmente, un estilo original y totalmente innovador. Tejido en telar con técnica ancestral. En vivo con Norberto Escalante  y  su telar. Música de origen ancestral, sikuriadas, coplas, vidalas. El Colectivo de bailarines de la Quebrada  escenificara en la pasarela  rituales andinos y danzas de la región . , el clásico cierre con la novia tendrá la representación del Sirviñacu  union  Andina con un alto contenido de tradición y cultura. Moda,  danza, música, ceremonias, historia . harán de un momento único.",
                 "fechaInicio": "2018-11-04 01:00 PM",
                 "fechaFin": "2018-11-04 02:30 PM",
                 "latitud": -23.65462,
@@ -664,7 +664,7 @@
             {
                 "evento": "Feria Sustentable",
                 "lugar": "Plaza Maimará (Martín Rodríguez esquina San Martín)",
-                "descripcion": "",
+                "descripcion": "Exposición itinerante de productos diseñados con conciencia sustentable y materiales renovables. Apoya la Fundación Ecoandina con la apertura de la casa EcoSolar para el público del festival y la provisión de cocinas solares.",
                 "fechaInicio": "2018-11-04 02:00 PM",
                 "fechaFin": "0",
                 "latitud": -23.65462,
@@ -678,7 +678,7 @@
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "Plaza Maimará",
-                "descripcion": "",
+                "descripcion": "El taller de lutheria fue creado con el objetivo de generar una conciencia sustentable y educar a través del reciclaje, a través de los conceptos básicos de construcción de instrumentos sinfónicos de cuerda y de vientos. Está dedicado a todas las edades, generando también un encuentro entre miembros de una familia. Para este festival se han diseñado instrumentos especiales: la “Violata” y el “Sorborgano”. Estos instrumentos están compuestos por las mismas partes que un violín y una flauta, pero su particularidad reside en que están conformados con materiales reciclables. Las latas de gaseosa y las botellas de plástico serán una parte fundamental en la fabricación de los mismos. Guiados por especialistas, cada uno de los participantes recibirá un kit de materiales y las indicaciones que sean necesarias para fabricar su propio instrumento que se llevarán luego como obsequio. Durante el taller aprenderán a tocar los instrumentos en grupo y podrán participar el Sábado 10 al mediodía en la Plaza MItre formando parte de en una gran orquesta de instrumentos reciclados.",
                 "fechaInicio": "2018-11-04 03:00 PM",
                 "fechaFin": "2018-11-04 04:30 PM",
                 "latitud": -23.65462,
@@ -724,7 +724,7 @@
             {
                 "evento": "Feria Sustentable",
                 "lugar": "Plaza Tumbaya - (Álvarez Prado esquina Salta)",
-                "descripcion": "",
+                "descripcion": "Exposición itinerante de productos diseñados con conciencia sustentable y materiales renovables. Apoya la Fundación Ecoandina con la apertura de la casa EcoSolar para el público del festival y la provisión de cocinas solares.",
                 "fechaInicio": "2018-11-05 02:00 PM",
                 "fechaFin": "2018-11-05 04:00 PM",
                 "latitud": -23.85752,
@@ -738,7 +738,7 @@
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "Plaza Tumbaya - (Álvarez Prado esquina Salta)",
-                "descripcion": "",
+                "descripcion": "El taller de lutheria fue creado con el objetivo de generar una conciencia sustentable y educar a través del reciclaje, a través de los conceptos básicos de construcción de instrumentos sinfónicos de cuerda y de vientos. Está dedicado a todas las edades, generando también un encuentro entre miembros de una familia. Para este festival se han diseñado instrumentos especiales: la “Violata” y el “Sorborgano”. Estos instrumentos están compuestos por las mismas partes que un violín y una flauta, pero su particularidad reside en que están conformados con materiales reciclables. Las latas de gaseosa y las botellas de plástico serán una parte fundamental en la fabricación de los mismos. Guiados por especialistas, cada uno de los participantes recibirá un kit de materiales y las indicaciones que sean necesarias para fabricar su propio instrumento que se llevarán luego como obsequio. Durante el taller aprenderán a tocar los instrumentos en grupo y podrán participar el Sábado 10 al mediodía en la Plaza MItre formando parte de en una gran orquesta de instrumentos reciclados.",
                 "fechaInicio": "2018-11-05 03:00 PM",
                 "fechaFin": "2018-11-05 04:30 PM",
                 "latitud": -23.85752,
@@ -813,7 +813,7 @@
             {
                 "evento": "Feria Sustentable",
                 "lugar": "Plaza Dr. Ernesto Padilla",
-                "descripcion": "",
+                "descripcion": "Exposición itinerante de productos diseñados con conciencia sustentable y materiales renovables. Apoya la Fundación Ecoandina con la apertura de la casa EcoSolar para el público del festival y la provisión de cocinas solares.",
                 "fechaInicio": "2018-11-06 02:00 PM",
                 "fechaFin": "2018-11-06 04:30 PM",
                 "latitud": -23.203906,
@@ -827,7 +827,7 @@
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "Humahuaca",
-                "descripcion": "",
+                "descripcion": "El taller de lutheria fue creado con el objetivo de generar una conciencia sustentable y educar a través del reciclaje, a través de los conceptos básicos de construcción de instrumentos sinfónicos de cuerda y de vientos. Está dedicado a todas las edades, generando también un encuentro entre miembros de una familia. Para este festival se han diseñado instrumentos especiales: la “Violata” y el “Sorborgano”. Estos instrumentos están compuestos por las mismas partes que un violín y una flauta, pero su particularidad reside en que están conformados con materiales reciclables. Las latas de gaseosa y las botellas de plástico serán una parte fundamental en la fabricación de los mismos. Guiados por especialistas, cada uno de los participantes recibirá un kit de materiales y las indicaciones que sean necesarias para fabricar su propio instrumento que se llevarán luego como obsequio. Durante el taller aprenderán a tocar los instrumentos en grupo y podrán participar el Sábado 10 al mediodía en la Plaza MItre formando parte de en una gran orquesta de instrumentos reciclados.",
                 "fechaInicio": "2018-11-06 03:00 PM",
                 "fechaFin": "2018-11-06 04:30 PM",
                 "latitud": -23.203906,
@@ -859,7 +859,7 @@
         "eventos": [{
                 "evento": "Maraton de Barriletes",
                 "lugar": "Laguna Volcan",
-                "descripcion": "",
+                "descripcion": "Taller de construcción de barriletes con materiales sustentables provistos por el festival. Actividad familiar que propicia el encuentro intergeneracional para recuperar una tradición de juego compartido, color y emoción colectiva.",
                 "fechaInicio": "2018-11-07 02:00 PM",
                 "fechaFin": "2018-11-07 04:00 PM",
                 "latitud": -23.92586,
@@ -873,7 +873,7 @@
             {
                 "evento": "Feria Sustentable",
                 "lugar": "Laguna Volcan",
-                "descripcion": "",
+                "descripcion": "Exposición itinerante de productos diseñados con conciencia sustentable y materiales renovables. Apoya la Fundación Ecoandina con la apertura de la casa EcoSolar para el público del festival y la provisión de cocinas solares.",
                 "fechaInicio": "2018-11-07 02:00 PM",
                 "fechaFin": "2018-11-07 04:00 PM",
                 "latitud": -23.92586,
@@ -887,7 +887,7 @@
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "Volcan",
-                "descripcion": "",
+                "descripcion": "El taller de lutheria fue creado con el objetivo de generar una conciencia sustentable y educar a través del reciclaje, a través de los conceptos básicos de construcción de instrumentos sinfónicos de cuerda y de vientos. Está dedicado a todas las edades, generando también un encuentro entre miembros de una familia. Para este festival se han diseñado instrumentos especiales: la “Violata” y el “Sorborgano”. Estos instrumentos están compuestos por las mismas partes que un violín y una flauta, pero su particularidad reside en que están conformados con materiales reciclables. Las latas de gaseosa y las botellas de plástico serán una parte fundamental en la fabricación de los mismos. Guiados por especialistas, cada uno de los participantes recibirá un kit de materiales y las indicaciones que sean necesarias para fabricar su propio instrumento que se llevarán luego como obsequio. Durante el taller aprenderán a tocar los instrumentos en grupo y podrán participar el Sábado 10 al mediodía en la Plaza MItre formando parte de en una gran orquesta de instrumentos reciclados.",
                 "fechaInicio": "2018-11-07 03:00 PM",
                 "fechaFin": "2018-11-07 04:30 PM",
                 "latitud": -23.92586,
@@ -919,7 +919,7 @@
         "eventos": [{
                 "evento": "Feria Sustentable",
                 "lugar": "Plaza Tilcara",
-                "descripcion": "",
+                "descripcion": "Exposición itinerante de productos diseñados con conciencia sustentable y materiales renovables. Apoya la Fundación Ecoandina con la apertura de la casa EcoSolar para el público del festival y la provisión de cocinas solares.",
                 "fechaInicio": "2018-11-08 01:30 PM",
                 "fechaFin": "2018-11-08 03:30 PM",
                 "latitud": -23.576963,
@@ -933,7 +933,7 @@
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "Plaza Tilcara",
-                "descripcion": "",
+                "descripcion": "El taller de lutheria fue creado con el objetivo de generar una conciencia sustentable y educar a través del reciclaje, a través de los conceptos básicos de construcción de instrumentos sinfónicos de cuerda y de vientos. Está dedicado a todas las edades, generando también un encuentro entre miembros de una familia. Para este festival se han diseñado instrumentos especiales: la “Violata” y el “Sorborgano”. Estos instrumentos están compuestos por las mismas partes que un violín y una flauta, pero su particularidad reside en que están conformados con materiales reciclables. Las latas de gaseosa y las botellas de plástico serán una parte fundamental en la fabricación de los mismos. Guiados por especialistas, cada uno de los participantes recibirá un kit de materiales y las indicaciones que sean necesarias para fabricar su propio instrumento que se llevarán luego como obsequio. Durante el taller aprenderán a tocar los instrumentos en grupo y podrán participar el Sábado 10 al mediodía en la Plaza MItre formando parte de en una gran orquesta de instrumentos reciclados.",
                 "fechaInicio": "2018-11-08 02:30 PM",
                 "fechaFin": "2018-11-08 04:00 PM",
                 "latitud": -23.576963,
@@ -993,7 +993,7 @@
         "eventos": [{
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "Purmamarca",
-                "descripcion": "",
+                "descripcion": "El taller de lutheria fue creado con el objetivo de generar una conciencia sustentable y educar a través del reciclaje, a través de los conceptos básicos de construcción de instrumentos sinfónicos de cuerda y de vientos. Está dedicado a todas las edades, generando también un encuentro entre miembros de una familia. Para este festival se han diseñado instrumentos especiales: la “Violata” y el “Sorborgano”. Estos instrumentos están compuestos por las mismas partes que un violín y una flauta, pero su particularidad reside en que están conformados con materiales reciclables. Las latas de gaseosa y las botellas de plástico serán una parte fundamental en la fabricación de los mismos. Guiados por especialistas, cada uno de los participantes recibirá un kit de materiales y las indicaciones que sean necesarias para fabricar su propio instrumento que se llevarán luego como obsequio. Durante el taller aprenderán a tocar los instrumentos en grupo y podrán participar el Sábado 10 al mediodía en la Plaza MItre formando parte de en una gran orquesta de instrumentos reciclados.",
                 "fechaInicio": "2018-11-09 10:00 AM",
                 "fechaFin": "2018-11-09 12:00 PM",
                 "latitud": -23.746459,
@@ -1049,7 +1049,7 @@
             {
                 "evento": "Feria Sustentable",
                 "lugar": "Plaza 9 de Julio",
-                "descripcion": "",
+                "descripcion": "Exposición itinerante de productos diseñados con conciencia sustentable y materiales renovables. Apoya la Fundación Ecoandina con la apertura de la casa EcoSolar para el público del festival y la provisión de cocinas solares.",
                 "fechaInicio": "2018-11-09 02:00 PM",
                 "fechaFin": "2018-11-09 07:00 PM",
                 "latitud": -23.746459,
@@ -1079,9 +1079,9 @@
     {
         "localidad": "Uquia",
         "eventos": [{
-                "evento": "Jujuy Feria Sustentable",
+                "evento": "Feria Sustentable",
                 "lugar": "Plaza Uquia",
-                "descripcion": "",
+                "descripcion": "Exposición itinerante de productos diseñados con conciencia sustentable y materiales renovables. Apoya la Fundación Ecoandina con la apertura de la casa EcoSolar para el público del festival y la provisión de cocinas solares.",
                 "fechaInicio": "2018-11-09 03:00 PM",
                 "fechaFin": "2018-11-09 04:30 PM",
                 "latitud": -23.303229,
@@ -1095,7 +1095,7 @@
             {
                 "evento": "Taller de Instrumentos Reciclados",
                 "lugar": "Plaza Uquia",
-                "descripcion": "",
+                "descripcion": "El taller de lutheria fue creado con el objetivo de generar una conciencia sustentable y educar a través del reciclaje, a través de los conceptos básicos de construcción de instrumentos sinfónicos de cuerda y de vientos. Está dedicado a todas las edades, generando también un encuentro entre miembros de una familia. Para este festival se han diseñado instrumentos especiales: la “Violata” y el “Sorborgano”. Estos instrumentos están compuestos por las mismas partes que un violín y una flauta, pero su particularidad reside en que están conformados con materiales reciclables. Las latas de gaseosa y las botellas de plástico serán una parte fundamental en la fabricación de los mismos. Guiados por especialistas, cada uno de los participantes recibirá un kit de materiales y las indicaciones que sean necesarias para fabricar su propio instrumento que se llevarán luego como obsequio. Durante el taller aprenderán a tocar los instrumentos en grupo y podrán participar el Sábado 10 al mediodía en la Plaza MItre formando parte de en una gran orquesta de instrumentos reciclados.",
                 "fechaInicio": "2018-11-09 03:00 PM",
                 "fechaFin": "2018-11-09 04:30 PM",
                 "latitud": -23.303229,

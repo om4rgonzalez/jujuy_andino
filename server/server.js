@@ -23,7 +23,7 @@ app.use(require('./routes/horarioBus'));
 // app.use(require('./server_contacto/server_contacto'));
 
 
-mongoose.connect(process.env.URLDB, (err, res) => {
+mongoose.connect(process.env.URLDB, { useNewUrlParser: true }, (err, res) => {
     if (err) throw err;
     console.log('Base de datos ONLINE');
 });
