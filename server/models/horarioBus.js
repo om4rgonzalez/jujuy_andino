@@ -23,6 +23,9 @@ let horarioBusSchema = new Schema({
     minuto: {
         type: String
     },
+    origen: {
+        type: String
+    },
     destino: {
         type: String
     }
