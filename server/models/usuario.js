@@ -47,6 +47,10 @@ let usuarioSchema = new Schema({
     fechaAlta: {
         type: Date,
         default: Date.now
+    },
+    telefono: {
+        type: String,
+        default: "-"
     }
 });
 usuarioSchema.plugin(uniqueValidator);

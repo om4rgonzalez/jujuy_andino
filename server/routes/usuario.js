@@ -209,6 +209,7 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
         //creo la cuenta del usuario
         console.log('Pais: ' + req.body.usuario.pais);
         console.log('Provincia: ' + req.body.usuario.provincia);
+        console.log('Nombre: ' + req.body.usuario.nombre);
 
         if (req.body.usuario.provincia) {
             if (req.body.usuario.provincia.toUpperCase() == 'JUJUY')
@@ -222,10 +223,6 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
             }
 
         }
-        let URL = process.env.URL_SERVICE + process.env.PORT + '/usuario/nuevo/';
-
-
-
         try {
             // let respuestaNuevoUsuario = await nuevoUsuario(usuario);
             // let usuario = new Usuario();
@@ -279,7 +276,8 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                             codigo: -1
                                         })
                                     }
-
+                                    console.log('evento: ' + eventoDB[0].nombreEvento);
+                                    console.log('usuario: ' + usuarioSuccess.nombre);
                                     console.log('Se actualizo el cupo, ahora vale: ' + c);
                                 });
                             } else {
@@ -317,6 +315,8 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                                 codigo: -1
                                             })
                                         }
+                                        console.log('evento: ' + eventoDB[0].nombreEvento);
+                                        console.log('usuario: ' + usuarioSuccess.nombre);
                                         console.log('Se actualizo el cupo externo, ahora vale: ' + c);
                                     });
                                 } else {
