@@ -549,7 +549,7 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
                 if (err) {
                     return res.json({
                         ok: false,
-                        message: 'Correo ya registrado. Error: ' + err.message,
+                        message: 'Correo ya registrado.',
                         codigo: -1
                     });
                 }
