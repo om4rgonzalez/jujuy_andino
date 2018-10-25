@@ -1423,10 +1423,9 @@ app.get('/agenda/obtener_eventos/', function(req, res) {
 
 app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
     let usuarios = [];
-    let URL = process.env.URL_SERVICE + process.env.PORT + '/agenda/buscar_entrada/';
-    let entrada = await axios.post(URL, {
-        idEntrada: req.query.idEntrada
-    });
+    let URL = process.env.URL_SERVICE + process.env.PORT + '/agenda/buscar_entrada/?entrada=' + req.query.idEntrada;
+    console.log('La URL a acceder es: ' + URL);
+    let entrada = await axios.get(URL);
 
     // console.log('El objeto que devuelve la funcion es: ');
     // console.log(entrada);
