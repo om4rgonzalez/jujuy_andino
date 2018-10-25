@@ -18,7 +18,7 @@ console.log('Llega la peticion');
 app.use(require('./routes/evento'));
 app.use(require('./routes/usuario'));
 app.use(require('./routes/horarioBus'));
-// app.use(require('./server_persona/server_persona'));
+app.use(require('./routes/notificacion'));
 // app.use(require('./server_usuario/server_usuario'));
 // app.use(require('./server_contacto/server_contacto'));
 

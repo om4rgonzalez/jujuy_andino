@@ -160,7 +160,7 @@ app.post('/usuario/nuevo/', async function(req, res) {
 
 app.get('/agenda/buscar_entrada/', async function(req, res) {
     Entrada.find({ _id: req.query.entrada })
-        .populate('usuario')
+        .populate('usuario', '_id nombre tipoDocumento email pais provincia documentoIdentidad')
         .populate('evento')
         .exec((err, entrada) => {
             if (err) {
