@@ -158,8 +158,8 @@ app.post('/usuario/nuevo/', async function(req, res) {
 });
 
 
-app.post('/agenda/buscar_entrada/', async function(req, res) {
-    Entrada.find({ _id: req.body.idEntrada })
+app.get('/agenda/buscar_entrada/', async function(req, res) {
+    Entrada.find({ _id: req.query.entrada })
         // .populate('Usuario')
         .populate('evento')
         .exec((err, entrada) => {
@@ -182,9 +182,315 @@ app.post('/agenda/buscar_entrada/', async function(req, res) {
                 entrada: entrada[0]
             });
         });
-})
+});
 
 app.post('/agenda/agregar_evento/', async function(req, res) {
+    //datos que recibe:
+    //===== === ======
+    //
+    //esNuevo
+    //idEvento
+    //idGoogle
+    //email
+    //nombre
+    //clave
+    // console.log(req.body.usuario);
+
+    //primero verifico si hay cupo
+
+    let idUsuario = '';
+    let yaRegistrado = false;
+    let idEvento = "";
+    let esLocal = true;
+    let tieneHotel = true;
+    // console.log('Valor de la variable -esNuevo-: ' + req.body.esNuevo);
+    if (req.body.esNuevo) {
+        //creo la cuenta del usuario
+        console.log('Pais: ' + req.body.usuario.pais);
+        console.log('Provincia: ' + req.body.usuario.provincia);
+
+        if (req.body.usuario.provincia) {
+            if (req.body.usuario.provincia.toUpperCase() == 'JUJUY')
+                esLocal = true;
+            else {
+                esLocal = false;
+                if (req.body.usuario.hotel) {
+                    tieneHotel = true;
+                } else
+                    tieneHotel = false;
+            }
+
+        }
+        let URL = process.env.URL_SERVICE + process.env.PORT + '/usuario/nuevo/';
+
+        // let usuario = new Usuario({
+        //     idGoogle: req.body.usuario.idGoogle,
+        //     email: req.body.usuario.email,
+        //     pais: req.body.usuario.pais,
+        //     provincia: req.body.usuario.provincia,
+        //     tipoDocumento: req.body.usuario.tipoDocumento,
+        //     documentoIdentidad: req.body.usuario.documentoIdentidad,
+        //     fechaNacimiento: req.body.usuario.fechaNacimiento,
+        //     nombre: req.body.usuario.nombre,
+        //     clave: req.body.usuario.clave,
+        //     hotel: req.body.usuario.hotel
+        // });
+        try {
+            // let respuestaNuevoUsuario = await nuevoUsuario(usuario);
+            let usuario = new Usuario();
+            let resp = await axios.post(URL, {
+                _id: usuario._id,
+                idGoogle: req.body.usuario.idGoogle,
+                email: req.body.usuario.email,
+                pais: req.body.usuario.pais,
+                provincia: req.body.usuario.provincia,
+                tipoDocumento: req.body.usuario.tipoDocumento,
+                documentoIdentidad: req.body.usuario.documentoIdentidad,
+                fechaNacimiento: req.body.usuario.fechaNacimiento,
+                nombre: req.body.usuario.nombre,
+                clave: req.body.usuario.clave,
+                hotel: req.body.usuario.hotel
+            });
+            if (resp.data.ok) {
+                idUsuario = usuario._id;
+                // console.log('Ya se dio de alta el usuario');
+            } else
+                return res.status(400).json({
+                    ok: false,
+                    message: 'No se pudo dar de alta el usuario. Error '
+                });
+
+        } catch (e) {
+            console.log('No se pudo dar de alta el usuario. Error ' + e.message);
+            // return res.status(400).json({
+            //     ok: false,
+            //     message: 'No se pudo dar de alta el usuario. Error ' + e.message
+            // });
+        }
+    }
+    // console.log('Se esta por buscar el usuario');
+    // console.log('email a buscar: ' + req.body.usuario.email);
+    Usuario.find({ email: req.body.usuario.email })
+        .populate('agenda')
+        .exec((err, usuario) => {
+            if (err) {
+                return res.status(400).json({
+                    ok: false,
+                    err
+                });
+            }
+
+            if (usuario.length > 0) {
+                idUsuario = usuario[0]._id;
+            } else
+                return res.json({
+                    ok: false,
+                    message: 'No hay usuarios con ese correo'
+                });
+            // console.log(usuario[0]);
+
+            if (usuario[0].provincia.toUpperCase() == 'JUJUY')
+                esLocal = true;
+            else
+                esLocal = false;
+
+            if (usuario[0].hotel != '-')
+                tieneHotel = true;
+            else
+                tieneHotel = false;
+
+            for (var j in usuario) {
+                for (var i in usuario[j].agenda) {
+                    if (usuario[j].agenda[i].id == req.body.evento.id) {
+                        yaRegistrado = true;
+                        idEvento = usuario[j].agenda[i]._id;
+                        break;
+                    }
+                }
+            }
+            if (!yaRegistrado) {
+                Evento.find({ id: req.body.evento.id })
+                    // .where({ completo: false })
+                    .exec((err, eventoDB) => {
+                        if (err) {
+                            return res.status(400).json({
+                                ok: false,
+                                err,
+                                codigo: -1
+                            });
+                        }
+
+                        if (eventoDB.length <= 0) {
+                            return res.json({
+                                ok: false,
+                                message: 'No existe un evento con el id enviado',
+                                codigo: -1
+                            });
+                        }
+                        if (esLocal) {
+                            if (eventoDB[0].cupo > 0) {
+                                let c = (eventoDB[0].cupo - 1);
+                                let completo_ = false;
+                                if (c <= 0) {
+                                    completo_ = true;
+                                }
+
+
+                                Evento.findOneAndUpdate({ _id: eventoDB[0]._id }, {
+                                    $set: { cupo: c, completo: completo_ }
+                                }, function(err1, success_) {
+                                    if (err1) {
+                                        console.log('La actualizacion del evento produjo un error: ' + err1.message);
+                                        return res.json({
+                                            ok: false,
+                                            message: 'La actualizacion del evento produjo un error: ' + err1.message,
+                                            codigo: -1
+                                        })
+                                    }
+
+                                    console.log('Se actualizo el cupo, ahora vale: ' + c);
+                                });
+                                // Aqui tengo que agregar el id a la agenda
+                                Usuario.findOneAndUpdate({ email: req.body.usuario.email }, { $push: { agenda: eventoDB[0]._id } },
+                                    function(err, success) {
+
+                                        if (err) {
+                                            return res.status(400).json({
+                                                ok: false,
+                                                message: 'No se pudo agregar el evento a la agenda',
+                                                codigo: -1
+                                            });
+                                        }
+
+                                        // console.log('id usuario: ' + success);
+                                        // console.log('id usuario guardado: ' + idUsuario);
+
+                                        // genero el ticket de entrada
+                                        let entrada = new Entrada({
+                                            usuario: idUsuario,
+                                            evento: eventoDB[0]._id
+                                        });
+                                        entrada.save();
+
+                                        res.json({
+                                            ok: true,
+                                            message: 'El evento se agrego a la agenda',
+                                            codigo: entrada._id
+                                        });
+                                    });
+                            } else {
+                                //el evento esta completo, queda ver si es que tiene la opcion de comprar la entrada
+                                if (eventoDB[0].urlCompraTicket == '-') { //no se puede comprar ticket
+                                    return res.json({
+                                        ok: false,
+                                        message: 'No quedan entradas gratuitas para este evento.',
+                                        codigo: -1
+                                    });
+                                } else { //se puede comprar ticket
+                                    return res.json({
+                                        ok: false,
+                                        message: 'No quedan entradas gratuitas para este evento.',
+                                        codigo: -1
+                                    });
+                                }
+                            }
+
+                        } else {
+                            if (tieneHotel) {
+                                //aqui debe tener en cuenta el cupo externo
+                                if (eventoDB[0].cupoExterno > 0) {
+                                    let c = (eventoDB[0].cupoExterno - 1);
+                                    let completo_ = false;
+                                    if (c <= 0) {
+                                        completo_ = true;
+                                    }
+
+
+                                    Evento.findOneAndUpdate({ _id: eventoDB[0]._id }, {
+                                        $set: { cupoExterno: c, completo: completo_ }
+                                    }, function(err1, success_) {
+                                        if (err1) {
+                                            console.log('La actualizacion del evento produjo un error: ' + err1.message);
+                                            return res.json({
+                                                ok: false,
+                                                message: 'La actualizacion del evento produjo un error: ' + err1.message,
+                                                codigo: -1
+                                            })
+                                        }
+
+                                        console.log('Se actualizo el cupo, ahora vale: ' + c);
+                                    });
+                                    // Aqui tengo que agregar el id a la agenda
+                                    Usuario.findOneAndUpdate({ email: req.body.usuario.email }, { $push: { agenda: eventoDB[0]._id } },
+                                        function(err, success) {
+
+                                            if (err) {
+                                                return res.status(400).json({
+                                                    ok: false,
+                                                    message: 'No se pudo agregar el evento a la agenda',
+                                                    codigo: -1
+                                                });
+                                            }
+
+                                            // console.log('id usuario: ' + success);
+                                            // console.log('id usuario guardado: ' + idUsuario);
+
+                                            // genero el ticket de entrada
+                                            let entrada = new Entrada({
+                                                usuario: idUsuario,
+                                                evento: eventoDB[0]._id
+                                            });
+                                            entrada.save();
+
+                                            res.json({
+                                                ok: true,
+                                                message: 'El evento se agrego a la agenda',
+                                                codigo: entrada._id
+                                            });
+                                        });
+                                } else {
+                                    //el evento esta completo, queda ver si es que tiene la opcion de comprar la entrada
+                                    if (eventoDB[0].urlCompraTicket == '-') { //no se puede comprar ticket
+                                        return res.json({
+                                            ok: false,
+                                            message: 'No quedan entradas gratuitas para este evento.',
+                                            codigo: -1
+                                        });
+                                    } else { //se puede comprar ticket
+                                        return res.json({
+                                            ok: false,
+                                            message: 'No quedan entradas gratuitas para este evento.',
+                                            codigo: -1
+                                        });
+                                    }
+                                }
+                            } else {
+                                //no tiene hotel, no puede reservar entrada
+                                return res.json({
+                                    ok: false,
+                                    message: 'No quedan entradas gratuitas para este evento.',
+                                    codigo: -1
+                                });
+                            }
+                        }
+
+                    });
+            } else {
+                //busco el tikcet
+                Entrada.find({ usuario: idUsuario, evento: idEvento })
+                    .exec((err, entradaDB) => {
+
+                        return res.json({
+                            ok: false,
+                            message: 'Ya esta registrado al evento',
+                            codigo: entradaDB[0]._id
+                        });
+                    });
+            }
+        });
+});
+
+app.post('/agenda/agregar_evento_/', async function(req, res) {
     //datos que recibe:
     //===== === ======
     //
