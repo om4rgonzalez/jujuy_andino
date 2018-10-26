@@ -49,7 +49,7 @@ app.post('/bus/registrar_viaje/', function(req, res) {
 
 app.get('/bus/consultar_viajes/', function(req, res) {
     HorarioBus.find()
-        .populate('usuario')
+        .populate('usuario', 'email')
         .exec((err, horarios) => {
             if (err) {
                 console.log('La busqueda de horarios de colectivos produjo un error: ' + err.message);
