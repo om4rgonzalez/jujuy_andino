@@ -65,6 +65,44 @@ app.post('/conf/calendario_init/', function(req, res) {
 });
 
 
+app.get('/reportes/entradas_disponibles/', function(req, res) {
+    let eventos = [];
+    Evento.find()
+        .exec((err, evento) => {
+            if (err) {
+                console.log('La consulta arrojo un error: ' + err.message);
+                return res.json({
+                    ok: false,
+                    message: 'La consulta arrojo un error: ' + err.message
+                });
+            }
+
+            if (evento.length == 0) {
+                console.log('La consulta arrojo un error: ' + err.message);
+                return res.json({
+                    ok: false,
+                    message: 'La consulta arrojo un error: ' + err.message
+                });
+            }
+            let i = 0;
+            let hasta = evento.length;
+            while (i < hasta) {
+                eventos.push({
+                    evento: evento[i].nombreEvento,
+                    cupoLocal: evento[i].cupo,
+                    cupoExtrangero: evento[i].cupoExterno
+                });
+                i++;
+            }
+
+            res.json({
+                ok: true,
+                eventos
+            });
+        });
+});
+
+
 
 
 module.exports = app;
