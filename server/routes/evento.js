@@ -87,16 +87,31 @@ app.get('/reportes/entradas_disponibles/', function(req, res) {
             let i = 0;
             let hasta = evento.length;
             while (i < hasta) {
-                eventos.push({
-                    evento: evento[i].nombreEvento,
-                    cupoLocal: evento[i].cupo,
-                    cupoExtrangero: evento[i].cupoExterno
-                });
+                for (var k in Calendario) {
+                    for (var j in Calendario[k].eventos) {
+                        if (Calendario[k].eventos[j].id == evento[i].id) {
+                            eventos.push({
+                                evento: evento[i].nombreEvento,
+                                fechaInicio: evento[i].fechaInicio,
+                                fechaFin: evento[i].fechaFin,
+                                cupoLocal: evento[i].cupo,
+                                cupoExtrangero: evento[i].cupoExterno,
+                                cupoLocaInicial: Calendario[k].eventos[j].cupo,
+                                cupoExtrangeroInicial: Calendario[k].eventos[j].cupoExterno
+                            });
+                            break;
+                        }
+                    }
+                }
+
                 i++;
             }
 
+            eventos = eventos.sort(function(a, b) {
+                return (a.cupoLocal - b.cupoLocal)
+            });
+
             res.json({
-                ok: true,
                 eventos
             });
         });
