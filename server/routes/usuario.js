@@ -750,7 +750,8 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                     // genero el ticket de entrada
                                     let entrada = new Entrada({
                                         usuario: usuarioSuccess._id,
-                                        evento: eventoDB[0]._id
+                                        evento: eventoDB[0]._id,
+                                        entradaConfirmada: req.body.evento.entradaConfirmada
                                     });
                                     entrada.save();
 
@@ -874,7 +875,8 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                             // genero el ticket de entrada
                                             let entrada = new Entrada({
                                                 usuario: idUsuario,
-                                                evento: eventoDB[0]._id
+                                                evento: eventoDB[0]._id,
+                                                entradaConfirmada: req.body.evento.entradaConfirmada
                                             });
                                             entrada.save();
 
@@ -947,7 +949,8 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                                 // genero el ticket de entrada
                                                 let entrada = new Entrada({
                                                     usuario: idUsuario,
-                                                    evento: eventoDB[0]._id
+                                                    evento: eventoDB[0]._id,
+                                                    entradaConfirmada: req.body.evento.entradaConfirmada
                                                 });
                                                 entrada.save();
 
@@ -1193,7 +1196,8 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
                                     // genero el ticket de entrada
                                     let entrada = new Entrada({
                                         usuario: usuarioSuccess._id,
-                                        evento: eventoDB[0]._id
+                                        evento: eventoDB[0]._id,
+                                        entradaConfirmada: req.body.evento.entradaConfirmada
                                     });
                                     entrada.save();
 
@@ -1317,7 +1321,8 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
                                             // genero el ticket de entrada
                                             let entrada = new Entrada({
                                                 usuario: idUsuario,
-                                                evento: eventoDB[0]._id
+                                                evento: eventoDB[0]._id,
+                                                entradaConfirmada: req.body.evento.entradaConfirmada
                                             });
                                             entrada.save();
 
@@ -1390,7 +1395,8 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
                                                 // genero el ticket de entrada
                                                 let entrada = new Entrada({
                                                     usuario: idUsuario,
-                                                    evento: eventoDB[0]._id
+                                                    evento: eventoDB[0]._id,
+                                                    entradaConfirmada: req.body.evento.entradaConfirmada
                                                 });
                                                 entrada.save();
 

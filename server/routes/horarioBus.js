@@ -34,14 +34,7 @@ app.post('/bus/registrar_viaje/', function(req, res) {
                     } else {
                         console.log('Se actualizo el telefono');
                     }
-                    // genero el ticket de entrada
 
-
-                    // res.json({
-                    //     ok: true,
-                    //     message: 'El evento se agrego a la agenda',
-                    //     codigo: entrada._id
-                    // });
                 });
         }
     }
@@ -54,7 +47,54 @@ app.post('/bus/registrar_viaje/', function(req, res) {
 });
 
 
+app.get('/bus/consultar_viajes/', function(req, res) {
+    HorarioBus.find()
+        .populate('usuario')
+        .exec((err, horarios) => {
+            if (err) {
+                console.log('La busqueda de horarios de colectivos produjo un error: ' + err.message);
+                return res.json({
+                    ok: false,
+                    message: 'La busqueda de horarios de colectivos produjo un error: ' + err.message,
+                    horarios: null
+                });
+            }
 
+            let hasta = horarios.length;
+
+            if (hasta == 0) {
+                console.log('El usuario no tiene viajes registrados');
+                return res.json({
+                    ok: false,
+                    message: 'El usuario no tiene viajes registrados',
+                    horarios: null
+                });
+            }
+            let arrayHorarios = [];
+            let i = 0;
+            while (i < hasta) {
+                if (horarios[i].usuario.email == req.query.email) {
+                    arrayHorarios.push(horarios[i])
+                }
+                i++;
+            }
+
+            if (arrayHorarios.length == 0) {
+                console.log('El usuario no tiene viajes registrados');
+                return res.json({
+                    ok: false,
+                    message: 'El usuario no tiene viajes registrados',
+                    horarios: null
+                });
+            }
+
+            res.json({
+                ok: true,
+                message: 'El usuario tiene viajes registrados',
+                horarios: arrayHorarios
+            });
+        });
+});
 
 
 
