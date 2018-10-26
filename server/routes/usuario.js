@@ -159,29 +159,99 @@ app.post('/usuario/nuevo/', async function(req, res) {
 
 
 app.get('/agenda/buscar_entrada/', async function(req, res) {
-    Entrada.find({ _id: req.query.entrada })
-        .populate('usuario', '_id nombre tipoDocumento email pais provincia documentoIdentidad')
-        .populate('evento')
-        .exec((err, entrada) => {
-            if (err) {
-                return res.json({
-                    ok: false
-                });
-            }
+    if (req.query.tipo_dni) {
+        console.log('Tipo dni: ' + req.query.tipo_dni);
+        console.log('Dni: ' + req.query.dni);
+        let entradas = [];
+        //busqueda por dni
+        Entrada.find()
+            //     .populate({
+            //         path: 'usuario',
+            //         // match: { documentoIdentidad: { $eq: req.body.dni }, tipoDocumento: req.query.tipo_dni },
+            //         match: { documentoIdentidad: { $eq: req.body.dni } },
+            //         select: '_id nombre tipoDocumento email pais provincia documentoIdentidad'
+            //     })
+            .populate('usuario', '_id nombre tipoDocumento email pais provincia documentoIdentidad')
+            .populate('evento')
+            .exec((err, entrada) => {
+                if (err) {
+                    console.log('La busqueda produjo un error: ' + err.message);
+                    return res.json({
+                        ok: false
+                    });
+                }
 
-            if (entrada.length == 0) {
-                return res.json({
-                    ok: false
-                });
-            }
+                // console.log('entradas');
+                // console.log(entrada);
 
-            // console.log('encontro una entrada: ');
-            // console.log(entrada[0]);
-            return res.json({
-                ok: true,
-                entrada: entrada[0]
+                if (entrada.length == 0) {
+                    console.log('No hay entradas');
+                    return res.json({
+                        ok: false
+                    });
+                }
+                let hasta = entrada.length;
+                let i = 0;
+                while (i < hasta) {
+                    // console.log('');
+                    // console.log('Comparando tipo dni.');
+                    // console.log('Tipo dni registro: ' + entrada[i].usuario.tipoDocumento);
+                    // console.log('Tipo dni query: ' + req.query.tipo_dni);
+                    // console.log('======================================');
+                    // console.log('Comparando dni.');
+                    // console.log('dni registro: ' + entrada[i].usuario.documentoIdentidad);
+                    // console.log('dni query: ' + req.query.dni);
+                    if (entrada[i].usuario.tipoDocumento == req.query.tipo_dni) {
+                        // console.log('EL TIPO DE DNI COINCIDE');
+                        if (entrada[i].usuario.documentoIdentidad == req.query.dni) {
+                            if (entrada[i].entradaConfirmada) {
+                                // console.log('SE AGREGA UNA ENTRADA');
+                                entradas.push(entrada[i]);
+                            }
+
+                        }
+                    }
+                    i++;
+                }
+                // entrada = entrada.filter(function(entrada) {
+                //     return entrada.usuario != null;
+                // })
+
+                // console.log('encontro una entrada: ');
+                // console.log(entrada[0]);
+                return res.json({
+                    ok: true,
+                    entrada: entradas
+                });
             });
-        });
+
+
+    } else {
+        Entrada.find({ _id: req.query.entrada })
+            .populate('usuario', '_id nombre tipoDocumento email pais provincia documentoIdentidad')
+            .populate('evento')
+            .exec((err, entrada) => {
+                if (err) {
+                    return res.json({
+                        ok: false
+                    });
+                }
+
+                if (entrada.length == 0) {
+                    return res.json({
+                        ok: false
+                    });
+                }
+
+                // console.log('encontro una entrada: ');
+                // console.log(entrada[0]);
+                return res.json({
+                    ok: true,
+                    entrada: entrada[0]
+                });
+            });
+    }
+
 });
 
 // app.post('/agenda/agregar_evento/', async function(req, res) {
