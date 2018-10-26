@@ -773,8 +773,8 @@
                 "longitud": -65.46786,
                 "id": 50,
                 "color": "#70CDDD",
-                "cupo": 50,
-                "cupoExterno": 50,
+                "cupo": 25,
+                "cupoExterno": 25,
                 "urlCompraTicket": "-"
             }
 
