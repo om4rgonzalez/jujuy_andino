@@ -94,10 +94,11 @@ app.get('/reportes/entradas_disponibles/', function(req, res) {
                                 evento: evento[i].nombreEvento,
                                 fechaInicio: evento[i].fechaInicio,
                                 fechaFin: evento[i].fechaFin,
-                                cupoLocal: evento[i].cupo,
-                                cupoExtrangero: evento[i].cupoExterno,
                                 cupoLocaInicial: Calendario[k].eventos[j].cupo,
-                                cupoExtrangeroInicial: Calendario[k].eventos[j].cupoExterno
+                                cupoLocalDisponible: evento[i].cupo,
+                                cupoExtrangeroInicial: Calendario[k].eventos[j].cupoExterno,
+                                cupoExtrangeroDisponible: evento[i].cupoExterno
+
                             });
                             break;
                         }
@@ -108,7 +109,7 @@ app.get('/reportes/entradas_disponibles/', function(req, res) {
             }
 
             eventos = eventos.sort(function(a, b) {
-                return (a.cupoLocal - b.cupoLocal)
+                return (a.cupoLocalDisponible - b.cupoLocalDisponible)
             });
 
             res.json({
