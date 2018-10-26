@@ -14,6 +14,10 @@ let entradaSchema = new Schema({
     entradaConfirmada: {
         type: Boolean,
         default: false
+    },
+    usuarioConfirm: {
+        type: String,
+        default: '-'
     }
 });
 

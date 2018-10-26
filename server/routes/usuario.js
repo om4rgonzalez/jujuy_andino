@@ -1573,7 +1573,7 @@ app.post('/agenda/confirmar_asistencia/', function(req, res) {
     let mensajeError = '';
 
     for (var i in req.body.entradas) {
-        Entrada.findOneAndUpdate({ _id: req.body.entradas[i]._id }, { $set: { entradaConfirmada: true } },
+        Entrada.findOneAndUpdate({ _id: req.body.entradas[i]._id }, { $set: { entradaConfirmada: true, usuarioConfirm: req.body.usuarioConfirm } },
             function(err, success) {
 
                 if (err) {
@@ -1583,6 +1583,9 @@ app.post('/agenda/confirmar_asistencia/', function(req, res) {
                     //     ok: false,
                     //     message: 'No se pudo confirmar la entrada. Error: ' + err.message
                     // });
+                }
+                if (success.length == 0) {
+                    mensajeError = 'No se encontro la entrada';
                 }
             });
     }
