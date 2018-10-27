@@ -3,17 +3,26 @@ const app = express();
 const Evento = require('../models/evento');
 const Calendario = require('../src/calendario.json')
 
+
+
+
 app.get('/conf/status/', function(req, res) {
+    // let fecha = getDate(new Date());
+    // let fecha = new Date().toGMTString();
+    // var now = new Date();
+    // var fecha = new Date(now.getTime() + (now.getTimezoneOffset() * 60000));
     console.log('Ambiente: ' + process.env.NODE_ENV);
     console.log('URL del servicio: ' + process.env.URL_SERVICE);
     console.log('Puerto escuchando: ' + process.env.PORT);
     console.log('URL base de datos: ' + process.env.urlDB);
+    console.log('Hora del servidor: ' + fecha);
 
     res.json({
         ambiente: process.env.NODE_ENV,
         urlServicio: process.env.URL_SERVICE,
         puerto: process.env.PORT,
-        baseDatos: process.env.urlDB
+        baseDatos: process.env.urlDB,
+        fecha: fecha
     });
 
 });

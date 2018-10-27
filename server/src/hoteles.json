@@ -2,7 +2,9 @@
         "localidad": "San Salvador de Jujuy",
         "alojamientos": [
             { "tipoAlojamiento": "Hotel", "Nombre": "INTERNACIONAL", "Domicilio": "Belgrano, 501, San Salvador de Jujuy, Jujuy", "Categoria": "3", "Telefono 1": "0388-4231599", "Telefono 2": "-", "E-mail": "-" },
-            { "tipoAlojamiento": "Hotel", "Nombre": "TERMAS DE REYES", "Domicilio": "Ruta Provincial N°4, KM 19, San Salvador de Jujuy, Jujuy", "Categoria": "4", "Telefono 1": "0388-4249700", "Telefono 2": "-", "E-mail": "-" }
+            { "tipoAlojamiento": "Hotel", "Nombre": "TERMAS DE REYES", "Domicilio": "Ruta Provincial N°4, KM 19, San Salvador de Jujuy, Jujuy", "Categoria": "4", "Telefono 1": "0388-4249700", "Telefono 2": "-", "E-mail": "-" },
+            { "tipoAlojamiento": "Hotel", "Nombre": "ALTOS DE LA VIÑA", "Domicilio": "Pasquín López, 50, San Salvador de Jujuy, Jujuy", "Categoria": "4", "Telefono 1": "0388-4262626", "Telefono 2": "0388-4261666", "E-mail": "-" },
+            { "tipoAlojamiento": "Hotel", "Nombre": "HOWARD JOHNSON PLAZA JUJUY", "Domicilio": "Guemes, 864 , San Salvador de Jujuy, Jujuy", "Categoria": "4", "Telefono 1": "0388-4249800", "Telefono 2": "-", "E-mail": "-" }
         ]
     },
     {
@@ -10,7 +12,22 @@
         "alojamientos": [
             { "tipoAlojamiento": "Cabaña", "Nombre": "LOS COLORADOS", "Domicilio": "El Chapacal 511-Paseo de los Colorados", "Categoria": "3", "Telefono 1": "0388-4908182", "Telefono 2": "-", "E-mail": "info@loscoloradosjujuy.com.ar" },
             { "tipoAlojamiento": "Hostel", "Nombre": "HOSTAL EL CARDON", "Domicilio": "Belgrano s/n", "Categoria": "-", "Telefono 1": "0388-4908672", "Telefono 2": "-", "E-mail": "hostalelcardon@outlook.com" },
-            { "tipoAlojamiento": "Hostel", "Nombre": "POSADA DE LOS SUEÑOS", "Domicilio": "Libertad s/n", "Categoria": "-", "Telefono 1": "0388-4908442", "Telefono 2": "0388-154162003", "E-mail": "nissipag@hotmail.com" }
+            { "tipoAlojamiento": "Hostel", "Nombre": "POSADA DE LOS SUEÑOS", "Domicilio": "Libertad s/n", "Categoria": "-", "Telefono 1": "0388-4908442", "Telefono 2": "0388-154162003", "E-mail": "nissipag@hotmail.com" },
+            { "tipoAlojamiento": "Departamentos", "Nombre": "LAS VICUÑAS", "Domicilio": "Florida esquina Sarmiento", "Categoria": "-", "Telefono 1": "-", "Telefono 2": "-", "E-mail": "www.las.vicuas-apartaments" }
+        ]
+    },
+    {
+        "localidad": "Tilcara",
+        "alojamientos": [
+            { "tipoAlojamiento": "Cabaña", "Nombre": "ALAS DEL ALMA", "Domicilio": "Dr. Padilla 437", "Categoria": "3", "Telefono 1": "0388 4955572", "Telefono 2": "0388 - 155250937", "E-mail": "info@alasdelalmatilcara.com.ar" },
+            { "tipoAlojamiento": "Posada", "Nombre": "LA POSADA DEL RIO TANPU MAYU", "Domicilio": "Av, Costanera 625 esquina Rivadavia, Tilcara", "Categoria": "-", "Telefono 1": "0388 155245829", "Telefono 2": "-", "E-mail": "laposadadadeiro@gmail.com" },
+            { "tipoAlojamiento": "Hotel", "Nombre": "HOTEL DE TURISMO DE TILCARA", "Domicilio": "Belgrano 366, Tilcara", "Categoria": "-", "Telefono 1": "03884955671", "Telefono 2": "-", "E-mail": "-" }
+        ]
+    },
+    {
+        "localidad": "Humauaca",
+        "alojamientos": [
+            { "tipoAlojamiento": "Hotel", "Nombre": "HOTEL DE TURISMO HUMAHUACA", "Domicilio": "Buenos Aires 630", "Categoria": "-", "Telefono 1": "03887-422036", "Telefono 2": "-", "E-mail": "hthreservas@hotmail.com" }
         ]
     }
 
