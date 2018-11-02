@@ -160,8 +160,8 @@ app.post('/usuario/nuevo/', async function(req, res) {
 
 app.get('/agenda/buscar_entrada/', async function(req, res) {
     if (req.query.tipo_dni) {
-        console.log('Tipo dni: ' + req.query.tipo_dni);
-        console.log('Dni: ' + req.query.dni);
+        // console.log('Tipo dni: ' + req.query.tipo_dni);
+        // console.log('Dni: ' + req.query.dni);
         let entradas = [];
         //busqueda por dni
         Entrada.find()
@@ -584,12 +584,12 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
     // console.log('Valor de la variable -esNuevo-: ' + req.body.esNuevo);
     if (req.body.esNuevo) {
         //creo la cuenta del usuario
-        console.log('Datos a registrar');
-        console.log('=================');
-        console.log('Fecha y hora: ' + fecha_);
-        console.log('Pais: ' + req.body.usuario.pais);
-        console.log('Provincia: ' + req.body.usuario.provincia);
-        console.log('Nombre: ' + req.body.usuario.nombre);
+        // console.log('Datos a registrar');
+        // console.log('=================');
+        // console.log('Fecha y hora: ' + fecha_);
+        // console.log('Pais: ' + req.body.usuario.pais);
+        // console.log('Provincia: ' + req.body.usuario.provincia);
+        // console.log('Nombre: ' + req.body.usuario.nombre);
 
         if (req.body.usuario.provincia) {
             if (req.body.usuario.provincia.toUpperCase() == 'JUJUY')
@@ -656,13 +656,13 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                             codigo: -1
                                         })
                                     }
-                                    console.log('');
-                                    console.log('Se registro una nueva entrada');
-                                    console.log('=============================');
-                                    console.log('Fecha y hora: ' + fecha_);
-                                    console.log('evento: ' + eventoDB[0].nombreEvento);
-                                    console.log('usuario: ' + usuarioSuccess.nombre);
-                                    console.log('Se actualizo el cupo, ahora vale: ' + c);
+                                    // console.log('');
+                                    // console.log('Se registro una nueva entrada');
+                                    // console.log('=============================');
+                                    // console.log('Fecha y hora: ' + fecha_);
+                                    // console.log('evento: ' + eventoDB[0].nombreEvento);
+                                    // console.log('usuario: ' + usuarioSuccess.nombre);
+                                    // console.log('Se actualizo el cupo, ahora vale: ' + c);
                                 });
                             } else {
                                 //no hay cupo
@@ -699,13 +699,13 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                                 codigo: -1
                                             })
                                         }
-                                        console.log('');
-                                        console.log('Se registro una nueva entrada');
-                                        console.log('=============================');
-                                        console.log('Fecha y hora: ' + fecha_);
-                                        console.log('evento: ' + eventoDB[0].nombreEvento);
-                                        console.log('usuario: ' + usuarioSuccess.nombre);
-                                        console.log('Se actualizo el cupo externo, ahora vale: ' + c);
+                                        // console.log('');
+                                        // console.log('Se registro una nueva entrada');
+                                        // console.log('=============================');
+                                        // console.log('Fecha y hora: ' + fecha_);
+                                        // console.log('evento: ' + eventoDB[0].nombreEvento);
+                                        // console.log('usuario: ' + usuarioSuccess.nombre);
+                                        // console.log('Se actualizo el cupo externo, ahora vale: ' + c);
                                     });
                                 } else {
                                     //no hay cupo
@@ -856,13 +856,13 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                                 codigo: -1
                                             })
                                         }
-                                        console.log('');
-                                        console.log('Se registro una nueva entrada');
-                                        console.log('=============================');
-                                        console.log('Fecha y hora: ' + fecha_);
-                                        console.log('evento: ' + eventoDB[0].nombreEvento);
-                                        console.log('usuario: ' + usuario[0].nombre);
-                                        console.log('Se actualizo el cupo externo, ahora vale: ' + c);
+                                        // console.log('');
+                                        // console.log('Se registro una nueva entrada');
+                                        // console.log('=============================');
+                                        // console.log('Fecha y hora: ' + fecha_);
+                                        // console.log('evento: ' + eventoDB[0].nombreEvento);
+                                        // console.log('usuario: ' + usuario[0].nombre);
+                                        // console.log('Se actualizo el cupo externo, ahora vale: ' + c);
                                         // console.log('Se actualizo el cupo, ahora vale: ' + c);
                                     });
                                     // Aqui tengo que agregar el id a la agenda
@@ -933,13 +933,13 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                                     codigo: -1
                                                 })
                                             }
-                                            console.log('');
-                                            console.log('Se registro una nueva entrada');
-                                            console.log('=============================');
-                                            console.log('Fecha y hora: ' + fecha_);
-                                            console.log('evento: ' + eventoDB[0].nombreEvento);
-                                            console.log('usuario: ' + usuario[0].nombre);
-                                            console.log('Se actualizo el cupo, ahora vale: ' + c);
+                                            // console.log('');
+                                            // console.log('Se registro una nueva entrada');
+                                            // console.log('=============================');
+                                            // console.log('Fecha y hora: ' + fecha_);
+                                            // console.log('evento: ' + eventoDB[0].nombreEvento);
+                                            // console.log('usuario: ' + usuario[0].nombre);
+                                            // console.log('Se actualizo el cupo, ahora vale: ' + c);
                                         });
                                         // Aqui tengo que agregar el id a la agenda
                                         Usuario.findOneAndUpdate({ email: req.body.usuario.email }, { $push: { agenda: eventoDB[0]._id } },
@@ -1040,13 +1040,13 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
     // console.log('Valor de la variable -esNuevo-: ' + req.body.esNuevo);
     if (req.body.esNuevo) {
         //creo la cuenta del usuario
-        console.log('');
-        console.log('Datos a registrar');
-        console.log('=================');
-        console.log('Fecha y hora: ' + fecha_);
-        console.log('Pais: ' + req.body.usuario.pais);
-        console.log('Provincia: ' + req.body.usuario.provincia);
-        console.log('Nombre: ' + req.body.usuario.nombre);
+        // console.log('');
+        // console.log('Datos a registrar');
+        // console.log('=================');
+        // console.log('Fecha y hora: ' + fecha_);
+        // console.log('Pais: ' + req.body.usuario.pais);
+        // console.log('Provincia: ' + req.body.usuario.provincia);
+        // console.log('Nombre: ' + req.body.usuario.nombre);
 
         if (req.body.usuario.provincia) {
             if (req.body.usuario.provincia.toUpperCase() == 'JUJUY')
@@ -1113,13 +1113,13 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
                                             codigo: -1
                                         })
                                     }
-                                    console.log('');
-                                    console.log('Se registro una nueva entrada');
-                                    console.log('=============================');
-                                    console.log('Fecha y hora: ' + fecha_);
-                                    console.log('evento: ' + eventoDB[0].nombreEvento);
-                                    console.log('usuario: ' + usuarioSuccess.nombre);
-                                    console.log('Se actualizo el cupo, ahora vale: ' + c);
+                                    // console.log('');
+                                    // console.log('Se registro una nueva entrada');
+                                    // console.log('=============================');
+                                    // console.log('Fecha y hora: ' + fecha_);
+                                    // console.log('evento: ' + eventoDB[0].nombreEvento);
+                                    // console.log('usuario: ' + usuarioSuccess.nombre);
+                                    // console.log('Se actualizo el cupo, ahora vale: ' + c);
                                 });
                             } else {
                                 //no hay cupo
@@ -1156,13 +1156,13 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
                                                 codigo: -1
                                             })
                                         }
-                                        console.log('');
-                                        console.log('Se registro una nueva entrada');
-                                        console.log('=============================');
-                                        console.log('Fecha y hora: ' + fecha_);
-                                        console.log('evento: ' + eventoDB[0].nombreEvento);
-                                        console.log('usuario: ' + usuarioSuccess.nombre);
-                                        console.log('Se actualizo el cupo externo, ahora vale: ' + c);
+                                        // console.log('');
+                                        // console.log('Se registro una nueva entrada');
+                                        // console.log('=============================');
+                                        // console.log('Fecha y hora: ' + fecha_);
+                                        // console.log('evento: ' + eventoDB[0].nombreEvento);
+                                        // console.log('usuario: ' + usuarioSuccess.nombre);
+                                        // console.log('Se actualizo el cupo externo, ahora vale: ' + c);
                                     });
                                 } else {
                                     //no hay cupo
@@ -1313,13 +1313,13 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
                                                 codigo: -1
                                             })
                                         }
-                                        console.log('');
-                                        console.log('Se registro una nueva entrada');
-                                        console.log('=============================');
-                                        console.log('Fecha y hora: ' + fecha_);
-                                        console.log('evento: ' + eventoDB[0].nombreEvento);
-                                        console.log('usuario: ' + usuario[0].nombre);
-                                        console.log('Se actualizo el cupo externo, ahora vale: ' + c);
+                                        // console.log('');
+                                        // console.log('Se registro una nueva entrada');
+                                        // console.log('=============================');
+                                        // console.log('Fecha y hora: ' + fecha_);
+                                        // console.log('evento: ' + eventoDB[0].nombreEvento);
+                                        // console.log('usuario: ' + usuario[0].nombre);
+                                        // console.log('Se actualizo el cupo externo, ahora vale: ' + c);
                                         // console.log('Se actualizo el cupo, ahora vale: ' + c);
                                     });
                                     // Aqui tengo que agregar el id a la agenda
@@ -1390,13 +1390,13 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
                                                     codigo: -1
                                                 })
                                             }
-                                            console.log('');
-                                            console.log('Se registro una nueva entrada');
-                                            console.log('=============================');
-                                            console.log('Fecha y hora: ' + fecha_);
-                                            console.log('evento: ' + eventoDB[0].nombreEvento);
-                                            console.log('usuario: ' + usuario[0].nombre);
-                                            console.log('Se actualizo el cupo, ahora vale: ' + c);
+                                            // console.log('');
+                                            // console.log('Se registro una nueva entrada');
+                                            // console.log('=============================');
+                                            // console.log('Fecha y hora: ' + fecha_);
+                                            // console.log('evento: ' + eventoDB[0].nombreEvento);
+                                            // console.log('usuario: ' + usuario[0].nombre);
+                                            // console.log('Se actualizo el cupo, ahora vale: ' + c);
                                         });
                                         // Aqui tengo que agregar el id a la agenda
                                         Usuario.findOneAndUpdate({ email: req.body.usuario.email }, { $push: { agenda: eventoDB[0]._id } },
@@ -1594,12 +1594,12 @@ app.post('/agenda/limpiar_eventos_no_confirmados/', function(req, res) {
             while (i < hasta) {
                 if (entradas[i].evento.fechaInicio.split(' ')[0].trim() == req.body.fecha) {
                     if (!entradas[i].entradaConfirmada) {
-                        console.log('');
-                        console.log('Entrada no confirmada, se procede a eliminar');
-                        console.log('=============================================');
-                        console.log('Usuario: ' + entradas[i].usuario.nombre);
-                        console.log('Evento: ' + entradas[i].evento.nombreEvento);
-                        console.log('Fecha y hora del evento: ' + entradas[i].evento.fechaInicio);
+                        // console.log('');
+                        // console.log('Entrada no confirmada, se procede a eliminar');
+                        // console.log('=============================================');
+                        // console.log('Usuario: ' + entradas[i].usuario.nombre);
+                        // console.log('Evento: ' + entradas[i].evento.nombreEvento);
+                        // console.log('Fecha y hora del evento: ' + entradas[i].evento.fechaInicio);
 
 
 
@@ -1619,12 +1619,12 @@ app.post('/agenda/limpiar_eventos_no_confirmados/', function(req, res) {
                                 }
                             });
                     } else {
-                        console.log('');
-                        console.log('Entrada confirmada, se mantiene');
-                        console.log('=============================================');
-                        console.log('Usuario: ' + entradas[i].usuario.nombre);
-                        console.log('Evento: ' + entradas[i].evento.nombreEvento);
-                        console.log('Fecha y hora del evento: ' + entradas[i].evento.fechaInicio);
+                        // console.log('');
+                        // console.log('Entrada confirmada, se mantiene');
+                        // console.log('=============================================');
+                        // console.log('Usuario: ' + entradas[i].usuario.nombre);
+                        // console.log('Evento: ' + entradas[i].evento.nombreEvento);
+                        // console.log('Fecha y hora del evento: ' + entradas[i].evento.fechaInicio);
                     }
                 }
                 i++;
