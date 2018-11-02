@@ -1676,6 +1676,7 @@ app.post('/agenda/confirmar_asistencia/', function(req, res) {
                 if (err) {
                     exito = false;
                     mensajeError = 'No se pudo confirmar la entrada. Error: ' + err.message;
+                    console.log(mensajeError);
                     // return res.status(400).json({
                     //     ok: false,
                     //     message: 'No se pudo confirmar la entrada. Error: ' + err.message
@@ -1683,15 +1684,17 @@ app.post('/agenda/confirmar_asistencia/', function(req, res) {
                 }
                 if (success.length == 0) {
                     mensajeError = 'No se encontro la entrada';
+                    console.log('No se encontro la entrada ');
                 }
             });
     }
-    if (exito)
+    if (exito) {
+        console.log('Entrada confirmada');
         res.json({
             ok: true,
             message: 'La entrada fue confirmada'
         });
-    else
+    } else
         return res.json({
             ok: false,
             message: mensajeError
