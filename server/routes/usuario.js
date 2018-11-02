@@ -1521,7 +1521,7 @@ app.get('/agenda/obtener_eventos/', function(req, res) {
 app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
     let usuarios = [];
     let URL = process.env.URL_SERVICE + process.env.PORT + '/agenda/buscar_entrada/?entrada=' + req.query.idEntrada;
-    console.log('La URL a acceder es: ' + URL);
+    // console.log('La URL a acceder es: ' + URL);
     let entrada = await axios.get(URL);
 
     // console.log('El objeto que devuelve la funcion es: ');
@@ -1533,6 +1533,7 @@ app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
             .where({ usuario: entrada.data.entrada.usuario, entradaConfirmada: false })
             .exec((err, entradas) => {
                 if (err) {
+                    console.log('El servicio "obtener_eventos_de_usurio" produjo el error: ' + err.message);
                     return res.json({
                         ok: false,
                         message: 'La busqueda produjo un error: ' + err.message,
@@ -1540,6 +1541,7 @@ app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
                     });
                 }
                 if (entradas.length == 0) {
+                    console.log('El servicio "obtener_eventos_de_usurio" no produjo resultados');
                     return res.json({
                         ok: false,
                         message: 'El usuario no tiene entradas',
