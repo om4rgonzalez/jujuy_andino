@@ -18,6 +18,10 @@ let entradaSchema = new Schema({
     usuarioConfirm: {
         type: String,
         default: '-'
+    },
+    activa: {
+        type: Boolean,
+        default: true
     }
 });
 

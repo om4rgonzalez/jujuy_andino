@@ -580,11 +580,13 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
     let esLocal = true;
     let tieneHotel = true;
     let usuario;
+    let fecha_ = new Date();
     // console.log('Valor de la variable -esNuevo-: ' + req.body.esNuevo);
     if (req.body.esNuevo) {
         //creo la cuenta del usuario
         console.log('Datos a registrar');
         console.log('=================');
+        console.log('Fecha y hora: ' + fecha_);
         console.log('Pais: ' + req.body.usuario.pais);
         console.log('Provincia: ' + req.body.usuario.provincia);
         console.log('Nombre: ' + req.body.usuario.nombre);
@@ -654,8 +656,10 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                             codigo: -1
                                         })
                                     }
+                                    console.log('');
                                     console.log('Se registro una nueva entrada');
                                     console.log('=============================');
+                                    console.log('Fecha y hora: ' + fecha_);
                                     console.log('evento: ' + eventoDB[0].nombreEvento);
                                     console.log('usuario: ' + usuarioSuccess.nombre);
                                     console.log('Se actualizo el cupo, ahora vale: ' + c);
@@ -695,8 +699,10 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                                 codigo: -1
                                             })
                                         }
+                                        console.log('');
                                         console.log('Se registro una nueva entrada');
                                         console.log('=============================');
+                                        console.log('Fecha y hora: ' + fecha_);
                                         console.log('evento: ' + eventoDB[0].nombreEvento);
                                         console.log('usuario: ' + usuarioSuccess.nombre);
                                         console.log('Se actualizo el cupo externo, ahora vale: ' + c);
@@ -850,8 +856,10 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                                 codigo: -1
                                             })
                                         }
+                                        console.log('');
                                         console.log('Se registro una nueva entrada');
                                         console.log('=============================');
+                                        console.log('Fecha y hora: ' + fecha_);
                                         console.log('evento: ' + eventoDB[0].nombreEvento);
                                         console.log('usuario: ' + usuario[0].nombre);
                                         console.log('Se actualizo el cupo externo, ahora vale: ' + c);
@@ -925,8 +933,10 @@ app.post('/agenda/agregar_evento/', async function(req, res) {
                                                     codigo: -1
                                                 })
                                             }
+                                            console.log('');
                                             console.log('Se registro una nueva entrada');
                                             console.log('=============================');
+                                            console.log('Fecha y hora: ' + fecha_);
                                             console.log('evento: ' + eventoDB[0].nombreEvento);
                                             console.log('usuario: ' + usuario[0].nombre);
                                             console.log('Se actualizo el cupo, ahora vale: ' + c);
@@ -1026,11 +1036,14 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
     let esLocal = true;
     let tieneHotel = true;
     let usuario;
+    let fecha_ = new Date();
     // console.log('Valor de la variable -esNuevo-: ' + req.body.esNuevo);
     if (req.body.esNuevo) {
         //creo la cuenta del usuario
+        console.log('');
         console.log('Datos a registrar');
         console.log('=================');
+        console.log('Fecha y hora: ' + fecha_);
         console.log('Pais: ' + req.body.usuario.pais);
         console.log('Provincia: ' + req.body.usuario.provincia);
         console.log('Nombre: ' + req.body.usuario.nombre);
@@ -1100,8 +1113,10 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
                                             codigo: -1
                                         })
                                     }
+                                    console.log('');
                                     console.log('Se registro una nueva entrada');
                                     console.log('=============================');
+                                    console.log('Fecha y hora: ' + fecha_);
                                     console.log('evento: ' + eventoDB[0].nombreEvento);
                                     console.log('usuario: ' + usuarioSuccess.nombre);
                                     console.log('Se actualizo el cupo, ahora vale: ' + c);
@@ -1141,8 +1156,10 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
                                                 codigo: -1
                                             })
                                         }
+                                        console.log('');
                                         console.log('Se registro una nueva entrada');
                                         console.log('=============================');
+                                        console.log('Fecha y hora: ' + fecha_);
                                         console.log('evento: ' + eventoDB[0].nombreEvento);
                                         console.log('usuario: ' + usuarioSuccess.nombre);
                                         console.log('Se actualizo el cupo externo, ahora vale: ' + c);
@@ -1296,8 +1313,10 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
                                                 codigo: -1
                                             })
                                         }
+                                        console.log('');
                                         console.log('Se registro una nueva entrada');
                                         console.log('=============================');
+                                        console.log('Fecha y hora: ' + fecha_);
                                         console.log('evento: ' + eventoDB[0].nombreEvento);
                                         console.log('usuario: ' + usuario[0].nombre);
                                         console.log('Se actualizo el cupo externo, ahora vale: ' + c);
@@ -1371,8 +1390,10 @@ app.post('/agenda/agregar_evento_/', async function(req, res) {
                                                     codigo: -1
                                                 })
                                             }
+                                            console.log('');
                                             console.log('Se registro una nueva entrada');
                                             console.log('=============================');
+                                            console.log('Fecha y hora: ' + fecha_);
                                             console.log('evento: ' + eventoDB[0].nombreEvento);
                                             console.log('usuario: ' + usuario[0].nombre);
                                             console.log('Se actualizo el cupo, ahora vale: ' + c);
@@ -1543,35 +1564,105 @@ app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
     }
 });
 
-// app.post('/agenda/verficar_asistencia/', function(req, res) {
+app.post('/agenda/limpiar_eventos_no_confirmados/', function(req, res) {
+    let eventos_ = []; //aqui voy a guardar todos los eventos a los que tengo que restituir la entrada
+    Entrada.find()
+        .populate('evento')
+        .populate('usuario')
+        // .where({ activa: true })
+        .exec((err, entradas) => {
+            if (err) {
+                console.log('La busqueda eventos produjo un error: ' + err.message);
+                return res.status(400).json({
+                    ok: false,
+                    message: 'La busqueda eventos produjo un error: ' + err.message
+                });
+            }
 
-//     Usuario.find({ email: req.body.email })
-//         .populate('agenda')
-//         .exec((err, usuario) => {
-//             if (err) {
-//                 return res.status(400).json({
-//                     ok: false,
-//                     err
-//                 });
-//             }
+            if (entradas.length == 0) {
+                return res.json({
+                    ok: false,
+                    message: 'No hay entradas para procesar'
+                });
+            }
 
-//             usuario = usuario.filter(function(usuario) {
-//                 return usuario.agenda.id != req.body.idEvento;
-//             })
+            let hasta = entradas.length;
+            let i = 0;
+            let diaEvento = 0;
+            while (i < hasta) {
+                if (entradas[i].evento.fechaInicio.split(' ')[0].trim() == req.body.fecha) {
+                    if (!entradas[i].entradaConfirmada) {
+                        console.log('');
+                        console.log('Entrada no confirmada, se procede a eliminar');
+                        console.log('=============================================');
+                        console.log('Usuario: ' + entradas[i].usuario.nombre);
+                        console.log('Evento: ' + entradas[i].evento.nombreEvento);
+                        console.log('Fecha y hora del evento: ' + entradas[i].evento.fechaInicio);
 
 
-//             if (usuario.length != 0) {
-//                 return res.status(404).json({
-//                     ok: false,
-//                     message: 'Usuario ya registrado al evento'
-//                 });
-//             }
-//             res.json({
-//                 ok: true,
-//                 message: 'El usuario aun no se registro en el evento'
-//             });
-//         });
-// });
+
+                        eventos_.push({
+                            usuario: entradas[i].usuario._id,
+                            evento: entradas[i].evento._id
+                        });
+                        Entrada.findOneAndUpdate({ _id: entradas[i]._id }, { $set: { activa: false } },
+                            function(err, success) {
+
+                                if (err) {
+                                    exito = false;
+                                    mensajeError = 'No se pudo quitar la entrada. Error: ' + err.message;
+                                }
+                                if (success.length == 0) {
+                                    mensajeError = 'No se encontro la entrada';
+                                }
+                            });
+                    } else {
+                        console.log('');
+                        console.log('Entrada confirmada, se mantiene');
+                        console.log('=============================================');
+                        console.log('Usuario: ' + entradas[i].usuario.nombre);
+                        console.log('Evento: ' + entradas[i].evento.nombreEvento);
+                        console.log('Fecha y hora del evento: ' + entradas[i].evento.fechaInicio);
+                    }
+                }
+                i++;
+            }
+
+            //ahora veo que usuarios tengo que actualizar
+            hasta = eventos_.length;
+            i = 0;
+            while (i < hasta) {
+                // console.log('');
+                // console.log('Usuario: ' + eventos_[i].usuario);
+                // console.log('Evento: ' + eventos_[i].evento);
+                Usuario.findOneAndUpdate({ _id: eventos_[i].usuario }, { $pull: { agenda: eventos_[i].evento } },
+                    function(err, success) {
+
+                        if (err) {
+                            exito = false;
+                            mensajeError = 'No se pudo quitar la entrada. Error: ' + err.message;
+                            // return res.status(400).json({
+                            //     ok: false,
+                            //     message: 'No se pudo confirmar la entrada. Error: ' + err.message
+                            // });
+                        }
+                        if (success.length == 0) {
+                            mensajeError = 'No se encontro la entrada';
+                        }
+                        console.log('Se quito la entrada');
+
+                    });
+                i++;
+            }
+
+
+
+            res.json({
+                ok: true,
+                message: 'Proceso finalizado'
+            });
+        });
+});
 
 app.post('/agenda/confirmar_asistencia/', function(req, res) {
 
