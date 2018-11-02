@@ -1533,7 +1533,7 @@ app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
             .where({ usuario: entrada.data.entrada.usuario, entradaConfirmada: false })
             .exec((err, entradas) => {
                 if (err) {
-                    console.log('El servicio "obtener_eventos_de_usurio" produjo el error: ' + err.message);
+                    console.log('El servicio "obtener_eventos_de_usuario" produjo el error: ' + err.message);
                     return res.json({
                         ok: false,
                         message: 'La busqueda produjo un error: ' + err.message,
