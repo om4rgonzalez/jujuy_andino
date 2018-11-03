@@ -1873,6 +1873,7 @@ app.post('/usuarios/inscriptos/', function(req, res) {
 
                 usuarios_.push({
                     nombre: entradas[i].usuario.nombre,
+                    dni: entradas[i].usuario.documentoIdentidad,
                     correo: entradas[i].usuario.email
                 });
                 i++;
