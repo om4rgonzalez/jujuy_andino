@@ -173,6 +173,7 @@ app.get('/agenda/buscar_entrada/', async function(req, res) {
             //     })
             .populate('usuario', '_id nombre tipoDocumento email pais provincia documentoIdentidad')
             .populate('evento')
+            .where({ activa: true })
             .exec((err, entrada) => {
                 if (err) {
                     console.log('La busqueda produjo un error: ' + err.message);
@@ -230,6 +231,7 @@ app.get('/agenda/buscar_entrada/', async function(req, res) {
         Entrada.find({ _id: req.query.entrada })
             .populate('usuario', '_id nombre tipoDocumento email pais provincia documentoIdentidad')
             .populate('evento')
+            .where({ activa: true })
             .exec((err, entrada) => {
                 if (err) {
                     return res.json({
@@ -1481,6 +1483,7 @@ app.get('/agenda/obtener_eventos/', function(req, res) {
         .populate('evento')
         .populate('usuario', 'nombre email tipoDocumento documentoIdentidad pais provincia')
         // .where({ 'usuario.email': req.query.email })
+        .where({ activa: true })
         .exec((err, entradas) => {
             if (err) {
                 return res.status(400).json({
@@ -1530,7 +1533,7 @@ app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
         Entrada.find()
             .populate('usuario', 'nombre email tipoDocumento documentoIdentidad pais provincia')
             .populate('evento')
-            .where({ usuario: entrada.data.entrada.usuario, entradaConfirmada: false })
+            .where({ usuario: entrada.data.entrada.usuario, entradaConfirmada: false, activ: true })
             .exec((err, entradas) => {
                 if (err) {
                     console.log('El servicio "obtener_eventos_de_usuario" produjo el error: ' + err.message);
