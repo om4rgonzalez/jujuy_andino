@@ -1795,6 +1795,55 @@ app.post('/agenda/confirmar_asistencia/', function(req, res) {
         });
 });
 
+app.post('/config/agregar_campo_activa/', function(req, res) {
+
+    Entrada.find()
+        .exec((err, entradas) => {
+            if (err) {
+                console.log('Salto el error: ' + err.message);
+            } else {
+                if (entradas.length == 0) {
+                    console.log('La consulta no devolvio resultados');
+                } else {
+                    let hasta = entradas.length;
+                    let i = 0;
+                    while (i < hasta) {
+                        if (!entradas[i].activa) {
+                            console.log('Entrada inactiva, no debe cambiar');
+                        } else {
+                            Entrada.findOneAndUpdate({ _id: entradas[i]._id }, { $set: { activa: true } },
+                                function(err, success) {
+
+                                    if (err) {
+                                        exito = false;
+                                        mensajeError = 'No se pudo cambiar la entrada a ACTIVA. Error: ' + err.message;
+                                        console.log(mensajeError);
+                                        // return res.status(400).json({
+                                        //     ok: false,
+                                        //     message: 'No se pudo confirmar la entrada. Error: ' + err.message
+                                        // });
+                                    } else {
+                                        if (success.length == 0) {
+                                            mensajeError = 'No se encontro la entrada';
+                                            console.log('No se encontro la entrada ');
+                                        } else {
+                                            console.log('Se cambio el estado exitosamente');
+                                        }
+                                    }
+
+                                });
+                        }
+                        i++;
+                    }
+                    res.json({
+                        ok: true,
+                        message: 'Proceso de insertar campo activo terminado'
+                    });
+                }
+            }
+        });
+});
+
 
 
 module.exports = app;
