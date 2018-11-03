@@ -1845,5 +1845,47 @@ app.post('/config/agregar_campo_activa/', function(req, res) {
 });
 
 
+app.post('/usuarios/inscriptos/', function(req, res) {
+    Entrada.find({ evento: req.body.evento })
+        .populate('usuario')
+        .exec((err, entradas) => {
+            if (err) {
+                console.log('La consulta de entradas devolvio un error: ' + err.message);
+                return res.json({
+                    ok: false,
+                    message: 'La consulta produjo un error: ' + err.message
+                });
+            }
+
+            if (entradas.length == 0) {
+                console.log('No hay entradas para ese evento');
+                return res.json({
+                    ok: false,
+                    message: 'No hay entradas para ese evento'
+                });
+            }
+
+            let hasta = entradas.length;
+            let i = 0;
+            let usuarios = [];
+            let usuarios_ = [];
+            while (i < hasta) {
+
+                usuarios_.push({
+                    nombre: entradas[i].usuario.nombre,
+                    correo: entradas[i].usuario.email
+                });
+                i++;
+            }
+
+            res.json({
+                ok: true,
+                usuarios_
+            });
+
+        })
+})
+
+
 
 module.exports = app;
