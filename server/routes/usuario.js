@@ -1709,47 +1709,48 @@ app.post('/agenda/limpiar_eventos_no_confirmados/', function(req, res) {
                 i++;
             }
 
-            i = 0;
-            console.log('');
-            console.log('Datos de entradas restituidas');
-            console.log('=============================')
-            while (i < eventos__.length) {
-                console.log(eventos__[i].evento);
-                console.log('Nombre Evento: ' + eventos__[i].nombreEvento);
-                console.log('Cantidad: ' + eventos__[i].cantidadRecuperada);
-                // Evento.find({ _id: eventos__[i].evento })
-                //     .exec(async(err, encontrado) => {
-                //         if (err) {
-                //             console.log('La busqueda del evento para actualizar el cupo produjo un error');
-                //         } else {
-                //             if (encontrado.length == 0) {
-                //                 console.log('No se encontro el evento para actualizar el cupo');
-                //             } else {
-                //                 //todo ok, paso a actualizar
-                //                 await Evento.findOneAndUpdate({ _id: encontrado[0]._id }, { $set: { cupo: encontrado[0].cupo + eventos__[i].cantidadRecuperada } },
-                //                     async function(err_, exito) {
-                //                         if (err_) {
-                //                             console.log('No se pudo recuperar el cupo');
-                //                         } else {
-                //                             if (exito.length == 0) {
-                //                                 console.log('No hay un evento para actualizar el cupo');
-                //                             } else {
-                //                                 console.log('Cupo actualizado');
-                //                             }
-                //                         }
-                //                     });
-                //                 console.log('Cupo actualizado');
-                //             }
-                //         }
+            // i = 0;
+            // console.log('');
+            // console.log('Datos de entradas restituidas');
+            // console.log('=============================')
+            // while (i < eventos__.length) {
+            //     console.log(eventos__[i].evento);
+            //     console.log('Nombre Evento: ' + eventos__[i].nombreEvento);
+            //     console.log('Cantidad: ' + eventos__[i].cantidadRecuperada);
+            //     // Evento.find({ _id: eventos__[i].evento })
+            //     //     .exec(async(err, encontrado) => {
+            //     //         if (err) {
+            //     //             console.log('La busqueda del evento para actualizar el cupo produjo un error');
+            //     //         } else {
+            //     //             if (encontrado.length == 0) {
+            //     //                 console.log('No se encontro el evento para actualizar el cupo');
+            //     //             } else {
+            //     //                 //todo ok, paso a actualizar
+            //     //                 await Evento.findOneAndUpdate({ _id: encontrado[0]._id }, { $set: { cupo: encontrado[0].cupo + eventos__[i].cantidadRecuperada } },
+            //     //                     async function(err_, exito) {
+            //     //                         if (err_) {
+            //     //                             console.log('No se pudo recuperar el cupo');
+            //     //                         } else {
+            //     //                             if (exito.length == 0) {
+            //     //                                 console.log('No hay un evento para actualizar el cupo');
+            //     //                             } else {
+            //     //                                 console.log('Cupo actualizado');
+            //     //                             }
+            //     //                         }
+            //     //                     });
+            //     //                 console.log('Cupo actualizado');
+            //     //             }
+            //     //         }
 
-                //     });
-                i++;
-            }
+            //     //     });
+            //     i++;
+            // }
 
-
+            console.log('Proceso de limpieza finalizado');
             res.json({
                 ok: true,
-                message: 'Proceso finalizado'
+                message: 'Proceso finalizado',
+                recuperadas: eventos__
             });
         });
 });
