@@ -1848,6 +1848,7 @@ app.post('/config/agregar_campo_activa/', function(req, res) {
 app.post('/usuarios/inscriptos/', function(req, res) {
     Entrada.find({ evento: req.body.evento })
         .populate('usuario')
+        .where({ activa: true })
         .exec((err, entradas) => {
             if (err) {
                 console.log('La consulta de entradas devolvio un error: ' + err.message);
