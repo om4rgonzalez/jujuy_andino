@@ -151,14 +151,14 @@
                 "color": "#70CDDD",
                 "cupo": 0,
                 "cupoExterno": 0,
-                "urlCompraTicket": "https://portal.autoentrada.com/concierto-de-camara-orquesta-de-cuerdas-gpa-brasil-festival-jujuy-corazon-andino.html"
+                "urlCompraTicket": "-"
             },
             {
-                "evento": "Cine De Las Alturas - Seminario 'Introducción a la Música en el Cine'",
+                "evento": "Cine De Las Alturas - 'Taller de Musicalización'",
                 "lugar": "Sala Galan - Teatro Mitre, Alvear 1009",
                 "descripcion": "",
-                "fechaInicio": "2018-11-04 03:00 PM",
-                "fechaFin": "2018-11-04 07:00 PM",
+                "fechaInicio": "2018-11-05 03:00 PM",
+                "fechaFin": "2018-11-05 07:00 PM",
                 "latitud": -24.184189,
                 "longitud": -65.307126,
                 "id": 90,
@@ -210,11 +210,11 @@
                 "urlCompraTicket": "https://portal.autoentrada.com/horacio-lavandera-festival-jujuy-corazon-andino.html"
             },
             {
-                "evento": "Cine De Las Alturas - Seminario 'Introducción a la Música en el Cine'",
+                "evento": "Cine De Las Alturas - 'Taller de Musicalización'",
                 "lugar": "Sala Galan - Teatro Mitre, Alvear 1009",
                 "descripcion": "",
                 "fechaInicio": "2018-11-05 09:00 AM",
-                "fechaFin": "2018-11-05 07:00 PM",
+                "fechaFin": "2018-11-05 05:00 PM",
                 "latitud": -24.184189,
                 "longitud": -65.307126,
                 "id": 91,
@@ -560,10 +560,10 @@
                 "urlCompraTicket": "-"
             },
             {
-                "evento": "Alturas Móvil: Proyección al aire libre de 'Landfill Harmonic'",
+                "evento": "Proyección del Film “LANDFILL HARMONIC” – Estados Unidos / Paraguay 2015",
                 "lugar": "Parque Lineal Xibi Xibi  Anfiteatro. Hipólito Irigoyen 1502",
                 "descripcion": "SINOPSIS: Una historia de vida, de esperanza, de inspiración. Una propuesta tan compleja como armónica, quizás tanto como el compás de la orquesta. “Landfill harmonic” cuenta la historia de una orquesta musical de jóvenes músicos en situación de vulnerabilidad de Paraguay que tocan a partir de instrumentos creados con residuos. Una iniciativa de reciclaje y música pasó a ser un ejemplo de transformación para el mundo entero; un mensaje de optimismo para cambiar la realidad.",
-                "fechaInicio": "2018-11-05 08:00 PM",
+                "fechaInicio": "2018-11-08 07:00 PM",
                 "fechaFin": "0",
                 "latitud": -24.190050,
                 "longitud": -65.308951,
@@ -701,7 +701,7 @@
                 "color": "#70CDDD",
                 "cupo": 50,
                 "cupoExterno": 50,
-                "urlCompraTicket": "https://portal.autoentrada.com/coro-de-ni-os-del-teatro-colon-festival-jujuy-corazon-andino.html"
+                "urlCompraTicket": "-"
             }
         ]
     },
@@ -794,7 +794,7 @@
                 "color": "#70CDDD",
                 "cupo": 75,
                 "cupoExterno": 75,
-                "urlCompraTicket": "https://portal.autoentrada.com/orquesta-de-cuerdas-gpa-brasil-festival-jujuy-corazon-andino.html"
+                "urlCompraTicket": "-"
             },
             {
                 "evento": "Cine Itinerante 'Altura Móvil'",
@@ -945,6 +945,20 @@
                 "urlCompraTicket": "-"
             },
             {
+                "evento": "Cine Itinerante 'Altura Móvil'",
+                "lugar": "Tilcara",
+                "descripcion": "",
+                "fechaInicio": "2018-11-08 04:00 PM",
+                "fechaFin": "2018-11-08 06:00 PM",
+                "latitud": -23.576963,
+                "longitud": -65.393465,
+                "id": 62,
+                "color": "#155AA9",
+                "cupo": 0,
+                "cupoExterno": 0,
+                "urlCompraTicket": "-"
+            },
+            {
                 "evento": "EL DESPERTAR - Concierto de Gustavo Santaoalla y Su Banda",
                 "lugar": "Huacalera",
                 "descripcion": "Su carrera musical comenzó en 1967 con Arco Iris. Ganador de los premios:  18 Grammys latinos, 1 Golden Globe ('A Love That Will Never Grow Old'), 2 Oscar (Brokeback Mountain y Babel), 2 Bafta (Babel y Diario de Motocicleta), 4 Konex (Konex Platino 2005). Durante su trayectoria, fue productor de los artistas mexicanos: Fobia, Molotov, Café Tacvba, Julieta Venegas y el cantante colombiano Juanes, entre otros. Al final de los años 90s comenzó su carrera como compositor de bandas sonoras para películas, las más conocidas: Amores Perros, 21 Gramos, Diarios de Motocicleta, Brokeback Mountain,  Babel, Biutiful, el Libro de la Vida, Relatos Salvajes. En 2001 funda la banda de tango electrónico Bajofondo. En 2017 edita “Raconto” y recorre en gira con el show desandando el camino. En 2018 produce Qhapaq Nan. Desarrolla junto a Andrea Merenzon un programa dedicado a las orquestas sinfónicas juveniles, presentándose en Posadas, Iguazú, Buenos Aires, San Juan, Jujuy, San José de Costa Rica y Medellín. Es el realizador de la banda de sonido de la primera parte del videojuego 'The Last of US', y actualmente se encuentra terminando la banda sonora de la segunda entrega 'The Last of US 2'.",
@@ -986,6 +1000,20 @@
                 "longitud": -65.499261,
                 "id": 66,
                 "color": "#70CDDD",
+                "cupo": 0,
+                "cupoExterno": 0,
+                "urlCompraTicket": "-"
+            },
+            {
+                "evento": "Cine Itinerante 'Altura Móvil'",
+                "lugar": "Plaza 9 de Julio - Purmamarca",
+                "descripcion": "",
+                "fechaInicio": "2018-11-09 02:00 PM",
+                "fechaFin": "0",
+                "latitud": -23.746459,
+                "longitud": -65.499261,
+                "id": 67,
+                "color": "#155AA9",
                 "cupo": 0,
                 "cupoExterno": 0,
                 "urlCompraTicket": "-"
@@ -1074,6 +1102,20 @@
                 "longitud": -65.356008,
                 "id": 72,
                 "color": "#70CDDD",
+                "cupo": 0,
+                "cupoExterno": 0,
+                "urlCompraTicket": "-"
+            },
+            {
+                "evento": "Cine Itinerante 'Altura Móvil'",
+                "lugar": "Plaza Uquia",
+                "descripcion": "",
+                "fechaInicio": "2018-11-09 04:00 PM",
+                "fechaFin": "2018-11-09 05:00 PM",
+                "latitud": -23.303229,
+                "longitud": -65.356008,
+                "id": 73,
+                "color": "#155AA9",
                 "cupo": 0,
                 "cupoExterno": 0,
                 "urlCompraTicket": "-"

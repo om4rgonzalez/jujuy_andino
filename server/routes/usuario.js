@@ -1605,8 +1605,11 @@ app.post('/agenda/limpiar_eventos_no_confirmados/', function(req, res) {
 
                         eventos_.push({
                             usuario: entradas[i].usuario._id,
-                            evento: entradas[i].evento._id
+                            evento: entradas[i].evento._id,
+                            nombreEvento: entradas[i].evento.nombreEvento
                         });
+
+
                         Entrada.findOneAndUpdate({ _id: entradas[i]._id }, { $set: { activa: false } },
                             function(err, success) {
 
@@ -1618,6 +1621,8 @@ app.post('/agenda/limpiar_eventos_no_confirmados/', function(req, res) {
                                     mensajeError = 'No se encontro la entrada';
                                 }
                             });
+
+
                     } else {
                         // console.log('');
                         // console.log('Entrada confirmada, se mantiene');
@@ -1633,6 +1638,7 @@ app.post('/agenda/limpiar_eventos_no_confirmados/', function(req, res) {
             //ahora veo que usuarios tengo que actualizar
             hasta = eventos_.length;
             i = 0;
+            let eventos__ = [];
             while (i < hasta) {
                 // console.log('');
                 // console.log('Usuario: ' + eventos_[i].usuario);
@@ -1657,6 +1663,88 @@ app.post('/agenda/limpiar_eventos_no_confirmados/', function(req, res) {
                 i++;
             }
 
+            //por ultimo, restituyo las entradas recuperadas
+            i = 0;
+            let j = 0;
+            while (i < hasta) {
+                if (i == 0) {
+                    let k = 0;
+                    let cantidad = 0;
+                    while (k < hasta) {
+                        if (eventos_[i].evento == eventos_[k].evento) {
+                            cantidad++;
+                        }
+                        k++;
+                    }
+                    eventos__.push({
+                        evento: eventos_[i].evento,
+                        nombreEvento: eventos_[i].nombreEvento,
+                        cantidadRecuperada: cantidad
+                    });
+                } else {
+                    let k = 0;
+                    let cantidad = 0;
+                    let existe = false;
+                    while (k < eventos__.length) {
+                        if (eventos_[i].evento == eventos__[k].evento) {
+                            existe = true;
+                        }
+                        k++;
+                    }
+                    if (!existe) {
+                        K = 0;
+                        while (k < hasta) {
+                            if (eventos_[i].evento == eventos_[k].evento) {
+                                cantidad++;
+                            }
+                            k++;
+                        }
+                        eventos__.push({
+                            evento: eventos_[i].evento,
+                            nombreEvento: eventos_[i].nombreEvento,
+                            cantidadRecuperada: cantidad
+                        });
+                    }
+                }
+                i++;
+            }
+
+            i = 0;
+            console.log('');
+            console.log('Datos de entradas restituidas');
+            console.log('=============================')
+            while (i < eventos__.length) {
+                console.log(eventos__[i].evento);
+                console.log('Nombre Evento: ' + eventos__[i].nombreEvento);
+                console.log('Cantidad: ' + eventos__[i].cantidadRecuperada);
+                // Evento.find({ _id: eventos__[i].evento })
+                //     .exec(async(err, encontrado) => {
+                //         if (err) {
+                //             console.log('La busqueda del evento para actualizar el cupo produjo un error');
+                //         } else {
+                //             if (encontrado.length == 0) {
+                //                 console.log('No se encontro el evento para actualizar el cupo');
+                //             } else {
+                //                 //todo ok, paso a actualizar
+                //                 await Evento.findOneAndUpdate({ _id: encontrado[0]._id }, { $set: { cupo: encontrado[0].cupo + eventos__[i].cantidadRecuperada } },
+                //                     async function(err_, exito) {
+                //                         if (err_) {
+                //                             console.log('No se pudo recuperar el cupo');
+                //                         } else {
+                //                             if (exito.length == 0) {
+                //                                 console.log('No hay un evento para actualizar el cupo');
+                //                             } else {
+                //                                 console.log('Cupo actualizado');
+                //                             }
+                //                         }
+                //                     });
+                //                 console.log('Cupo actualizado');
+                //             }
+                //         }
+
+                //     });
+                i++;
+            }
 
 
             res.json({
