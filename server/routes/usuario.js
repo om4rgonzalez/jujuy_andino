@@ -1533,7 +1533,7 @@ app.get('/agenda/obtener_eventos_de_usuario/', async function(req, res) {
         Entrada.find()
             .populate('usuario', 'nombre email tipoDocumento documentoIdentidad pais provincia')
             .populate('evento')
-            .where({ usuario: entrada.data.entrada.usuario, entradaConfirmada: false, activ: true })
+            .where({ usuario: entrada.data.entrada.usuario, entradaConfirmada: false, activa: true })
             .exec((err, entradas) => {
                 if (err) {
                     console.log('El servicio "obtener_eventos_de_usuario" produjo el error: ' + err.message);
