@@ -218,7 +218,7 @@ app.get('/agenda/buscar_entrada/', async function(req, res) {
                 //     return entrada.usuario != null;
                 // })
 
-                // console.log('encontro una entrada: ');
+                console.log('El metodo de consulta de entrada encontro una entrada');
                 // console.log(entrada[0]);
                 return res.json({
                     ok: true,
