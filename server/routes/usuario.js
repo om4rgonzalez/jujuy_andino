@@ -1588,8 +1588,24 @@ app.post('/usuarios/todos/', function(req, res) {
     Usuario.find()
         .exec((err, usuarios) => {
 
+            let i = 0;
+            let hasta = usuarios.length;
+            let usuarios_ = [];
+            while (i < hasta) {
+                usuarios_.push({
+                    nombre: usuarios[i].nombre,
+                    provincia: usuarios[i].provincia,
+                    tipoDocumento: usuarios[i].tipoDocumento,
+                    email: usuarios[i].email,
+                    pais: usuarios[i].pais,
+                    documentoIdentidad: usuarios[i].documentoIdentidad,
+                    fechaNacimiento: usuarios[i].fechaNacimiento,
+                    hotel: usuarios[i].hotel
+                });
+                i++;
+            }
             res.json({
-                usuarios: usuarios
+                usuarios: usuarios_
             });
         })
 });
